@@ -1,0 +1,5 @@
+ことねやHP 実ファイル一式
+ZIPを展開したうえで、同じフォルダにあるindex.htmlを開いてください。
+assets、method、news、contactの各フォルダを削除・移動しないでください。
+ZIP内のindex.htmlのみを直接開くと画像やページ移動が壊れる場合があります。
+単独HTMLプレビューは kotoneya_preview_all_in_one_v24.html を使用してください。
