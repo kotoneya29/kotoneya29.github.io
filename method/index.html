@@ -302,6 +302,20 @@
 .feeling-context{margin:13px 0;padding:11px 14px;background:#eff7f1;border-left:3px solid #298057;border-radius:9px;color:#214b35;font-size:.9rem}
 .feeling-focus-summary{display:block;color:#45675a;font-size:.84rem;margin-top:5px;font-weight:600}
 @media(max-width:540px){.feeling-deeper{padding:13px}}
+
+/* Keep question headings visible below the mobile ledger when moving between steps. */
+@media(max-width:540px){#question-card{scroll-margin-top:240px}}
+/* v41: show the chosen household perspective before exploring a spending example. */
+.house-role-banner{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border:1px solid #bbd6c6;border-radius:12px;background:#eef6ef;padding:11px 13px;margin:0 0 15px}
+.house-role-banner[hidden]{display:none}
+.house-role-banner>div{display:grid;gap:1px}.house-role-banner small{color:#536f5d;font-size:.73rem}.house-role-banner strong{font-size:.91rem}
+.house-role-banner .btn{padding:6px 12px;font-size:.76rem;background:#fff}
+.house-role-choices .btn{text-align:left;display:grid;gap:1px;line-height:1.4}
+.house-role-choices .btn b{font-weight:800;font-size:.98rem}
+.house-role-choices .btn small{font-weight:400;font-size:.8rem;opacity:.81}
+.house-role-note{font-size:.83rem;color:#2a6b52;margin:6px 0 13px}
+.v41-summary-role{font-size:.83rem;color:#47705b;margin:0 0 6px}
+@media(max-width:440px){.house-role-banner{display:block}.house-role-banner .btn{margin-top:6px}.house-role-choices .btn{padding:11px 12px}}
 /* Common navigation on the official Kotoneya website */
 .header{border-top:4px solid transparent;border-image:linear-gradient(to right,#55bf3b 0 33.33%,#f9c43f 33.33% 66.66%,#37b7e8 66.66% 100%) 1}
 .header .wrap{min-height:69px;display:flex;align-items:center;justify-content:space-between;gap:17px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
@@ -329,7 +343,17 @@
   </div>
 </div><div class="tree-detail" id="tree-detail" aria-live="polite"></div></div><div class="notice">数字を見るときも、その背景や、何を大切にしているかを一緒に考えてみませんか。</div><div class="navbuttons"><button class="btn primary" data-goto="house">家計で試してみる →</button></div></section>
 <section class="section" data-page="house" hidden><p class="eyebrow">02 / 05　家計の数字</p><h1 class="title">収入も支出も増えた。どこに目が向く？</h1><p class="lead">ある家庭の先月と今月を並べてみました。まずは、気になる数字を見つけてみましょう。</p><div class="panel"><h2>ある家庭の1か月（架空の例）</h2><div style="overflow-x:auto"><table class="compare"><thead><tr><th>項目</th><th>先月</th><th>今月</th><th>増減</th></tr></thead><tbody><tr><th>収入</th><td>30万円</td><td>33万円</td><td class="blue">＋3万円</td></tr><tr><th>支出</th><td>28万円</td><td>33万円</td><td class="red">＋5万円</td></tr><tr class="total"><th>残り</th><td>2万円</td><td>0円</td><td>−2万円</td></tr></tbody></table></div><p class="hint">※「残り」はこの月の収入−支出です。過去の預貯金残高を示すものではありません。</p></div><div class="intent"><small>この問いで考えてみたいこと</small>どこが気になるかは人それぞれ。今、目が向いたところから考えてみましょう。</div><h2>この数字を見て、どこが気になる？</h2><div class="grid3"><button class="btn" data-first="income">収入が増えたところ</button><button class="btn" data-first="expense">支出が増えたところ</button><button class="btn" data-first="balance">残りが減ったところ</button><button class="btn" data-first="context">使い道や事情が気になる</button></div><div id="first-note" class="notice" hidden>気になった数字の背景には、どんな事情があるでしょう。次は使い道も見てみましょう。</div><div class="navbuttons"><button class="btn" data-goto="tree">木を見る</button><button class="btn primary" data-goto="questions">使い道の例を見てみる →</button></div></section>
-<section class="section" data-page="questions" hidden><p class="eyebrow">03 / 05　家計の4つの問い</p><h1 class="title">使ったお金について、少し考えてみよう。</h1><p class="lead">最初に見た家計簿をそばに置いて、使ったお金について考えてみましょう。気になる例を一つ選んでください。</p><div class="household-question-layout"><aside class="household-reference" aria-label="家計の数字の比較表"><div class="panel household-reference-panel"><h2>最初に見た家計簿</h2><div style="overflow-x:auto"><table class="compare"><thead><tr><th>項目</th><th>先月</th><th>今月</th><th>増減</th></tr></thead><tbody><tr><th>収入</th><td>30万円</td><td>33万円</td><td class="blue">＋3万円</td></tr><tr><th>支出</th><td>28万円</td><td>33万円</td><td class="red">＋5万円</td></tr><tr class="total"><th>残り</th><td>2万円</td><td>0円</td><td>−2万円</td></tr></tbody></table></div><p class="hint">※「残り」はこの月の収入−支出です。過去の預貯金残高を示すものではありません。</p></div></aside><div class="household-question-main"><div class="panel" id="question-card"><p class="wizard-step" id="q-progress">質問 1 / 4</p><div class="step-indicator"><span class="current"></span><span></span><span></span><span></span></div>
+<section class="section" data-page="questions" hidden><p class="eyebrow">03 / 05　家計の4つの問い</p><h1 class="title">使ったお金について、少し考えてみよう。</h1><p class="lead">最初に見た家計簿をそばに置いて考えます。まず使い道を一つ選び、それをどの立場で考えるか決めてみましょう。</p><div class="household-question-layout"><aside class="household-reference" aria-label="家計の数字の比較表"><div class="panel household-reference-panel"><h2>最初に見た家計簿</h2><div style="overflow-x:auto"><table class="compare"><thead><tr><th>項目</th><th>先月</th><th>今月</th><th>増減</th></tr></thead><tbody><tr><th>収入</th><td>30万円</td><td>33万円</td><td class="blue">＋3万円</td></tr><tr><th>支出</th><td>28万円</td><td>33万円</td><td class="red">＋5万円</td></tr><tr class="total"><th>残り</th><td>2万円</td><td>0円</td><td>−2万円</td></tr></tbody></table></div><p class="hint">※「残り」はこの月の収入−支出です。過去の預貯金残高を示すものではありません。</p></div></aside><div class="household-question-main"><div class="panel" id="question-card">
+<div id="house-role-banner" class="house-role-banner" hidden><div><small>今、どの立場で考えている？</small><strong id="house-role-selected"></strong></div><button type="button" class="btn" data-change-house-role>立場を選び直す</button></div>
+<p class="wizard-step" id="q-progress">質問 1 / 4</p><div class="step-indicator"><span class="current"></span><span></span><span></span><span></span></div>
+<div data-quiz="house-role" hidden><h2>この支出を、あなたはどの立場から考える？</h2><p>選んだ使い道：<b id="role-scene-name"></b></p>
+<div class="intent"><small>この問いで考えてみたいこと</small>同じ支出でも、支払う人、使う人、相談する人で気になることが変わりそうです。この支出について、考えやすい立場を一つ選んでください。</div>
+<div class="choice-list house-role-choices" role="group" aria-label="家計で考える立場">
+<button class="btn" data-house-role="budget"><b>家計をやりくりする立場</b><small>今月のお金や、これからの負担が気になる</small></button>
+<button class="btn" data-house-role="user"><b id="house-role-beneficiary">使う本人</b><small>自分にとって何が変わるかが気になる</small></button>
+<button class="btn" data-house-role="family"><b>家族と相談して決める立場</b><small>家族の希望や納得も気になる</small></button>
+<button class="btn" data-house-role="open"><b>立場を決めずに考える</b><small>いろいろな見方から考えてみる</small></button>
+</div><p class="hint">架空の家計です。実際の家族構成や役割に合わせる必要はありません。</p></div>
 <div data-quiz="0"><h2>① 何に使った？</h2><div class="intent"><small>この問いで考えてみたいこと</small>使い道が違うと、気になることも変わりそうです。どの例から考えてみますか？</div><div class="choice-list"><button class="btn" data-scene="education">学費・教育費</button><button class="btn" data-scene="car">車の購入費</button><button class="btn" data-scene="home">住宅・生活設備費</button></div><p class="hint">※3つの選択肢は、支出増の背景を考えるための例です。実際の金額や購入条件を示すものではありません。</p></div>
 
 <div data-quiz="car" hidden>
@@ -367,8 +391,8 @@
     <button class="btn primary" id="car-continue" data-car-continue disabled>支払い方をふまえて、理由を考える →</button>
   </div>
 </div>
-<div data-quiz="1" hidden><h2>② どうして使いたかった？</h2><p>選んだ使い道：<b id="scene-name"></b></p><div class="intent"><small>この問いで考えてみたいこと</small>同じ使い道にも、いくつかの理由がありそうです。近いと思うものを選んでみてください。</div><div class="car-reason-context" id="car-reason-context" hidden></div><div class="choice-list" id="reason-list"></div><div class="navbuttons"><button class="btn" data-qback="0">使い道を選び直す</button></div></div>
-<div data-quiz="2" hidden><h2>③ そのあと、どう感じそう？</h2><div class="intent"><small>この問いで考えてみたいこと</small>使ったあとの気持ちを想像してみましょう。選んだあと、その気持ちの中身も少し確かめてみます。</div><div class="choice-list"><button class="btn" data-feeling="満足に近い">満足に近い</button><button class="btn" data-feeling="まだわからない">まだわからない</button><button class="btn" data-feeling="気になる点がある">気になる点がある</button></div>
+<div data-quiz="1" hidden><h2>② どうして使いたかった？</h2><p>選んだ使い道：<b id="scene-name"></b></p><p class="house-role-note" id="reason-role-note"></p><div class="intent"><small>この問いで考えてみたいこと</small>今の立場から考えると、何をかなえたかったでしょう。近いものを選んでみてください。</div><div class="car-reason-context" id="car-reason-context" hidden></div><div class="choice-list" id="reason-list"></div><div class="navbuttons"><button class="btn" data-qback="0">使い道を選び直す</button></div></div>
+<div data-quiz="2" hidden><h2>③ そのあと、どう感じそう？</h2><p class="house-role-note" id="feeling-role-note"></p><div class="intent"><small>この問いで考えてみたいこと</small>使ったあとの気持ちを想像してみましょう。選んだあと、その気持ちの中身も少し確かめてみます。</div><div class="choice-list"><button class="btn" data-feeling="満足に近い">満足に近い</button><button class="btn" data-feeling="まだわからない">まだわからない</button><button class="btn" data-feeling="気になる点がある">気になる点がある</button></div>
   <div class="feeling-deeper" id="feeling-deeper" hidden aria-live="polite">
     <h3 id="feeling-deeper-title">何が気になる？</h3>
     <p id="feeling-deeper-intro" class="hint"></p>
@@ -377,7 +401,7 @@
   <div class="navbuttons"><button class="btn" data-qback="1">理由に戻る</button></div>
 </div>
 <div data-quiz="3" hidden><h2>④ 次はどうする？</h2><div class="intent"><small>この問いで考えてみたいこと</small>次に同じ場面があったら、どうしたいでしょう。今のままでも、違う選び方でも大丈夫です。</div><p id="next-feeling-context" class="feeling-context"></p><div class="choice-list"><button class="btn" data-next="同じように考える">同じように考える</button><button class="btn" data-next="少し工夫してみる">少し工夫してみる</button><button class="btn" data-next="別の方法も比べる">別の方法も比べる</button></div><div class="navbuttons"><button class="btn" data-qback="2">気持ちに戻る</button></div></div>
-<div data-quiz="4" hidden><h2>家計の振り返り</h2><div class="summary-row"><div><small>何に使った？</small><strong id="sum-scene"></strong></div><div><small>目的は？</small><strong id="sum-reason"></strong></div><div><small>気持ちは？</small><strong id="sum-feeling"></strong><span class="feeling-focus-summary" id="sum-feeling-focus"></span></div><div><small>次は？</small><strong id="sum-next"></strong></div></div><div class="car-summary-row" id="sum-car-payment-row" hidden><small>車の支払い方</small><strong id="sum-car-payment"></strong><p class="hint" id="sum-car-note"></p></div><div class="notice"><b id="sum-msg"></b><p style="margin:6px 0 0">残った金額と使った理由を並べると、ほかにも気づくことがあるかもしれません。</p></div><div class="navbuttons"><button class="btn" data-another="yes">別の使い道を選ぶ</button><button class="btn primary" data-goto="company">会社の例も見てみる →</button></div></div>
+<div data-quiz="4" hidden><h2>家計の振り返り</h2><p class="house-role-note">家計で選んだ立場：<strong id="sum-house-role"></strong></p><div class="summary-row"><div><small>何に使った？</small><strong id="sum-scene"></strong></div><div><small>目的は？</small><strong id="sum-reason"></strong></div><div><small>気持ちは？</small><strong id="sum-feeling"></strong><span class="feeling-focus-summary" id="sum-feeling-focus"></span></div><div><small>次は？</small><strong id="sum-next"></strong></div></div><div class="car-summary-row" id="sum-car-payment-row" hidden><small>車の支払い方</small><strong id="sum-car-payment"></strong><p class="hint" id="sum-car-note"></p></div><div class="notice"><b id="sum-msg"></b><p style="margin:6px 0 0">残った金額と使った理由を並べると、ほかにも気づくことがあるかもしれません。</p></div><div class="navbuttons"><button class="btn" data-another="yes">別の使い道を選ぶ</button><button class="btn primary" data-goto="company">会社の例も見てみる →</button></div></div>
 </div></div></div></section>
 <section class="section" data-page="company" hidden>
 <p class="eyebrow">04 / 05　会社で考える</p>
@@ -385,7 +409,7 @@
 <p class="lead">家計で「何をかなえたかったか」を手がかりに、会社の支出も考えてみましょう。</p>
 <div class="panel company-handoff">
   <span class="handoff-label">家計で求めたこと</span>
-  <div class="handoff-pills"><span><small>使い道</small><b id="handoff-item">—</b></span><span><small>大切にしたこと</small><b id="handoff-reason">—</b></span><span><small>感じたこと</small><b id="handoff-feeling">—</b></span><span><small>次は</small><b id="handoff-next">—</b></span></div>
+  <div class="handoff-pills"><span><small>家計での立場</small><b id="handoff-house-role">—</b></span><span><small>使い道</small><b id="handoff-item">—</b></span><span><small>大切にしたこと</small><b id="handoff-reason">—</b></span><span><small>感じたこと</small><b id="handoff-feeling">—</b></span><span><small>次は</small><b id="handoff-next">—</b></span></div>
   <p id="handoff-message" class="handoff-message"></p><p id="handoff-feeling-focus" class="feeling-context" hidden></p>
 </div>
 <div class="panel case-overview" id="company-case-overview">
@@ -430,7 +454,7 @@
 
   <div class="v39-pair" aria-label="家計と会社での選択の振り返り">
     <div class="v39-pair-card v39-home">
-      <span class="v39-eyebrow">家計で求めたこと</span>
+      <span class="v39-eyebrow">家計で求めたこと</span><p class="v41-summary-role">考えた立場：<strong id="v41-summary-house-role">—</strong></p>
       <h2 id="v39-house-item">—</h2>
       <p id="v39-house-purpose">—</p>
       <small id="v39-house-payment" hidden></small>
@@ -496,9 +520,46 @@
 <footer class="footer"><div class="wrap"><span>© 2026 ことねや　｜　架空の数字を使った体験です。選択内容は外部へ送信されません。</span><div class="bottom-links"><a href="/">TOP</a><a href="/comics/">4コマ一覧</a><a href="/stamps/">LINEスタンプ</a><a href="/privacy/">アクセス解析について</a></div></div></footer>
 <script>
 (()=>{'use strict';
-const state={page:'tree',tree:'',q:0,scene:'',payment:'',reason:'',feeling:'',feelingFocus:'',next:'',plan:'',priority:'',role:'',summaryRole:''};
+const state={page:'tree',tree:'',q:'house-role',houseRole:'',reasonIndex:-1,scene:'',payment:'',reason:'',feeling:'',feelingFocus:'',next:'',plan:'',priority:'',role:'',summaryRole:''};
 const sets={flower:{name:'花',title:'どんな結果を目指したい？',intent:'どんな結果を思い浮かべるか、少し考えてみませんか。',words:['利益が残る','人が育つ','満足につながる','続けられる'],overlay:['利益が残る','人が育つ','満足','続けられる']},branch:{name:'枝',title:'誰の立場から見る？',intent:'立場によって、どんなところに目が向くでしょう。',words:['経営者','総務・経理','社員','お客さま'],overlay:['経営者','総務・経理','社員','お客さま']},trunk:{name:'幹',title:'何を共通の基準にする？',intent:'比べられそうな数字や共通点を探してみましょう。',words:['売上と費用','時間と手間','予算と実績','管理会計'],overlay:['売上','費用','時間','実績']},root:{name:'根',title:'そもそも何のため？',intent:'何を大切にしたいかを考える入口です。',words:['目的を共有','何を優先？','なぜ必要？','どう確かめる？'],overlay:['目的','優先順位','必要性','確かめる']}};
 const cases={education:{label:'学費・教育費',reasons:['子どもの学びを増やしたかった','将来の選択肢を広げたかった','本人の希望を応援したかった','まだ理由を一つに決められない']},car:{label:'車の購入費',reasons:['移動の負担を減らしたかった','安全を大切にしたかった','家族の行動範囲を広げたかった','まだ理由を一つに決められない']},home:{label:'住宅・生活設備費',reasons:['暮らしを快適にしたかった','健康や安心を大切にしたかった','古い設備の不便を解消したかった','まだ理由を一つに決められない']}};
+
+const houseRoles={budget:'家計をやりくりする立場',user:'その支出を使う本人',family:'家族と相談して決める立場',open:'立場を決めずに考える'};
+const houseReasons={
+ education:{
+  budget:['家計の範囲で学びの機会をつくりたかった','将来につながる使い方をしたかった','学ぶ本人の希望を支えたかった','まだ理由を一つに決められない'],
+  user:['新しいことを学んでみたかった','これからできることを増やしたかった','自分のやりたいことに挑戦したかった','まだ理由を一つに決められない'],
+  family:['家族が学べる機会をつくりたかった','将来の可能性を一緒に考えたかった','学ぶ本人の希望を大切にしたかった','まだ理由を一つに決められない'],
+  open:['学ぶ機会を増やしたかった','将来の選択肢を広げたかった','学ぶ本人の希望を大切にしたかった','まだ理由を一つに決められない']},
+ car:{
+  budget:['毎日の移動の負担を減らしたかった','安全に移動できる手段を選びたかった','移動できる範囲を広げたかった','まだ理由を一つに決められない'],
+  user:['自分の移動をもっと楽にしたかった','安心して運転・利用したかった','行きたい場所に行きやすくしたかった','まだ理由を一つに決められない'],
+  family:['家族の移動を楽にしたかった','家族の安全を大切にしたかった','一緒に出かける機会を増やしたかった','まだ理由を一つに決められない'],
+  open:['移動の負担を減らしたかった','安全を大切にしたかった','行動範囲を広げたかった','まだ理由を一つに決められない']},
+ home:{
+  budget:['無理のない範囲で暮らしを快適にしたかった','安心して暮らせるようにしたかった','設備の不便を解消したかった','まだ理由を一つに決められない'],
+  user:['自分の暮らしを快適にしたかった','安心して設備を使いたかった','日ごろの不便を減らしたかった','まだ理由を一つに決められない'],
+  family:['家族みんなが快適に過ごせるようにしたかった','家族の健康や安心を大切にしたかった','設備の不便を一緒に解消したかった','まだ理由を一つに決められない'],
+  open:['暮らしを快適にしたかった','健康や安心を大切にしたかった','古い設備の不便を解消したかった','まだ理由を一つに決められない']}
+ };
+function houseRoleLabel(){return state.houseRole==='user'?({education:'学ぶ本人',car:'車を使う本人',home:'設備を使う本人'}[state.scene]||'その支出を使う本人'):(houseRoles[state.houseRole]||'立場を決めずに考える');}
+function setHouseRole(key){
+ if(!houseRoles[key])return;
+ const changed=state.houseRole!==key;
+ state.houseRole=key;
+ $('#house-role-selected').textContent=houseRoleLabel();
+ $('#house-role-banner').hidden=false;
+ if(changed&&state.scene){
+  state.reason='';state.reasonIndex=-1;state.feeling='';state.feelingFocus='';state.next='';state.plan='';state.priority='';state.role='';state.summaryRole='';
+  $('#reason-list').innerHTML=houseReasons[state.scene][state.houseRole].map((w,i)=>`<button class="btn full" data-reason-choice="${w}" data-reason-index="${i}">${w}</button>`).join('');
+  $('#feeling-deeper').hidden=true;
+  $$('[data-feeling]').forEach(b=>b.classList.remove('selected'));
+ }
+ $('#reason-role-note').textContent='今の立場：'+houseRoleLabel();
+ $('#feeling-role-note').textContent='今の立場：'+houseRoleLabel();
+ question(state.scene==='car'?'car':state.scene?1:0);
+}
+
 const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
 // Region layers keep the illustrated tree consistent; each selection brightens only its area.
 const treeStage=$('.tree-stage');
@@ -539,7 +600,7 @@ function tree(key){
  $('#tree-detail').innerHTML=`<span class="tag">${d.name}｜${({flower:'結果',branch:'立場',trunk:'共通の数字',root:'目的'}[key])}</span><h2>${d.title}</h2><p class="hint">${d.intent}</p><div class="word-grid">${d.words.map(w=>`<div class="word">${w}</div>`).join('')}</div>`;
  $('#float-words').innerHTML=d.overlay.map((w,i)=>`<span class="tree-term tree-term--${key} tree-term--${i+1}">${w}</span>`).join('');
 }
-function question(q){state.q=q;$$('[data-quiz]').forEach(e=>e.hidden=e.dataset.quiz!==String(q));$$('.step-indicator span').forEach((e,i)=>e.classList.toggle('current',i===(q==='car'?0:Math.min(q,3))));$('#q-progress').textContent=q==='car'?'質問1 の続き｜車の支払い方':q===4?'ふり返り':`質問 ${q+1} / 4`;$('#question-card').scrollIntoView({behavior:'smooth',block:'start'});}
+function question(q){state.q=q;$('#house-role-banner').hidden=!state.houseRole||q==='house-role';$$('[data-quiz]').forEach(e=>e.hidden=e.dataset.quiz!==String(q));$$('.step-indicator span').forEach((e,i)=>e.classList.toggle('current',i===(q==='house-role'?-1:q==='car'?0:Math.min(q,3))));$('#q-progress').textContent=q==='house-role'?'使い道の次に｜考える立場':q==='car'?'質問1 の続き｜車の支払い方':q===4?'ふり返り':`質問 ${q+1} / 4`;$('#question-card').scrollIntoView({behavior:'smooth',block:'start'});}
 // One additional, concrete question within ③; the answer remains open-ended and nonjudgmental.
 const feelingTopics={
  education:{
@@ -564,6 +625,10 @@ function showFeelingDetail(){
  const titles={'満足に近い':'どんなところが、よかったと思えそう？','まだわからない':'何がわかれば、判断できそう？','気になる点がある':'具体的には、何が気になる？'};
  const intros={'満足に近い':'満足の理由は人それぞれ。近いものを一つ選んでみてください。','まだわからない':'まだ決めなくても大丈夫。何を確かめたいかだけ考えてみましょう。','気になる点がある':'気になる理由を一つ言葉にしてみましょう。まだ決められなくても大丈夫です。'};
  const topics=[...(feelingTopics[scene]?.[mood]||[])];
+ if(scene==='education'&&state.houseRole==='user'){
+  const own={'満足に近い':['新しいことを学べた','やってみたいことに近づいた','できることが増えそう'],'まだわからない':['学びが身につきそうか','費用や時間をかけ続けられるか','自分に合っているか'],'気になる点がある':['費用や時間の負担をどうするか','学び方が自分に合うか','身につけたことを使えそうか']};
+  topics.splice(0,topics.length,...own[mood]);
+ }
  if(scene==='car'&&mood==='気になる点がある'){
    topics.splice(0,3,...(state.payment==='loan' ? ['毎月の返済を続けられるか','支払総額がどのくらい増えるか','維持費と使い勝手はどうか'] : ['購入後の手元資金は大丈夫か','維持費を負担できるか','車の使い勝手はどうか']));
  }
@@ -579,7 +644,7 @@ function showFeelingDetail(){
  $('#feeling-deeper').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function setActive(group,value){$$(`[data-${group}]`).forEach(e=>e.classList.toggle('selected',e.dataset[group]===value));}
-function selectScene(v){state.scene=v;state.payment='';state.reason='';state.feeling='';state.feelingFocus='';state.next='';$('#feeling-deeper').hidden=true;$$('[data-feeling]').forEach(b=>b.classList.remove('selected'));$('#scene-name').textContent=cases[v].label;$('#reason-list').innerHTML=cases[v].reasons.map(w=>`<button class="btn full" data-reason-choice="${w}">${w}</button>`).join('');$('#car-reason-context').hidden=true;$('#car-payment-result').hidden=true;$('#car-continue').disabled=true;$$('[data-payment]').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')});question(v==='car'?'car':1);}
+function selectScene(v){state.scene=v;$('#role-scene-name').textContent=cases[v].label;$('#house-role-beneficiary').textContent=({education:'学ぶ本人',car:'車を使う本人',home:'設備を使う本人'})[v];state.payment='';state.reason='';state.reasonIndex=-1;state.feeling='';state.feelingFocus='';state.next='';$('#feeling-deeper').hidden=true;$$('[data-feeling]').forEach(b=>b.classList.remove('selected'));$('#scene-name').textContent=cases[v].label;$('#reason-role-note').textContent='今の立場：'+houseRoleLabel();$('#feeling-role-note').textContent='今の立場：'+houseRoleLabel();$('#reason-list').innerHTML=houseReasons[v][state.houseRole||'open'].map((w,i)=>`<button class="btn full" data-reason-choice="${w}" data-reason-index="${i}">${w}</button>`).join('');$('#car-reason-context').hidden=true;$('#car-payment-result').hidden=true;$('#car-continue').disabled=true;$$('[data-payment]').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')});question('house-role');}
 function selectPayment(v){
  if(state.scene!=='car'||!['cash','loan'].includes(v))return;
  state.payment=v;
@@ -599,7 +664,7 @@ function selectPayment(v){
 function summary(){const d=cases[state.scene];$('#sum-scene').textContent=d.label;
  const car=state.scene==='car';$('#sum-car-payment-row').hidden=!car;
  if(car){const cash=state.payment==='cash';$('#sum-car-payment').textContent=cash?'一括払い110万円':'ローン5万円×24回（総額120万円）';$('#sum-car-note').textContent=cash?'購入月の収支差額−105万円／翌月＋5万円（別試算）':'購入月・翌月の収支差額0円（返済期間中・別試算）';}
-$('#sum-reason').textContent=state.reason;$('#sum-feeling').textContent=state.feeling;$('#sum-feeling-focus').textContent=feelingFocusLabel()+'：'+state.feelingFocus;$('#sum-next').textContent=state.next;const map={'満足に近い':'満足に近いと感じるとしたら、どの部分がよかったのでしょう。','まだわからない':'今は決めずに、使ってから考える選び方もありそうです。','気になる点がある':'気になる点があるとしたら、どんなことを比べておきたいでしょう。'};$('#sum-msg').textContent=(map[state.feeling]||'')+' 今回は「'+state.feelingFocus+'」にも目を向けました。';question(4);}
+$('#sum-house-role').textContent=houseRoleLabel();$('#sum-reason').textContent=state.reason;$('#sum-feeling').textContent=state.feeling;$('#sum-feeling-focus').textContent=feelingFocusLabel()+'：'+state.feelingFocus;$('#sum-next').textContent=state.next;const map={'満足に近い':'満足に近いと感じるとしたら、どの部分がよかったのでしょう。','まだわからない':'今は決めずに、使ってから考える選び方もありそうです。','気になる点がある':'気になる点があるとしたら、どんなことを比べておきたいでしょう。'};$('#sum-msg').textContent=(map[state.feeling]||'')+' 今回は「'+state.feelingFocus+'」にも目を向けました。';question(4);}
 const companyCases={
  education:{
   title:'社員の学びに、お金と時間を使うとしたら？',description:'社員向けに研修を用意することになりました。社内で企画する方法と、外部研修を利用する方法を比べてみましょう。',
@@ -646,7 +711,7 @@ const companyPurposes={
 function currentCompanyCase(){return companyCases[state.scene]||companyCases.education;}
 function currentCompanyPurpose(){
  const reasons=cases[state.scene]?.reasons||[];
- const index=reasons.indexOf(state.reason);
+ const index=state.reasonIndex>=0?state.reasonIndex:reasons.indexOf(state.reason);
  const opts=companyPurposes[state.scene]||companyPurposes.education;
  return opts[index>=0?index:opts.length-1];
 }
@@ -654,7 +719,7 @@ function currentCompanyPurpose(){
 function renderCompanyCase(){
  const c=currentCompanyCase();
  $('#company-title').textContent='家計で求めたことを、会社ならどう考える？';
- $('#handoff-item').textContent=cases[state.scene]?.label||'—';
+ $('#handoff-house-role').textContent=houseRoleLabel();$('#handoff-item').textContent=cases[state.scene]?.label||'—';
  $('#handoff-reason').textContent=state.reason||'—';
  $('#handoff-feeling').textContent=state.feeling||'—';$('#handoff-feeling-focus').textContent='家計で'+feelingFocusLabel()+'：'+(state.feelingFocus||'まだ考え中');$('#handoff-feeling-focus').hidden=!state.feelingFocus;
  $('#handoff-next').textContent=state.next||'—';
@@ -702,7 +767,7 @@ function finalSummary(){
  const ix={cost:0,time:1,quality:2};
  const priority=state.priority==='undecided'?'今は一つに絞らない':(c.priorityLabels[ix[state.priority]]||'確認中');
  const payment=state.scene!=='car'?'':state.payment==='cash'?'一括払い110万円':'ローン 月5万円×24回（総額120万円）';
- $('#v39-house-item').textContent=h.label;
+ $('#v39-house-item').textContent=h.label;$('#v41-summary-house-role').textContent=houseRoleLabel();
  $('#v39-house-purpose').textContent=state.reason||'まだ考え中';
  $('#v39-house-payment').hidden=state.scene!=='car';
  $('#v39-house-payment').textContent=payment;
@@ -734,7 +799,7 @@ function finalSummary(){
  state.summaryRole=state.role;
  finalRole();
 }
-document.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;if(b.dataset.part){tree(b.dataset.part);return}if(b.dataset.goto){if(b.dataset.goto==='company'){if(state.page!=='summary'){state.plan='';state.priority='';state.role='';}renderCompanyCase();company();}page(b.dataset.goto);return}if(b.dataset.qback!==undefined){question(Number(b.dataset.qback));return}if(b.dataset.first){document.querySelectorAll('[data-first]').forEach(x=>x.classList.toggle('selected',x===b));$('#first-note').hidden=false;$('#first-note').textContent=({'income':'収入の増加に注目すると、増えた理由やお金の使い道も気になりそうです。','expense':'支出の増加に注目すると、その使い道も見てみたくなるかもしれません。','balance':'残りが減った点に注目すると、支出の背景も気になりそうです。','context':'使い道や事情を見てから考える方法もあります。次は、使い道の例を見てみましょう。'})[b.dataset.first];return}if(b.dataset.scene){selectScene(b.dataset.scene);return}if(b.dataset.payment){selectPayment(b.dataset.payment);return}if(b.hasAttribute('data-car-continue')){if(state.payment)question(1);return}if(b.dataset.reasonChoice){state.reason=b.dataset.reasonChoice;state.feeling='';state.feelingFocus='';state.next='';$('#feeling-deeper').hidden=true;$$('[data-feeling]').forEach(x=>x.classList.remove('selected'));question(2);return}if(b.dataset.feeling){state.feeling=b.dataset.feeling;state.feelingFocus='';state.next='';showFeelingDetail();return}if(b.dataset.feelingFocus){state.feelingFocus=b.dataset.feelingFocus;$('#next-feeling-context').textContent=feelingFocusLabel()+'：「'+state.feelingFocus+'」。それもふまえて、次はどうしたい？';question(3);return}if(b.dataset.next){state.next=b.dataset.next;summary();return}if(b.dataset.plan){state.plan=b.dataset.plan;company();return}if(b.dataset.priority){state.priority=b.dataset.priority;company();return}if(b.dataset.role){state.role=b.dataset.role;company();return}if(b.dataset.finalRole){state.summaryRole=b.dataset.finalRole;finalRole();return}if(b.dataset.finish){finalSummary();page('summary');return}if(b.dataset.startover){state.scene='';state.payment='';state.q=0;state.reason='';state.feeling='';state.feelingFocus='';state.next='';state.plan='';state.priority='';state.role='';state.summaryRole='';$('#feeling-deeper').hidden=true;$$('[data-feeling]').forEach(x=>x.classList.remove('selected'));question(0);company();tree(null);page('tree');return}if(b.dataset.another){state.plan='';state.priority='';state.role='';question(0);page('questions');return}});
+document.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;if(b.dataset.part){tree(b.dataset.part);return}if(b.dataset.goto){if(b.dataset.goto==='company'){if(state.page!=='summary'){state.plan='';state.priority='';state.role='';}renderCompanyCase();company();}page(b.dataset.goto);return}if(b.dataset.qback!==undefined){question(Number(b.dataset.qback));return}if(b.hasAttribute('data-change-house-role')){question('house-role');return}if(b.dataset.houseRole){setHouseRole(b.dataset.houseRole);return}if(b.dataset.first){document.querySelectorAll('[data-first]').forEach(x=>x.classList.toggle('selected',x===b));$('#first-note').hidden=false;$('#first-note').textContent=({'income':'収入の増加に注目すると、増えた理由やお金の使い道も気になりそうです。','expense':'支出の増加に注目すると、その使い道も見てみたくなるかもしれません。','balance':'残りが減った点に注目すると、支出の背景も気になりそうです。','context':'使い道や事情を見てから考える方法もあります。次は、使い道の例を見てみましょう。'})[b.dataset.first];return}if(b.dataset.scene){selectScene(b.dataset.scene);return}if(b.dataset.payment){selectPayment(b.dataset.payment);return}if(b.hasAttribute('data-car-continue')){if(state.payment)question(1);return}if(b.dataset.reasonChoice){state.reason=b.dataset.reasonChoice;state.reasonIndex=Number(b.dataset.reasonIndex??-1);state.feeling='';state.feelingFocus='';state.next='';$('#feeling-deeper').hidden=true;$$('[data-feeling]').forEach(x=>x.classList.remove('selected'));question(2);return}if(b.dataset.feeling){state.feeling=b.dataset.feeling;state.feelingFocus='';state.next='';showFeelingDetail();return}if(b.dataset.feelingFocus){state.feelingFocus=b.dataset.feelingFocus;$('#next-feeling-context').textContent=feelingFocusLabel()+'：「'+state.feelingFocus+'」。それもふまえて、次はどうしたい？';question(3);return}if(b.dataset.next){state.next=b.dataset.next;summary();return}if(b.dataset.plan){state.plan=b.dataset.plan;company();return}if(b.dataset.priority){state.priority=b.dataset.priority;company();return}if(b.dataset.role){state.role=b.dataset.role;company();return}if(b.dataset.finalRole){state.summaryRole=b.dataset.finalRole;finalRole();return}if(b.dataset.finish){finalSummary();page('summary');return}if(b.dataset.startover){state.houseRole='';state.reasonIndex=-1;$('#house-role-banner').hidden=true;state.scene='';state.payment='';state.q=0;state.reason='';state.feeling='';state.feelingFocus='';state.next='';state.plan='';state.priority='';state.role='';state.summaryRole='';$('#feeling-deeper').hidden=true;$$('[data-feeling]').forEach(x=>x.classList.remove('selected'));question(0);company();tree(null);page('tree');return}if(b.dataset.another){state.plan='';state.priority='';state.role='';question(0);page('questions');return}});
 tree(null);renderCompanyCase();company();question(0);page('tree');})();
 </script>
 </body></html>
