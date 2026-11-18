@@ -407,6 +407,12 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 .footer-brand-link{display:inline-flex;align-items:center;gap:6px}
 .footer-brand-link img{height:17px;width:17px;filter:invert(1)}
 @media(max-width:420px){.v17-buttons .social-cta{width:100%;min-height:48px;white-space:normal}}
+
+/* Small official trio decoration beside TOP section labels. */
+#comics .section-heading-deco,#method .section-heading-deco{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;margin:0 0 5px}
+#comics .section-mascots,#method .section-mascots{display:flex;align-items:center;gap:5px;flex-shrink:0}
+#comics .section-mascots img,#method .section-mascots img{width:44px;height:44px;object-fit:contain;background:#fff;border:1px solid #e4eae5;border-radius:10px;padding:2px;box-shadow:0 1px 5px rgba(21,53,30,.05)}
+@media(max-width:440px){#comics .section-heading-deco,#method .section-heading-deco{min-height:43px}#comics .section-mascots img,#method .section-mascots img{width:36px;height:36px;padding:1px}}
 </style>
 <!-- Google Analytics 4: ことねや公式HP -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2BKBCCMGG"></script>
@@ -419,7 +425,7 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ことねや","url":"https://kotoneya29.github.io/","inLanguage":"ja-JP","description":"ことねやは、仕事やお金の小さな「なんでやろ？」を4コマ漫画で楽しく考えるサイト。こと・ね・やと一緒に気づき、問い直し、確かめて次の一歩へ。LINEスタンプや経営支援プログラム「ことねや式」も紹介します。"}</script>
 <link rel="stylesheet" href="/assets/kotoneya-global-header.css?v=1"></head>
 <body>
-<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/comics/">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/news/">NEWS</a><a href="/contact/">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
+<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/news/">NEWS</a><a href="/contact/">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <main id="top">
 <section aria-label="ことねや ブランド紹介" class="hero"><div class="wrap"><div class="v17-header-visual"><div class="v17-hero-art"><img alt="こと・ね・や。緑のこと、黄色のね、青のやの3人" fetchpriority="high" height="610" src="assets/kotoneya-mascots-from-banner.png" width="1120"/></div><div class="v17-hero-intro"><p class="v17-hello">HELLO, KOTONEYA!</p><h1>気づいて、問い直して、<br/>確かめて、やってみよう！</h1><p class="v17-lead">日常の小さな「なんでやろ？」を、<br/>こと・ね・やと一緒に考える。</p><div class="v17-badges"><span>こと｜気づき</span><span>ね｜問い直し</span><span>や｜確認・行動</span></div><div class="v17-buttons">
 <a class="button button-archive" href="comics/">4コマを読む →</a>
@@ -429,7 +435,7 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 <div class="rule"></div>
 <section class="section section-tint" id="comics">
 <div class="wrap section-shell"><div class="section-accent" aria-hidden="true"></div>
-<div class="section-label">WEEKLY 4-COMA</div>
+<div class="section-heading-deco"><div class="section-label">WEEKLY 4-COMA</div><div class="section-mascots" aria-hidden="true"><img src="/assets/koto-portrait-from-master.png" width="44" height="44" loading="lazy" alt=""><img src="/assets/ne-portrait-from-master.png" width="44" height="44" loading="lazy" alt=""><img src="/assets/ya-portrait-from-master.png" width="44" height="44" loading="lazy" alt=""></div></div>
 <h2 class="section-title">日常の小さなズレを、4コマに。</h2>
 <p class="section-lead">とある製造会社で働く「いっかい」が、「こと・ね・や」と一緒に、仕事やお金の小さな「なぜ？」を考える4コマ。</p>
 <div class="comics-archive-entry"><div><strong>週刊4コマを公開中！</strong><span>最新話もバックナンバーも、こちらからまとめて読めます。</span></div><a class="button button-archive" href="comics/">4コマ・バックナンバーを見る →</a></div>
@@ -496,7 +502,7 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 <section class="section section-tint" id="method">
 <div class="wrap section-shell">
 <div class="section-accent" aria-hidden="true"></div>
-<div class="section-label">KOTONEYA METHOD</div>
+<div class="section-heading-deco"><div class="section-label">KOTONEYA METHOD</div><div class="section-mascots" aria-hidden="true"><img src="/assets/koto-portrait-from-master.png" width="44" height="44" loading="lazy" alt=""><img src="/assets/ne-portrait-from-master.png" width="44" height="44" loading="lazy" alt=""><img src="/assets/ya-portrait-from-master.png" width="44" height="44" loading="lazy" alt=""></div></div>
 <h2 class="section-title">使う会計から、つくる会計へ。</h2>
 <p class="section-lead">家計も会社も、目的や立場は違っても、考え方はつながっています。</p>
 <div class="method-overview-layout">
