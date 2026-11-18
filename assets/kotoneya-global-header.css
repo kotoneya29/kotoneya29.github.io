@@ -1,0 +1,19 @@
+/* Kotoneya global site header — common to every public page. */
+.k-site-header{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.975);border-bottom:1px solid #e7e7e7;color:#202329;backdrop-filter:blur(10px);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.45}
+.k-site-header::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#62bd39 0 33.33%,#f4c333 33.33% 66.66%,#2ab5e8 66.66% 100%)}
+.k-site-header *,.k-site-header *::before,.k-site-header *::after{box-sizing:border-box}
+.k-header-inner{width:min(1100px,calc(100% - 42px));margin:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+.k-header-brand{display:inline-flex;align-items:center;gap:9px;font-size:1rem;font-weight:850;white-space:nowrap;letter-spacing:.03em;color:#202329!important;text-decoration:none!important;flex-shrink:0}
+.k-header-brand-label{color:#168e3c;font-weight:900;letter-spacing:.10em}
+.k-header-brand:hover .k-header-brand-label{text-decoration:underline;text-underline-offset:5px}
+.k-header-nav{display:flex;align-items:center;justify-content:flex-end;gap:22px;flex-wrap:nowrap;min-width:0;font-size:.82rem;font-weight:800;white-space:nowrap}
+.k-header-nav>a{color:#202329!important;text-decoration:none!important;line-height:1.45;flex-shrink:0}
+.k-header-nav>a:not(.k-header-shop):hover,.k-header-nav>a[aria-current="page"]{color:#14723b!important;text-decoration:underline!important;text-underline-offset:6px}
+.k-header-nav .k-header-shop{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid #d7ead8;border-radius:999px;background:#fff;color:#202329!important}
+.k-header-nav .k-header-shop:hover{background:#f1faef}
+.k-header-shop img{width:27px;height:27px;display:block;object-fit:contain}
+.k-site-header a:focus-visible{outline:3px solid #2ab5e8;outline-offset:3px}
+@media(max-width:1030px){.k-header-inner{gap:14px}.k-header-nav{gap:13px;font-size:.76rem}.k-header-nav .k-header-shop{padding:6px 10px}}
+@media(max-width:820px){.k-header-inner{min-height:0;display:block;padding:11px 0 8px}.k-header-brand{font-size:.95rem}.k-header-nav{margin-top:8px;display:flex;justify-content:flex-start;gap:16px;width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#cad5cd transparent;padding:1px 0 7px;font-size:.78rem}.k-header-nav>a{min-height:27px;display:inline-flex;align-items:center}.k-header-nav .k-header-shop{padding:4px 9px}}
+@media(max-width:440px){.k-header-inner{width:calc(100% - 32px)}.k-header-nav{gap:14px;font-size:.76rem}}
+@media(prefers-reduced-motion:reduce){.k-site-header{scroll-behavior:auto}}
