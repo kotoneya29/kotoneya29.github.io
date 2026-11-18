@@ -29,9 +29,13 @@
 .k-site-header .k-header-nav>a[href$="#comics"]::before,
 .k-site-header .k-header-nav>a[href$="#about"]::before{background-image:url("/assets/koto-portrait-from-master.png");}
 .k-site-header .k-header-nav>a[href$="#stamps"]::before,
-.k-site-header .k-header-nav>a[href="/news/"]::before{background-image:url("/assets/ne-portrait-from-master.png");}
+.k-site-header .k-header-nav>a[href$="#news"]::before{background-image:url("/assets/ne-portrait-from-master.png");}
 .k-site-header .k-header-nav>a[href$="#method"]::before,
-.k-site-header .k-header-nav>a[href="/contact/"]::before{background-image:url("/assets/ya-portrait-from-master.png");}
+.k-site-header .k-header-nav>a[href$="#contact-teaser"]::before{background-image:url("/assets/ya-portrait-from-master.png");}
 @media(max-width:1030px){.k-site-header .k-header-nav{gap:9px}.k-site-header .k-header-nav>a:not(.k-header-shop){gap:3px}.k-site-header .k-header-nav>a:not(.k-header-shop)::before{width:20px;height:20px}.k-site-header .k-header-brand::before{width:46px;height:46px}}
 @media(max-width:820px){.k-site-header .k-header-nav{gap:14px}.k-site-header .k-header-nav>a:not(.k-header-shop)::before{width:23px;height:23px}.k-site-header .k-header-brand::before{width:46px;height:46px}}
 @media(max-width:440px){.k-site-header .k-header-nav{gap:11px}.k-site-header .k-header-brand::before{width:42px;height:42px}}
+
+/* Small screens retain a visible, gently separated horizontal menu. */
+@media(max-width:820px){.k-site-header .k-header-nav{border-bottom:1px solid #e2eae3;scrollbar-width:thin;scrollbar-color:#91b49b transparent;padding-bottom:9px}}
+@media(max-width:440px){.k-site-header .k-header-nav{gap:10px;font-size:.75rem}.k-site-header .k-header-nav>a:not(.k-header-shop)::before{width:20px;height:20px}}
