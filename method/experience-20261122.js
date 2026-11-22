@@ -215,6 +215,12 @@
     return `<div class="concept-tree method-tree" data-tree-block>
       <div class="concept-tree-graphic" data-current-part="overview">
         <div class="concept-tree-art" data-original-tree>${FALLBACK_TREE}</div>
+        <svg class="tree-focus-overlay" viewBox="0 0 373 350" preserveAspectRatio="none" aria-hidden="true">
+          <defs><mask id="method-tree-focus-mask"><rect x="0" y="0" width="373" height="350" fill="white"/><path data-tree-hole d="${TREE_REGIONS.root}" fill="black"/></mask></defs>
+          <rect width="373" height="350" fill="#fff" opacity=".57" mask="url(#method-tree-focus-mask)"/>
+          <path data-tree-outline d="${TREE_REGIONS.root}" fill="none" stroke="#fff" stroke-width="6" opacity=".95" stroke-linejoin="round"/>
+          <path data-tree-outline d="${TREE_REGIONS.root}" fill="none" stroke="#26714b" stroke-width="2.8" opacity=".95" stroke-linejoin="round"/>
+        </svg>
         ${wordCloud}
         <div class="method-label flower">花｜経営の成果</div>
         <div class="method-label branch">枝｜立場と役割</div>
@@ -296,7 +302,9 @@
   };
 
   const css=`
-    .method-tree .tree-focus-overlay,.method-tree .tree-focus-label{display:none!important}
+    .method-tree .tree-focus-overlay{display:block;opacity:1;transition:opacity .2s ease}
+    .method-tree .concept-tree-graphic[data-current-part="overview"] .tree-focus-overlay{display:none}
+    .method-tree .tree-focus-label{display:none!important}
     .method-tree .concept-tree-graphic{isolation:isolate}
     .method-tree .method-label{position:absolute;z-index:7;pointer-events:none;white-space:nowrap;
       transform:translate(-50%,-50%);padding:2px 6px;background:rgba(255,255,255,.92);
