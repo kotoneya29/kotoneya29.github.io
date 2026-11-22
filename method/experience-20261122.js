@@ -8,11 +8,13 @@
     branch:{label:"枝｜立場と役割", title:"それぞれの立場と役割",desc:"経営者は方向を決め、総務経理は仕組みを支え、社員は価値を生み出します。それぞれの役割から考え、行動します。",words:["経営者","総務経理","社員","判断と実行"]},
     flower:{label:"花｜経営の成果",title:"目指す成果と実際の結果",desc:"利益が残る、人が育つ、信頼が生まれる、事業が続く。目指した成果と実際の変化を確かめ、次の改善につなげます。",words:["利益が残る","人が育つ","信頼が生まれる","事業が続く","お金が回る","無駄が減る","判断がそろう","安心して働ける","納得が生まれる","仕事が回る","人が集まる","挑戦できる","地域に根づく"]}
   };
+  // Layout coordinates are tuned for the published original 373×350 tree,
+  // not the taller stand-alone test illustration.
   const placements = {
-    root:[[16,83],[50,83],[83,83],[16,91],[50,91],[83,91],[33,97],[68,97]],
-    trunk:[[43,61],[67,65],[43,71],[67,75]],
-    branch:[[27,48],[69,48],[36,55],[74,55]],
-    flower:[[17,11],[50,10],[83,11],[16,19],[51,19],[84,19],[17,28],[51,28],[83,28],[18,36],[50,36],[82,36],[50,43]]
+    root:[[16,85],[83,85],[16,91],[50,91],[83,91],[16,97],[50,97],[83,97]],
+    trunk:[[17,64],[83,64],[17,74],[83,74]],
+    branch:[[17,55],[83,55],[17,61],[83,61]],
+    flower:[[17,16],[50,16],[83,16],[17,23],[50,23],[83,23],[17,30],[50,30],[83,30],[17,37],[50,37],[83,37],[50,44]]
   };
 
   TREE_VOCAB.root = tree.root.words;
@@ -263,11 +265,11 @@
       <p class="story-lead">家計で選んだ考え方を、会社の仕事に置き換えてみましょう。</p>
       ${selectionRibbon()}
       <div class="goalbox"><small>会社で考える目的</small><strong>${escapeHtml(review["会社で考える目的"])}</strong></div>
-      <div class="company-point company-mainpoint"><small>会社の場面で</small><p>${escapeHtml(review["会社の場面で"])}</p></div>
+      <div class="company-point company-mainpoint"><small>会社の具体例</small><p>${escapeHtml(review["会社の場面で"])}</p></div>
       ${steps}${comparison}
       <div class="company-point"><small>立場で見ると</small><p>${escapeHtml(review["立場で見ると"])}</p></div>
       <div class="company-point"><small>確かめる数字・情報</small><p>${escapeHtml(review["確かめる数字"])}</p></div>
-      <div class="method-takeaway"><b>持ち帰る視点</b><p>${escapeHtml(review.takeaway)}</p></div>
+      <p class="method-takeaway"><strong>${escapeHtml(review.takeaway)}</strong></p>
       <section class="story-company-bridge">
       <h2>異なる判断をつなぐ、共通の土台。</h2>
       <div class="story-roles"><div><strong>経営者</strong><span>方向を決める</span></div>
@@ -298,10 +300,10 @@
     .method-tree .method-label{position:absolute;z-index:7;pointer-events:none;white-space:nowrap;
       transform:translate(-50%,-50%);padding:2px 6px;background:rgba(255,255,255,.92);
       border:1px solid #d5e4d8;color:#275940;border-radius:6px;font-weight:800;font-size:clamp(9px,1.1vw,11px)}
-    .method-tree .method-label.flower{top:45%;left:50%}
-    .method-tree .method-label.branch{top:55%;left:50%}
-    .method-tree .method-label.trunk{top:73%;left:50%}
-    .method-tree .method-label.root{top:81%;left:50%}
+    .method-tree .method-label.flower{top:8%;left:50%}
+    .method-tree .method-label.branch{top:49%;left:50%}
+    .method-tree .method-label.trunk{top:69%;left:50%}
+    .method-tree .method-label.root{top:82%;left:50%}
     .method-tree .method-words{position:absolute;inset:0;z-index:6;display:none;pointer-events:none;overflow:hidden}
     .method-tree .concept-tree-graphic[data-current-part="root"] .method-words.root,
     .method-tree .concept-tree-graphic[data-current-part="trunk"] .method-words.trunk,
@@ -309,7 +311,7 @@
     .method-tree .concept-tree-graphic[data-current-part="flower"] .method-words.flower{display:block}
     .method-tree .method-word{position:absolute;transform:translate(-50%,-50%);display:block;white-space:nowrap;
       padding:2px 3px;border:1px solid #d6e6d9;border-radius:5px;background:rgba(255,255,255,.95);
-      color:#27573a;font-size:clamp(7px,.85vw,9px);font-weight:750;line-height:1.4}
+      color:#27573a;font-size:clamp(9px,.96vw,11px);font-weight:750;line-height:1.4}
     .method-tree .method-words.root .method-word{border-color:#e8d7c4;color:#765b43}
     .method-tree .tree-hit{z-index:8}
     .method-tree .tree-hit:hover{background:transparent}
@@ -331,9 +333,9 @@
     .method-business-flow p{margin:4px 0;line-height:1.65}
     .method-business-flow b{display:inline-flex;background:#266448;color:#fff;border-radius:50%;height:21px;width:21px;align-items:center;justify-content:center;font-size:.76rem}
     .method-takeaway{border-left:3px solid #286448;background:#f2f8f2;padding:12px 15px;margin:16px 0;border-radius:3px 10px 10px 3px}
-    .method-takeaway p{margin:6px 0 0;line-height:1.75}
+    .method-takeaway{margin:16px 0;line-height:1.75}
     @media(max-width:650px){
-      .method-tree .method-word{font-size:7px;padding:1px 2px}
+      .method-tree .method-word{font-size:8px;padding:1px 2px}
       .method-tree .method-label{font-size:9px;padding:1px 3px}
       .method-tree .concept-tree-graphic{max-width:310px}
       .method-family-choices .method-choice{min-height:75px}
