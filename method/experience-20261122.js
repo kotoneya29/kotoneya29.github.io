@@ -11,7 +11,7 @@
   // Layout coordinates are tuned for the published original 373×350 tree,
   // not the taller stand-alone test illustration.
   const placements = {
-    root:[[16,85],[83,85],[16,91],[50,91],[83,91],[16,97],[50,97],[83,97]],
+    root:[[16,83],[50,83],[83,83],[16,90],[50,90],[83,90],[33,97],[68,97]],
     trunk:[[17,64],[83,64],[17,74],[83,74]],
     branch:[[17,55],[83,55],[17,61],[83,61]],
     flower:[[17,16],[50,16],[83,16],[17,23],[50,23],[83,23],[17,30],[50,30],[83,30],[17,37],[50,37],[83,37],[50,44]]
@@ -193,6 +193,7 @@
 
   INTRO[4].parts=[["経営の土台","根｜仕組み"],["判断をつなぐ","幹｜管理会計"],["それぞれの役割","枝｜立場"],["目指す成果と結果","花｜成果"]];
   INTRO[4].end="経営の土台をつくり、管理会計で判断をつなぎ、それぞれの役割から行動する。実際の結果を確かめ、必要なら土台や判断を見直します。";
+  V3_QUESTIONS[4][3]="経営の土台を整え、管理会計で判断をつなぎ、それぞれの役割で行動する。結果を確かめ、必要に応じて仕組みを見直しながら、改善を続けます。";
 
   const escapeHtml = (x)=>String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const pairs=[["root","根"],["trunk","幹"],["branch","枝"],["flower","花"]];
@@ -248,7 +249,7 @@
   household=function(){
     // Keep the familiar household table and choice/response flow; replace the old
     // result selection table with the three approved short questions.
-    return originalHousehold().replace('方法を比べて、そのまま選ぶ','気になることから選ぶ')
+    return originalHousehold().replace('<h2>方法を比べて、そのまま選ぶ</h2>','')
       .replace('A案・B案・保留のどれかを選ぶと','A・B・Cのどれかを選ぶと');
   };
 
@@ -301,9 +302,9 @@
       transform:translate(-50%,-50%);padding:2px 6px;background:rgba(255,255,255,.92);
       border:1px solid #d5e4d8;color:#275940;border-radius:6px;font-weight:800;font-size:clamp(9px,1.1vw,11px)}
     .method-tree .method-label.flower{top:8%;left:50%}
-    .method-tree .method-label.branch{top:49%;left:50%}
+    .method-tree .method-label.branch{top:51%;left:50%}
     .method-tree .method-label.trunk{top:69%;left:50%}
-    .method-tree .method-label.root{top:82%;left:50%}
+    .method-tree .method-label.root{top:76%;left:50%}
     .method-tree .method-words{position:absolute;inset:0;z-index:6;display:none;pointer-events:none;overflow:hidden}
     .method-tree .concept-tree-graphic[data-current-part="root"] .method-words.root,
     .method-tree .concept-tree-graphic[data-current-part="trunk"] .method-words.trunk,
