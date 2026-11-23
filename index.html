@@ -614,9 +614,45 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
   #comics.hero-comics-integrated .v17-hero-intro h1{font-size:clamp(1.4rem,5.7vw,1.65rem)}
 }
 </style>
+
+<style>
+/* Official brand closing section: distinct from the method explanation above. */
+#about.brand-about{padding:57px 0 70px;background:linear-gradient(145deg,#f8fbf5,#fffdf7 65%,#f4fbf7);text-align:left}
+#about .brand-about-head{text-align:center;margin:4px auto 25px}
+#about .brand-about-head .section-label{font-size:.73rem;letter-spacing:.16em;color:#587b60;font-weight:850}
+#about .brand-about-head .section-title{font-size:clamp(1.65rem,3vw,2.35rem);margin:8px auto 12px;color:#20593c}
+#about .brand-about-head .section-title::after{margin:12px auto 0}
+#about .brand-about-lead{font-weight:800;color:#2f4e39;line-height:1.65;font-size:clamp(1rem,1.7vw,1.2rem);max-width:none}
+#about .brand-about-origin{color:#647269;font-size:.9rem;max-width:none;margin:8px auto 0}
+#about .brand-about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:stretch}
+#about .brand-logo-card{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;gap:12px;margin:0;padding:24px 18px;background:#fff;border:1px solid #dce7d7;border-radius:18px}
+#about .brand-logo-title{font-weight:800;font-size:.96rem;color:#355f45;text-align:center}
+#about .brand-logo-card img{display:block;width:min(100%,380px);height:auto;max-height:380px;object-fit:contain}
+#about .brand-meaning-card{min-width:0;background:#fff;border:1px solid #dce7d7;border-radius:18px;padding:0 0 20px;overflow:hidden}
+#about .brand-meaning-card h3{margin:0 0 20px;padding:16px 22px;background:#366e4f;color:#fff;font-size:clamp(1.05rem,1.5vw,1.22rem);font-weight:850}
+#about .brand-meaning-card>p{max-width:none;margin:0 23px 15px;line-height:1.9;font-size:.94rem;color:#33463b;text-align:left}
+#about .brand-meaning-flow{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:16px 20px 0;padding:0}
+#about .brand-meaning-flow li{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;min-height:93px;min-width:0;padding:11px 5px;background:#f0f7ec;border:1px solid #e0ebdb;border-radius:12px;text-align:center;position:relative}
+#about .brand-meaning-flow li span{color:#4f855c;font-weight:850;font-size:.77rem}
+#about .brand-meaning-flow li strong{color:#24513a;font-size:.83rem;line-height:1.45}
+#about .brand-about-close{max-width:none;font-size:1rem;font-weight:850;color:#255d41;text-align:center;margin:20px auto 0}
+@media(max-width:850px){
+  #about .brand-about-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  #about .brand-logo-card{padding:18px}
+  #about .brand-logo-card img{max-height:265px;width:min(100%,300px)}
+  #about .brand-meaning-card h3{padding:14px 18px;margin-bottom:16px}
+  #about .brand-meaning-card>p{margin:0 18px 14px}
+}
+@media(max-width:480px){
+  #about.brand-about{padding:44px 0 54px}
+  #about .brand-meaning-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  #about .brand-meaning-flow li{min-height:68px}
+  #about .brand-logo-card img{max-height:230px}
+}
+</style>
 </head>
 <body>
-<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/comics/">4コマ</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#about">ことねや紹介</a><a href="#news">NEWS</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
+<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/comics/">4コマ</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#about">ことねやとは</a><a href="#news">NEWS</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <main id="top">
 <section aria-label="ことねやと週刊4コマの紹介" class="hero hero-comics-integrated" id="comics">
   <div class="wrap">
@@ -705,16 +741,35 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 <a class="button button-dark" href="/contact/index.html">お問い合わせフォームへ →</a>
 </div>
 </section>
-<section class="about" id="about"><div class="wrap section-shell"><div class="section-accent" aria-hidden="true"></div>
-<div class="section-label">ABOUT KOTONEYA</div>
-<h2 class="section-title">「ことねや」＝事を根付かせる場</h2>
-<div class="about-copy">
-<p class="about-opening">日常や仕事の小さな「なぜ？」に気づき、問い直し、確かめる。</p>
-<p>勘や経験を否定せず、数字や事実と照らし合わせ、自分たちで考え、判断し、次の行動につなげていく。</p>
-<p class="about-channels">4コマ漫画で気づきを、LINEスタンプで親しみを、ことねや式で考える体験を。</p>
-<p>こうした活動を通じて、一人ひとりの気づきや経験が、次に活かせる知識として根づいていく。ことねやは、その考え方と実践する楽しさを伝えていきます。</p>
-<p class="about-slogan">できるかな⁉︎をカタチに！</p>
-</div><div class="section-accent about-accent-bottom" aria-hidden="true"></div></div></section>
+<section class="about brand-about" id="about" aria-labelledby="about-title">
+  <div class="wrap section-shell">
+    <div class="section-accent" aria-hidden="true"></div>
+    <div class="brand-about-head">
+      <div class="section-label">ABOUT KOTONEYA｜ことねやの想い</div>
+      <h2 class="section-title" id="about-title">ことねやとは</h2>
+      <p class="brand-about-lead">勘と経験を、次の経営に使える知識へ。</p>
+      <p class="brand-about-origin">「ことねや」＝事を根付かせる場</p>
+    </div>
+    <div class="brand-about-grid">
+      <figure class="brand-logo-card">
+        <div class="brand-logo-title">ことねや ブランド／ロゴ</div>
+        <img src="/assets/kotoneya-official-logo.png?v=1" alt="ことねやの公式ロゴ。感覚や経験から、成長と循環につながる流れを表現したシンボルと、ことねやの文字。" loading="lazy"/>
+      </figure>
+      <div class="brand-meaning-card">
+        <h3>ブランド／ロゴに込めた意味</h3>
+        <p>ことねやのロゴは、感覚や経験を記録・分析につなげ、判断と成長へ結びつけ、次の経営に活かしていく循環を表しています。</p>
+        <p>現場で得た気づきや経験を、使える知識に変えていく。その積み重ねが仕事に根づき、次の判断を支える土台となるように。「根づく支援」の想いを込めています。</p>
+        <ol class="brand-meaning-flow" aria-label="ロゴに込めた4つの流れ">
+          <li><span>01</span><strong>感覚・経験</strong></li>
+          <li><span>02</span><strong>記録・分析</strong></li>
+          <li><span>03</span><strong>判断・成長</strong></li>
+          <li><span>04</span><strong>循環・根づく支援</strong></li>
+        </ol>
+      </div>
+    </div>
+    <p class="brand-about-close">できるかな⁉︎をカタチに！</p>
+  </div>
+</section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><span>© 2026 ことねや</span><span class="footer-note">できるかな⁉︎をカタチに！</span><a class="footer-brand-link" href="https://store.line.me/stickershop/author/6718846/ja" rel="noopener noreferrer" target="_blank"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"/>LINEショップ ↗</a><a href="/comics/">4コマ一覧</a><a href="/news/index.html">NEWS</a><a href="/contact/index.html">お問い合わせ</a><a href="/privacy/">アクセス解析について</a></div></footer>
 
