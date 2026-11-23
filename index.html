@@ -581,28 +581,65 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 @media(max-width:800px){#comics .kotoneya-comics-head{flex-direction:column;gap:5px}#comics .kotoneya-update-pill{margin-top:6px}#stamps .kotoneya-stamp-person{padding:8px;gap:8px}#stamps .kotoneya-stamp-portrait{width:65px;height:76px}}
 @media(max-width:540px){#comics .kotoneya-comics-actions{grid-template-columns:1fr}#stamps .kotoneya-stamp-people{gap:6px}#stamps .kotoneya-stamp-person{flex-direction:column;text-align:center;padding:8px 5px;gap:5px}#stamps .kotoneya-stamp-portrait{width:100%;height:90px}#stamps .kotoneya-stamp-person small{font-size:.69rem}}
 </style>
+
+<style>
+/* Approved integrated TOP hero: PC image/text columns; mobile A image > copy > 4-coma links. */
+#comics.hero-comics-integrated{background:transparent}
+#comics.hero-comics-integrated .v17-header-visual{grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);min-height:0;gap:clamp(18px,3vw,36px)}
+#comics.hero-comics-integrated .v17-hero-art{align-self:center;min-width:0}
+#comics.hero-comics-integrated .v17-hero-art img{display:block;width:100%;max-width:none;max-height:none;height:auto;object-fit:contain}
+#comics.hero-comics-integrated .v17-hero-intro h1{font-size:clamp(1.7rem,2.9vw,2.28rem);line-height:1.45;margin-bottom:14px}
+#comics.hero-comics-integrated .v17-lead{margin:0;font-size:.95rem;line-height:1.8}
+#comics.hero-comics-integrated .hero-comics-subintro{margin:20px 0 0;padding-top:16px;border-top:1px solid #d8e7d9}
+#comics.hero-comics-integrated .hero-comics-subintro strong{display:block;color:#21593a;font-size:1rem;line-height:1.6}
+#comics.hero-comics-integrated .hero-comics-subintro p{font-size:.88rem;line-height:1.75;color:#56695b;margin:5px 0 9px}
+#comics.hero-comics-integrated .kotoneya-update-pill{display:inline-block;margin:0;padding:5px 10px}
+#comics.hero-comics-integrated .hero-comics-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:15px}
+#comics.hero-comics-integrated .hero-comics-actions .button{display:inline-flex;justify-content:center;align-items:center;gap:7px;min-width:0;width:100%;min-height:48px;padding:10px 8px;font-size:.9rem;text-align:center;white-space:normal;line-height:1.4}
+#comics.hero-comics-integrated .hero-comics-actions .hero-comics-x{background:#202329;border:1px solid #202329;color:#fff}
+#comics.hero-comics-integrated .hero-comics-actions .hero-comics-x img{width:18px;height:18px;filter:invert(1);object-fit:contain}
+@media(max-width:750px){
+  #comics.hero-comics-integrated .v17-header-visual{display:flex;flex-direction:column;gap:12px;padding:18px 16px}
+  #comics.hero-comics-integrated .v17-hero-art{order:0;width:100%;max-width:540px;margin:0 auto}
+  #comics.hero-comics-integrated .v17-hero-art img{width:100%;height:auto;max-height:260px;object-fit:contain}
+  #comics.hero-comics-integrated .v17-hero-intro{order:1;width:100%;text-align:left;padding:0}
+  #comics.hero-comics-integrated .v17-hero-intro h1{font-size:clamp(1.45rem,5.7vw,1.9rem);margin:7px 0 12px}
+  #comics.hero-comics-integrated .hero-comics-subintro{margin-top:13px;padding-top:12px}
+  #comics.hero-comics-integrated .hero-comics-actions{margin-top:13px;gap:8px}
+}
+@media(max-width:420px){
+  #comics.hero-comics-integrated .v17-header-visual{padding:15px 13px 18px}
+  #comics.hero-comics-integrated .v17-hero-art img{max-height:220px}
+  #comics.hero-comics-integrated .hero-comics-actions{grid-template-columns:1fr}
+  #comics.hero-comics-integrated .v17-hero-intro h1{font-size:clamp(1.4rem,5.7vw,1.65rem)}
+}
+</style>
 </head>
 <body>
 <header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="#comics">4コマ</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#about">ことねや紹介</a><a href="#news">NEWS</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <main id="top">
-<section aria-label="ことねや ブランド紹介" class="hero"><div class="wrap"><div class="v17-header-visual"><div class="v17-hero-art"><img alt="こと・ね・や。緑のこと、黄色のね、青のやの3人" fetchpriority="high" height="610" src="/assets/kotoneya-mascots-from-banner.png" width="1120"/></div><div class="v17-hero-intro"><p class="v17-hello">HELLO, KOTONEYA!</p><h1>気づいて、問い直して、<br/>確かめて、やってみよう！</h1><p class="v17-lead">日常の小さな「なんでやろ？」を、<br/>こと・ね・やと一緒に考える。</p><div class="v17-badges"><span>こと｜気づき</span><span>ね｜問い直し</span><span>や｜確認・行動</span></div><div class="v17-buttons"><a class="button button-archive" href="#comics">4コマの紹介へ →</a></div></div></div><p class="v17-under-message">できるかな⁉︎をカタチに！ <span>小さな「なぜ？」が、次の一歩になる。</span></p></div></section>
-<div class="rule"></div>
-<section class="section section-tint" id="comics">
-  <div class="wrap section-shell"><div class="section-accent" aria-hidden="true"></div>
-    <div class="kotoneya-comics-card">
-      <div class="kotoneya-compact-kicker">WEEKLY 4-COMA</div>
-      <div class="kotoneya-comics-head">
-        <div>
-          <h2>日常の「なぜ？」を、4コマに。</h2>
-          <p>仕事やお金の「それ、なんで？」。身近な疑問を、こと・ね・やと一緒に考える4コマ。</p>
-        </div>
-        <span class="kotoneya-update-pill">毎週水曜 18:00更新</span>
+<section aria-label="ことねやと週刊4コマの紹介" class="hero hero-comics-integrated" id="comics">
+  <div class="wrap">
+    <div class="v17-header-visual">
+      <div class="v17-hero-art">
+        <img alt="こと・ね・や。緑のこと、黄色のね、青のやの3人" fetchpriority="high" width="1120" height="610" src="/assets/kotoneya-mascots-from-banner.png"/>
       </div>
-      <div class="kotoneya-comics-actions">
-        <a class="kotoneya-compact-link archive" href="/comics/">4コマを読んでみる →</a>
-        <a class="kotoneya-compact-link x" href="https://x.com/kotoneya29" target="_blank" rel="noopener noreferrer" aria-label="Xで4コマを読む（別タブで開きます）"><img src="/assets/brand-x.svg" alt="" aria-hidden="true"> Xで読む ↗</a>
+      <div class="v17-hero-intro">
+        <p class="v17-hello">HELLO, KOTONEYA!</p>
+        <h1>気づいて、問い直して、<br/>確かめて、やってみよう！</h1>
+        <p class="v17-lead">日常の小さな「なんでやろ？」を、こと・ね・やと一緒に考える。</p>
+        <div class="hero-comics-subintro">
+          <strong>日常の「なぜ？」を、4コマに。</strong>
+          <p>仕事やお金の「それ、なんで？」。身近な疑問を4コマで。</p>
+          <span class="kotoneya-update-pill">毎週水曜 18:00更新</span>
+        </div>
+        <div class="v17-buttons hero-comics-actions">
+          <a class="button button-archive" href="/comics/">4コマを読んでみる →</a>
+          <a class="button button-dark hero-comics-x" href="https://x.com/kotoneya29" target="_blank" rel="noopener noreferrer" aria-label="公式Xで4コマを読む（別タブで開きます）"><img src="/assets/brand-x.svg" alt="" aria-hidden="true"/>Xで読む ↗</a>
+        </div>
       </div>
     </div>
+    <p class="v17-under-message">できるかな⁉︎をカタチに！ <span>小さな「なぜ？」が、次の一歩になる。</span></p>
   </div>
 </section>
 <section class="section" id="stamps">
