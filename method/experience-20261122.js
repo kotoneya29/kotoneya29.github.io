@@ -10,11 +10,13 @@
   };
   // Layout coordinates are tuned for the published original 373×350 tree,
   // not the taller stand-alone test illustration.
+  // Vocabulary stays inside its own horizontal band: 花(0–43%) / 枝(43–63%) / 幹(63–79%) / 根(79–100%).
+  // The published tree artwork stays unchanged. Only selected-part words are rendered.
   const placements = {
-    root:[[16,83],[50,83],[83,83],[16,90],[50,90],[83,90],[33,97],[68,97]],
-    trunk:[[17,64],[83,64],[17,74],[83,74]],
-    branch:[[17,55],[83,55],[17,61],[83,61]],
-    flower:[[17,16],[50,16],[83,16],[17,23],[50,23],[83,23],[17,30],[50,30],[83,30],[17,37],[50,37],[83,37],[50,44]]
+    root:[[13,90],[38,90],[63,90],[88,90],[13,96],[38,96],[63,96],[88,96]],
+    trunk:[[25,73],[75,73],[25,77],[75,77]],
+    branch:[[25,54],[75,54],[25,59],[75,59]],
+    flower:[[17,13],[50,13],[83,13],[17,20],[50,20],[83,20],[17,27],[50,27],[83,27],[17,34],[50,34],[83,34],[50,40]]
   };
 
   TREE_VOCAB.root = tree.root.words;
@@ -215,6 +217,12 @@
     return `<div class="concept-tree method-tree" data-tree-block>
       <div class="concept-tree-graphic" data-current-part="overview">
         <div class="concept-tree-art" data-original-tree>${FALLBACK_TREE}</div>
+        <div class="method-tree-bands" aria-hidden="true">
+          <span class="method-tree-band flower"></span>
+          <span class="method-tree-band branch"></span>
+          <span class="method-tree-band trunk"></span>
+          <span class="method-tree-band root"></span>
+        </div>
         <svg class="tree-focus-overlay" viewBox="0 0 373 350" preserveAspectRatio="none" aria-hidden="true">
           <defs><mask id="method-tree-focus-mask"><rect x="0" y="0" width="373" height="350" fill="white"/><path data-tree-hole d="${TREE_REGIONS.root}" fill="black"/></mask></defs>
           <rect width="373" height="350" fill="#fff" opacity=".57" mask="url(#method-tree-focus-mask)"/>
@@ -303,16 +311,27 @@
 
   const css=`
     .method-tree .tree-focus-overlay{display:block;opacity:1;transition:opacity .2s ease}
+    /* Four soft horizontal bands reveal structure without replacing or cropping the tree. */
+    .method-tree .method-tree-bands{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;border-radius:inherit}
+    .method-tree .method-tree-band{position:absolute;left:0;right:0;box-sizing:border-box;pointer-events:none;border-bottom:1px solid rgba(77,107,88,.30);transition:background .2s ease}
+    .method-tree .method-tree-band.flower{top:0;height:43%;background:rgba(253,224,112,.13)}
+    .method-tree .method-tree-band.branch{top:43%;height:20%;background:rgba(121,186,114,.10)}
+    .method-tree .method-tree-band.trunk{top:63%;height:16%;background:rgba(119,207,226,.12)}
+    .method-tree .method-tree-band.root{top:79%;height:21%;background:rgba(204,171,126,.14);border-bottom:0}
+    .method-tree .concept-tree-graphic[data-current-part="flower"] .method-tree-band.flower{background:rgba(255,226,105,.23)}
+    .method-tree .concept-tree-graphic[data-current-part="branch"] .method-tree-band.branch{background:rgba(105,191,124,.20)}
+    .method-tree .concept-tree-graphic[data-current-part="trunk"] .method-tree-band.trunk{background:rgba(103,194,224,.22)}
+    .method-tree .concept-tree-graphic[data-current-part="root"] .method-tree-band.root{background:rgba(203,167,116,.23)}
     .method-tree .concept-tree-graphic[data-current-part="overview"] .tree-focus-overlay{display:none}
     .method-tree .tree-focus-label{display:none!important}
     .method-tree .concept-tree-graphic{isolation:isolate}
     .method-tree .method-label{position:absolute;z-index:7;pointer-events:none;white-space:nowrap;
       transform:translate(-50%,-50%);padding:2px 6px;background:rgba(255,255,255,.92);
       border:1px solid #d5e4d8;color:#275940;border-radius:6px;font-weight:800;font-size:clamp(9px,1.1vw,11px)}
-    .method-tree .method-label.flower{top:8%;left:50%}
-    .method-tree .method-label.branch{top:51%;left:50%}
-    .method-tree .method-label.trunk{top:69%;left:50%}
-    .method-tree .method-label.root{top:76%;left:50%}
+    .method-tree .method-label.flower{top:6%;left:50%;border-color:#e8b847;background:rgba(255,252,232,.96);color:#285c40}
+    .method-tree .method-label.branch{top:47%;left:50%;border-color:#91c9a6;background:rgba(246,255,247,.96);color:#285e45}
+    .method-tree .method-label.trunk{top:67%;left:50%;border-color:#92cadb;background:rgba(244,253,255,.96);color:#285a66}
+    .method-tree .method-label.root{top:83%;left:50%;border-color:#d4b89c;background:rgba(255,250,241,.97);color:#654c32}
     .method-tree .method-words{position:absolute;inset:0;z-index:6;display:none;pointer-events:none;overflow:hidden}
     .method-tree .concept-tree-graphic[data-current-part="root"] .method-words.root,
     .method-tree .concept-tree-graphic[data-current-part="trunk"] .method-words.trunk,
@@ -321,7 +340,11 @@
     .method-tree .method-word{position:absolute;transform:translate(-50%,-50%);display:block;white-space:nowrap;
       padding:2px 3px;border:1px solid #d6e6d9;border-radius:5px;background:rgba(255,255,255,.95);
       color:#27573a;font-size:clamp(9px,.96vw,11px);font-weight:750;line-height:1.4}
-    .method-tree .method-words.root .method-word{border-color:#e8d7c4;color:#765b43}
+    /* The keyword color contrasts with each section heading and selected green control. */
+    .method-tree .method-words.flower .method-word{background:rgba(255,248,204,.97);border:1.5px solid #c68e0d;color:#674500;font-weight:850}
+    .method-tree .method-words.branch .method-word{background:rgba(234,251,237,.97);border-color:#69a97d;color:#1c6047}
+    .method-tree .method-words.trunk .method-word{background:rgba(235,249,255,.97);border-color:#63b1ca;color:#175a76}
+    .method-tree .method-words.root .method-word{background:rgba(255,248,235,.97);border-color:#c2a07d;color:#765238}
     .method-tree .tree-hit{z-index:8}
     .method-tree .tree-hit:hover{background:transparent}
     .method-tree .concept-tree-explain{min-height:92px}
