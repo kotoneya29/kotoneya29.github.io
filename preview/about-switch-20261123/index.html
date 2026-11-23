@@ -85,12 +85,25 @@ h1{margin:14px 0 10px;color:#245d41;font-size:34px;line-height:1.3}
 .stage.mobile .logo-card{padding:18px 12px;min-height:208px}
 .stage.mobile .page{padding-top:28px;padding-bottom:40px}
 .stage.mobile .origin{margin-bottom:17px}
+
+/* Real extracted logo layers from the original PNG (no translated masks). */
+.stage .brand-wordmark{margin:4px auto 14px;display:flex;justify-content:center;align-items:center;min-height:65px}
+.stage .logo-letter{display:block;max-width:100%;width:230px;height:auto;object-fit:contain}
+.stage .logo-symbol{display:block;max-width:100%;width:290px;height:auto;object-fit:contain}
+.stage .logo-letter:not([src]),.stage .logo-symbol:not([src]){visibility:hidden}
+.stage .logo-card{min-height:320px;padding:20px 12px}
+.stage .logo-preview-error{font-size:13px;color:#ac2929}
+.stage.mobile .brand-wordmark{min-height:50px;margin:2px auto 11px}
+.stage.mobile .logo-letter{width:180px}
+.stage.mobile .logo-symbol{width:245px}
+.stage.mobile .logo-card{min-height:215px;padding:19px 10px}
+.stage.pc .logo-card{min-height:320px}
 </style>
 </head>
 <body>
 <div class="toolbar" role="region" aria-label="PC版スマホ版の表示切替">
   <div class="toolbar-inner">
-    <div><div class="toolbar-title">ことねや｜文字ロゴ・シンボル分離テスト</div><span class="toolbar-sub">公開TOPとは別の確認用ページ</span></div>
+    <div><div class="toolbar-title">ことねや｜公式ロゴ正確抽出テスト</div><span class="toolbar-sub">公開TOPとは別の確認用ページ</span></div>
     <div class="switch" role="group" aria-label="画面表示を切り替える">
       <button type="button" id="mobileBtn" aria-pressed="true">📱 スマホ版</button>
       <button type="button" id="pcBtn" aria-pressed="false">🖥 PC版</button>
@@ -106,14 +119,109 @@ h1{margin:14px 0 10px;color:#245d41;font-size:34px;line-height:1.3}
 </header>
 <main class="page">
 <div class="section-stripe"></div>
-<div class="heading"><div class="eyebrow">ABOUT KOTONEYA｜ことねやの想い</div><h1 class="brand-wordmark" aria-label="ことねや"><span class="wordmark-crop"><img src="/assets/kotoneya-official-logo.png?v=1" alt="ことねや" loading="eager"></span></h1><p class="lead">勘と経験を、次の経営に使える知識へ。</p><p class="origin">「ことねや」＝事を根付かせる場</p></div>
+<div class="heading"><div class="eyebrow">ABOUT KOTONEYA｜ことねやの想い</div><h1 class="brand-wordmark"><img class="logo-letter" alt="ことねや（公式ロゴの文字部分）"><span class="logo-load-fallback" hidden>ことねや</span></h1><p class="lead">勘と経験を、次の経営に使える知識へ。</p><p class="origin">「ことねや」＝事を根付かせる場</p></div>
 <div class="about-grid">
-  <div class="logo-card"><div class="symbol-crop" role="img" aria-label="ことねやの公式ロゴのシンボル部分"><img src="/assets/kotoneya-official-logo.png?v=1" alt="" loading="eager"></div></div>
+  <div class="logo-card"><img class="logo-symbol" alt="ことねやの公式シンボル"><p class="logo-preview-error" hidden>画像の分離を確認できませんでした</p></div>
   <div class="meaning-card"><h2 class="meaning-title">ブランド／ロゴに込めた意味</h2><div class="meaning-body"><p>ことねやのロゴは、感覚や経験を記録・分析につなげ、判断と成長へ結びつけ、次の経営に活かしていく循環を表しています。</p><p>現場で得た気づきや経験を、使える知識に変えていく。その積み重ねが仕事に根づき、次の判断を支える土台となるように。「根づく支援」の想いを込めています。</p><ul class="flow" aria-label="ロゴに込めた4つの流れ"><li>感覚・経験</li><li>記録・分析</li><li>判断・成長</li><li>循環・根づく支援</li></ul></div></div>
 </div>
 </main>
 <footer class="footer"><span>© 2026 ことねや</span><span>できるかな⁉︎をカタチに！</span><span>LINEショップ ／ 4コマ一覧 ／ NEWS ／ お問い合わせ</span></footer>
 </div></div></div>
+
+<script id="original-logo-layer-extraction">
+/*
+ * Separate official original logo ink by measuring vertical transparent/white gaps.
+ * The source is the SAME published /assets/kotoneya-official-logo.png.
+ * Source pixel artwork is not redrawn or moved by CSS translation.
+ */
+(function(){
+  const source=new Image();
+  const letter=document.querySelector('.logo-letter');
+  const symbol=document.querySelector('.logo-symbol');
+  const notice=document.querySelector('.logo-preview-error');
+  const fallback=document.querySelector('.logo-load-fallback');
+  const maybeResize=()=>window.dispatchEvent(new Event('resize'));
+  function split(){
+    const width=source.naturalWidth,height=source.naturalHeight;
+    if(!width||!height)throw Error('Original logo failed to load');
+    const canvas=document.createElement('canvas');
+    canvas.width=width;canvas.height=height;
+    const ctx=canvas.getContext('2d',{willReadFrequently:true});
+    ctx.drawImage(source,0,0);
+    const raw=ctx.getImageData(0,0,width,height);
+    const pixels=raw.data;
+    function dark(i){
+      return pixels[i+3]>22 &&
+        (pixels[i]*.299+pixels[i+1]*.587+pixels[i+2]*.114)<164;
+    }
+    const rowInk=new Uint32Array(height);
+    const threshold=Math.max(2,Math.floor(width*.002));
+    for(let y=0;y<height;y++){
+      let sum=0;
+      for(let x=0;x<width;x++)if(dark((y*width+x)*4))sum++;
+      rowInk[y]=sum;
+    }
+    const regions=[];
+    let start=-1,amount=0;
+    for(let y=0;y<=height;y++){
+      const active=y<height&&rowInk[y]>=threshold;
+      if(active&&start<0){start=y;amount=0}
+      if(active)amount+=rowInk[y];
+      if(!active&&start>=0){
+        regions.push({top:start,bottom:y-1,amount,height:y-start});
+        start=-1;
+      }
+    }
+    // Original image consists of symbol, wordmark, and small slogan in that order.
+    const groups=regions.filter(r=>r.height>height*.015&&r.amount>width*.18)
+      .sort((a,b)=>b.amount-a.amount).slice(0,3)
+      .sort((a,b)=>a.top-b.top);
+    if(groups.length!==3||groups[0].top>=groups[1].top||groups[1].top>=groups[2].top)
+      throw Error('The three original artwork regions could not be identified');
+    function extracted(group){
+      const top=group.top,bottom=group.bottom;
+      let xmin=width,xmax=0;
+      for(let y=top;y<=bottom;y++){
+        for(let x=0;x<width;x++){
+          if(dark((y*width+x)*4)){xmin=Math.min(xmin,x);xmax=Math.max(xmax,x)}
+        }
+      }
+      if(xmin>=xmax)throw Error('Ink boundary could not be identified');
+      const paddingX=Math.max(4,Math.round(width*.016));
+      const paddingY=Math.max(3,Math.round(height*.009));
+      const left=Math.max(0,xmin-paddingX),right=Math.min(width,xmax+paddingX+1);
+      const w=right-left,h=bottom-top+1;
+      const out=document.createElement('canvas');
+      out.width=w;out.height=h+paddingY*2;
+      const co=out.getContext('2d',{willReadFrequently:true});
+      co.drawImage(source,left,top,w,h,0,paddingY,w,h);
+      const image=co.getImageData(0,0,out.width,out.height),data=image.data;
+      for(let i=0;i<data.length;i+=4){
+        const gray=(data[i]*.299+data[i+1]*.587+data[i+2]*.114);
+        const existing=data[i+3];
+        data[i+3]=Math.round(existing*Math.max(0,Math.min(1,(251-gray)/251)));
+        data[i]=0;data[i+1]=0;data[i+2]=0;
+      }
+      co.putImageData(image,0,0);
+      return out.toDataURL('image/png');
+    }
+    symbol.src=extracted(groups[0]);
+    letter.src=extracted(groups[1]);
+    symbol.addEventListener('load',maybeResize,{once:true});
+    letter.addEventListener('load',maybeResize,{once:true});
+    maybeResize();
+  }
+  source.onload=()=>{try{split()}catch(e){failed(e)}};
+  source.onerror=()=>failed(new Error('Could not load the original logo'));
+  function failed(e){
+    console.error('Official logo extraction preview:',e);
+    notice.hidden=false;fallback.hidden=false;
+    letter.style.display='none';symbol.style.display='none';
+    maybeResize();
+  }
+  source.src='/assets/kotoneya-official-logo.png?v=1';
+})();
+</script>
 <script>
 (function(){
   var stage=document.getElementById('stage'),holder=document.getElementById('holder'),hint=document.getElementById('hint');
@@ -138,7 +246,7 @@ h1{margin:14px 0 10px;color:#245d41;font-size:34px;line-height:1.3}
   mobile.addEventListener('click',function(){setMode('mobile',true)});
   pc.addEventListener('click',function(){setMode('pc',true)});
   window.addEventListener('resize',size);
-  document.querySelectorAll('.wordmark-crop img,.symbol-crop img,.site-brand img').forEach(function(img){img.addEventListener('load',size)});
+  document.querySelectorAll('.logo-letter,.logo-symbol,.site-brand img').forEach(function(img){img.addEventListener('load',size)});
   setMode(mode,false);
 })();
 </script>
