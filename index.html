@@ -553,76 +553,72 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
   #method .method-mobile-buttons{gap:6px}
 }
 </style>
+
+<style>
+/* Compact official 4-coma / LINE-sticker presentation. Keep hero, method and site navigation intact. */
+#comics .kotoneya-comics-card{background:#fff;border:1px solid #d6e5da;border-top:5px solid #59bb3b;border-radius:20px;padding:clamp(19px,3vw,32px);box-shadow:0 9px 25px rgba(28,73,53,.04)}
+#comics .kotoneya-compact-kicker,#stamps .kotoneya-compact-kicker{color:#527f64;font-size:.73rem;font-weight:900;letter-spacing:.17em}
+#comics .kotoneya-comics-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+#comics .kotoneya-comics-head h2{margin:4px 0 9px;font-size:clamp(1.45rem,2.6vw,1.95rem);line-height:1.45}
+#comics .kotoneya-comics-head p{margin:0;color:#52665a;line-height:1.8;font-size:.94rem}
+#comics .kotoneya-update-pill{flex:none;margin-top:9px;padding:6px 11px;border-radius:999px;color:#276b46;background:#edf6ec;font-size:.77rem;font-weight:850;white-space:nowrap}
+#comics .kotoneya-comics-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:23px}
+#comics .kotoneya-compact-link,#stamps .kotoneya-compact-link{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:48px;border:1px solid #236c47;border-radius:10px;padding:11px 16px;text-align:center;text-decoration:none;font-weight:850;font-size:.92rem;line-height:1.5}
+#comics .kotoneya-compact-link.archive{color:#246f48;background:#fff}
+#comics .kotoneya-compact-link.x{color:#fff;background:#202329;border-color:#202329}
+#comics .kotoneya-compact-link img,#stamps .kotoneya-compact-link img{width:19px;height:19px;object-fit:contain}
+#comics .kotoneya-compact-link:focus-visible,#stamps .kotoneya-compact-link:focus-visible{outline:3px solid #edc05d;outline-offset:3px}
+#stamps .kotoneya-stamps-card{display:flex;flex-direction:column;gap:14px;padding:clamp(20px,3vw,30px);border:1px solid #dbe6d8;border-radius:20px;background:linear-gradient(122deg,#fbfaed,#edf9f5)}
+#stamps .kotoneya-stamps-card h2{font-size:clamp(1.38rem,2.4vw,1.9rem);margin:0;line-height:1.45}
+#stamps .kotoneya-stamps-card>p{margin:0;color:#526356;font-size:.94rem;line-height:1.8}
+#stamps .kotoneya-stamp-people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#stamps .kotoneya-stamp-person{display:flex;align-items:center;gap:12px;min-width:0;background:#fff;border:1px solid #e1e9e1;border-radius:12px;padding:10px 12px}
+#stamps .kotoneya-stamp-portrait{display:flex;align-items:center;justify-content:center;flex:none;width:91px;height:91px;background:#f7faf8;border-radius:9px;overflow:hidden}
+#stamps .kotoneya-stamp-portrait img{width:100%;height:100%;object-fit:contain}
+#stamps .kotoneya-stamp-person strong{display:block;color:#285f43;font-size:1.05rem}
+#stamps .kotoneya-stamp-person small{display:block;color:#657669;font-size:.76rem;line-height:1.5}
+#stamps .kotoneya-stamp-cta{align-self:center;width:min(100%,340px);background:#159743;border-color:#159743;color:#fff}
+@media(max-width:800px){#comics .kotoneya-comics-head{flex-direction:column;gap:5px}#comics .kotoneya-update-pill{margin-top:6px}#stamps .kotoneya-stamp-person{padding:8px;gap:8px}#stamps .kotoneya-stamp-portrait{width:65px;height:76px}}
+@media(max-width:540px){#comics .kotoneya-comics-actions{grid-template-columns:1fr}#stamps .kotoneya-stamp-people{gap:6px}#stamps .kotoneya-stamp-person{flex-direction:column;text-align:center;padding:8px 5px;gap:5px}#stamps .kotoneya-stamp-portrait{width:100%;height:90px}#stamps .kotoneya-stamp-person small{font-size:.69rem}}
+</style>
 </head>
 <body>
-<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="#comics">4コマ一覧</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#about">ことねや紹介</a><a href="#news">NEWS</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
+<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="#comics">4コマ</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#about">ことねや紹介</a><a href="#news">NEWS</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <main id="top">
-<section aria-label="ことねや ブランド紹介" class="hero"><div class="wrap"><div class="v17-header-visual"><div class="v17-hero-art"><img alt="こと・ね・や。緑のこと、黄色のね、青のやの3人" fetchpriority="high" height="610" src="/assets/kotoneya-mascots-from-banner.png" width="1120"/></div><div class="v17-hero-intro"><p class="v17-hello">HELLO, KOTONEYA!</p><h1>気づいて、問い直して、<br/>確かめて、やってみよう！</h1><p class="v17-lead">日常の小さな「なんでやろ？」を、<br/>こと・ね・やと一緒に考える。</p><div class="v17-badges"><span>こと｜気づき</span><span>ね｜問い直し</span><span>や｜確認・行動</span></div><div class="v17-buttons">
-<a class="button button-archive" href="/comics/">4コマを読む →</a>
-<a class="button button-dark social-cta social-cta-x" href="https://x.com/kotoneya29" target="_blank" rel="noopener noreferrer" aria-label="Xで4コマを見る（別タブで開きます）"><img class="social-cta-icon social-cta-x-icon" src="/assets/brand-x.svg" alt="" aria-hidden="true"/><span>で4コマを見る</span><span aria-hidden="true">↗</span></a>
-<a class="button button-green social-cta social-cta-line" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer" aria-label="LINEでスタンプを見る（別タブで開きます）"><img class="social-cta-icon social-cta-line-icon" src="/assets/brand-line.svg" alt="" aria-hidden="true"/><span>でスタンプを見る</span><span aria-hidden="true">↗</span></a>
-</div></div></div><p class="v17-under-message">できるかな⁉︎をカタチに！ <span>小さな「なぜ？」が、次の一歩になる。</span></p></div></section>
+<section aria-label="ことねや ブランド紹介" class="hero"><div class="wrap"><div class="v17-header-visual"><div class="v17-hero-art"><img alt="こと・ね・や。緑のこと、黄色のね、青のやの3人" fetchpriority="high" height="610" src="/assets/kotoneya-mascots-from-banner.png" width="1120"/></div><div class="v17-hero-intro"><p class="v17-hello">HELLO, KOTONEYA!</p><h1>気づいて、問い直して、<br/>確かめて、やってみよう！</h1><p class="v17-lead">日常の小さな「なんでやろ？」を、<br/>こと・ね・やと一緒に考える。</p><div class="v17-badges"><span>こと｜気づき</span><span>ね｜問い直し</span><span>や｜確認・行動</span></div><div class="v17-buttons"><a class="button button-archive" href="#comics">4コマの紹介へ →</a></div></div></div><p class="v17-under-message">できるかな⁉︎をカタチに！ <span>小さな「なぜ？」が、次の一歩になる。</span></p></div></section>
 <div class="rule"></div>
 <section class="section section-tint" id="comics">
-<div class="wrap section-shell"><div class="section-accent" aria-hidden="true"></div>
-<div class="section-label">WEEKLY 4-COMA</div>
-<h2 class="section-title">日常の小さなズレを、4コマに。</h2>
-<p class="section-lead">仕事やお金の「それ、なんで？」。身近な疑問を、こと・ね・やと一緒に考える4コマ。</p>
-<div class="comics-archive-entry"><div><strong>最新 第7話｜片づけたのに、また散らかる？</strong><span>最新話もバックナンバーも、こちらからまとめて読めます。</span></div><a class="button button-archive" href="/comics/">4コマ・バックナンバーを見る →</a></div>
-<div class="character-head character-head--equal">
-<span class="character-kicker">CHARACTERS / 4-COMA</span>
-<h3>4コマの登場人物</h3>
-<p>こと・ね・やの3人が、日常の「なぜ？」を考えます。</p>
-</div>
-<div aria-label="こと・ね・やの3人の紹介" class="character-equal-grid">
-<article class="character-equal-card ch-koto">
-<div class="character-equal-image"><img alt="緑色のロボキャラ・こと。気づき担当" height="176" loading="eager" src="/assets/koto-portrait-from-master.png" width="198"/></div>
-<div class="character-equal-content"><h4>こと</h4><div class="character-equal-role">気づき担当</div>
-<p>小さな変化や違和感を見つけて、「あれ？」という気づきを届けます。</p></div>
-</article>
-<article class="character-equal-card ch-ne">
-<div class="character-equal-image"><img alt="黄色のロボキャラ・ね。問い直し担当" height="176" loading="eager" src="/assets/ne-portrait-from-master.png" width="195"/></div>
-<div class="character-equal-content"><h4>ね</h4><div class="character-equal-role">問い直し担当</div>
-<p>「本当にそうかな？」と立ち止まり、別の見方を探します。</p></div>
-</article>
-<article class="character-equal-card ch-ya">
-<div class="character-equal-image"><img alt="青色のロボキャラ・や。確認・行動担当" height="176" loading="eager" src="/assets/ya-portrait-from-master.png" width="202"/></div>
-<div class="character-equal-content"><h4>や</h4><div class="character-equal-role">確認・行動担当</div>
-<p>数字や事実を確かめて、次の一歩につなげます。</p></div>
-</article>
-</div>
-
-<div aria-label="ことねや公式Xの週刊4コマと最新投稿" class="x-home-panel x-home-panel--below">
-<div class="x-home-heading"><span class="timepill">毎週水曜日 18:00 更新</span><h3>週刊4コマの最新投稿</h3><p>4コマは公式Xで公開しています。最新の投稿はこちらからご覧いただけます。</p></div>
-<div aria-label="X公式タイムライン。表示できない場合はリンクから公式Xへ移動" class="x-embed-slot">
-<a class="twitter-timeline" aria-label="Xで4コマを見る（別タブで開きます）" data-chrome="noheader nofooter" data-height="460" data-lang="ja" data-theme="light" href="https://x.com/kotoneya29"><img class="brand-x-mark" src="/assets/brand-x.svg" alt="" aria-hidden="true"/><span>で4コマを見る</span><span aria-hidden="true">↗</span></a>
-</div>
-</div>
-</div>
-</section>
-<section class="section" id="stamps">
-<div class="wrap stamp-layout section-shell"><div class="section-accent" aria-hidden="true"></div>
-  <div class="stamp-wide-card">
-    <div class="stamp-main">
-      <div class="stamp-copy">
-        <div class="section-label">LINE STICKERS</div>
-        <h2 class="section-title">「こと・ね・や」を、<br/>いつもの会話にも。</h2>
-        <div aria-hidden="true" class="color-dots"><span></span><span></span><span></span></div>
-        <p>気づき担当の「こと」、問い直し担当の「ね」、確認・行動担当の「や」。3人のキャラクターがLINEスタンプになりました。</p>
-        <p class="stamp-note">日々のやり取りに、ことねやの3人を気軽に添えられます。アクセスは右のQRコード、または下のボタンからどうぞ。</p>
+  <div class="wrap section-shell"><div class="section-accent" aria-hidden="true"></div>
+    <div class="kotoneya-comics-card">
+      <div class="kotoneya-compact-kicker">WEEKLY 4-COMA</div>
+      <div class="kotoneya-comics-head">
+        <div>
+          <h2>日常の「なぜ？」を、4コマに。</h2>
+          <p>仕事やお金の「それ、なんで？」。身近な疑問を、こと・ね・やと一緒に考える4コマ。</p>
+        </div>
+        <span class="kotoneya-update-pill">毎週水曜 18:00更新</span>
       </div>
-      <div class="stamp-mascot-spread" aria-hidden="true">
-        <img src="/assets/kotoneya-mascots-from-banner.png" alt="" loading="eager"/>
-      </div>
-    </div>
-    <div class="stamp-side">
-      <div class="stamp-visual stamp-qr-card" aria-label="ことねやのLINEスタンプショップQRコードとLINEショップへのリンク">
-        <div class="stamp-qr-head"><span class="qr-overline">LINE STICKER SHOP</span><h3>こと・ね・やと<br/>いつでも一緒に！</h3></div>
-        <div class="stamp-qr-lower"><span class="qr-dots" aria-hidden="true"><i></i><i></i><i></i></span><div class="qr-white"><img src="/assets/line-shop-qr.png" alt="LINEスタンプ公式作者ショップにアクセスするQRコード" loading="eager"/></div><p>スマホで読み取るか、ボタンからLINEスタンプショップを開けます。</p><a class="qr-shop-link" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"/> <span>LINEショップを開く</span> <span class="arrow" aria-hidden="true">↗</span></a></div>
+      <div class="kotoneya-comics-actions">
+        <a class="kotoneya-compact-link archive" href="/comics/">4コマを読んでみる →</a>
+        <a class="kotoneya-compact-link x" href="https://x.com/kotoneya29" target="_blank" rel="noopener noreferrer" aria-label="Xで4コマを読む（別タブで開きます）"><img src="/assets/brand-x.svg" alt="" aria-hidden="true"> Xで読む ↗</a>
       </div>
     </div>
   </div>
-</div>
+</section>
+<section class="section" id="stamps">
+  <div class="wrap section-shell"><div class="section-accent" aria-hidden="true"></div>
+    <div class="kotoneya-stamps-card">
+      <div class="kotoneya-compact-kicker">LINE STICKERS</div>
+      <h2>日常会話に、こと・ね・や。</h2>
+      <p>気づく「こと」、問い直す「ね」、確かめて動く「や」。3人のスタンプを、いつものひと言に。</p>
+      <div class="kotoneya-stamp-people" aria-label="LINEスタンプの3人">
+        <div class="kotoneya-stamp-person"><div class="kotoneya-stamp-portrait"><img src="/assets/koto-portrait-from-master.png" alt="こと。緑色のキャラクター" loading="lazy" width="198" height="176"></div><div><strong>こと</strong><small>気づき担当</small></div></div>
+        <div class="kotoneya-stamp-person"><div class="kotoneya-stamp-portrait"><img src="/assets/ne-portrait-from-master.png" alt="ね。黄色のキャラクター" loading="lazy" width="195" height="176"></div><div><strong>ね</strong><small>問い直し担当</small></div></div>
+        <div class="kotoneya-stamp-person"><div class="kotoneya-stamp-portrait"><img src="/assets/ya-portrait-from-master.png" alt="や。青色のキャラクター" loading="lazy" width="202" height="176"></div><div><strong>や</strong><small>確認・行動担当</small></div></div>
+      </div>
+      <a class="kotoneya-compact-link line kotoneya-stamp-cta" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer" aria-label="LINEスタンプショップを開く（別タブで開きます）"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"> LINEスタンプを見る ↗</a>
+    </div>
+  </div>
 </section>
 <section class="section section-tint" id="method">
 <div class="wrap section-shell">
@@ -684,7 +680,7 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 </div><div class="section-accent about-accent-bottom" aria-hidden="true"></div></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><span>© 2026 ことねや</span><span class="footer-note">できるかな⁉︎をカタチに！</span><a class="footer-brand-link" href="https://store.line.me/stickershop/author/6718846/ja" rel="noopener noreferrer" target="_blank"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"/>LINEショップ ↗</a><a href="/comics/">4コマ一覧</a><a href="/news/index.html">NEWS</a><a href="/contact/index.html">お問い合わせ</a><a href="/privacy/">アクセス解析について</a></div></footer>
-<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+
 <script src="/assets/news-data.js?v=20261118-03"></script>
 <script src="/assets/news-render.js"></script>
 
