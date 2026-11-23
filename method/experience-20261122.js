@@ -310,6 +310,28 @@
   };
 
   const css=`
+
+    /* 2026-11-23: consistent interactive four-layer layout on PC and phones */
+    .method-tree .concept-tree-graphic{position:relative!important;isolation:isolate;width:100%!important;max-width:420px!important;margin-inline:auto!important}
+    .method-tree .method-tree-bands{display:block!important;position:absolute!important;inset:0!important;z-index:2!important;pointer-events:none!important}
+    .method-tree .method-tree-band{display:block!important;position:absolute!important;left:0!important;right:0!important;border-bottom:1px solid rgba(32,70,50,.43)!important}
+    .method-tree .method-tree-band.flower{top:0!important;height:43%!important}
+    .method-tree .method-tree-band.branch{top:43%!important;height:20%!important}
+    .method-tree .method-tree-band.trunk{top:63%!important;height:16%!important}
+    .method-tree .method-tree-band.root{top:79%!important;height:21%!important;border-bottom:0!important}
+    .method-tree .method-label{display:block!important;visibility:visible!important;position:absolute!important;z-index:12!important;pointer-events:none!important;opacity:1!important;line-height:1.35!important;font-size:clamp(10px,2.3vw,13px)!important;padding:3px 8px!important;border-width:1.5px!important;box-shadow:0 1px 5px rgba(18,43,25,.10)}
+    .method-tree .method-label.flower{left:50%!important;top:6%!important;color:#79520b!important;background:#fff1c8!important;border-color:#c39228!important}
+    .method-tree .method-label.branch{left:50%!important;top:47%!important;color:#216141!important;background:#e1f5e4!important;border-color:#6fa984!important}
+    .method-tree .method-label.trunk{left:50%!important;top:67%!important;color:#145b77!important;background:#dff3fc!important;border-color:#67aeca!important}
+    .method-tree .method-label.root{left:50%!important;top:83%!important;color:#6c492d!important;background:#f9e9d6!important;border-color:#c49b77!important}
+    .method-tree .method-words{z-index:10!important}
+    .method-tree .method-word{font-size:clamp(8px,1.85vw,11px)!important;padding:2px 4px!important;max-width:32%;overflow:hidden;text-overflow:ellipsis}
+    .method-tree .tree-hit{z-index:14!important}
+    .method-tree .concept-tree-tabs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}
+    .method-tree .concept-tree-tabs button{font-size:clamp(10px,1.75vw,14px)!important;overflow-wrap:anywhere!important;min-height:52px!important;padding:6px 3px!important}
+    .method-tree .concept-tree-explain{margin-top:10px}
+    @media(min-width:651px){.intro-tree-first .method-tree{grid-template-columns:minmax(0,420px) minmax(0,1fr)!important;align-items:start!important}}
+    @media(max-width:650px){.method-tree{grid-template-columns:1fr!important}.method-tree .concept-tree-graphic{max-width:min(100%,420px)!important}.method-tree .method-label{font-size:10px!important;padding:2px 5px!important}.method-tree .method-word{font-size:8px!important;padding:1px 2px!important}}
     .method-tree .tree-focus-overlay{display:block;opacity:1;transition:opacity .2s ease}
     /* Four soft horizontal bands reveal structure without replacing or cropping the tree. */
     .method-tree .method-tree-bands{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;border-radius:inherit}
