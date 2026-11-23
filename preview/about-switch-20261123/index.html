@@ -65,12 +65,32 @@ h1{margin:14px 0 10px;color:#245d41;font-size:34px;line-height:1.3}
 .stage.mobile .flow li{min-height:77px;font-size:15px}
 .stage.mobile .footer{padding:20px 14px;font-size:10px}
 @media(max-width:480px){.toolbar-title{font-size:13px}.toolbar-sub{font-size:10px}.switch button{padding:8px 12px;font-size:13px}}
+
+/* Visual refinement v2: original official artwork split by non-destructive image masks. */
+.brand-wordmark{margin:7px auto 17px;display:flex;justify-content:center;line-height:1}
+.wordmark-crop{display:block;position:relative;width:228px;height:77px;overflow:hidden;flex:none}
+.wordmark-crop img{position:absolute;display:block;top:0;left:0;width:100%;height:auto;transform:translateY(-53%);max-width:none}
+.symbol-crop{position:relative;width:100%;max-width:345px;height:225px;overflow:hidden;flex:none}
+.symbol-crop img{display:block;position:absolute;top:0;left:0;width:100%;height:auto;max-width:none}
+.stage.pc .logo-card{min-height:350px;padding:20px 12px}
+.stage.pc .symbol-crop{max-width:345px;height:240px}
+.stage.pc .page{padding-top:49px;padding-bottom:52px}
+.stage.pc .heading .origin{margin-bottom:24px}
+.stage.pc .logo-card,.stage.pc .meaning-card{min-height:350px}
+.stage.pc .meaning-body{padding-bottom:19px}
+.stage.pc .flow{margin-top:16px}
+.stage.mobile .brand-wordmark{margin:6px auto 11px}
+.stage.mobile .wordmark-crop{width:175px;height:59px}
+.stage.mobile .symbol-crop{max-width:270px;height:175px}
+.stage.mobile .logo-card{padding:18px 12px;min-height:208px}
+.stage.mobile .page{padding-top:28px;padding-bottom:40px}
+.stage.mobile .origin{margin-bottom:17px}
 </style>
 </head>
 <body>
 <div class="toolbar" role="region" aria-label="PC版スマホ版の表示切替">
   <div class="toolbar-inner">
-    <div><div class="toolbar-title">ことねや｜「ことねやとは」修正テスト</div><span class="toolbar-sub">公開TOPとは別の確認用ページ</span></div>
+    <div><div class="toolbar-title">ことねや｜文字ロゴ・シンボル分離テスト</div><span class="toolbar-sub">公開TOPとは別の確認用ページ</span></div>
     <div class="switch" role="group" aria-label="画面表示を切り替える">
       <button type="button" id="mobileBtn" aria-pressed="true">📱 スマホ版</button>
       <button type="button" id="pcBtn" aria-pressed="false">🖥 PC版</button>
@@ -86,9 +106,9 @@ h1{margin:14px 0 10px;color:#245d41;font-size:34px;line-height:1.3}
 </header>
 <main class="page">
 <div class="section-stripe"></div>
-<div class="heading"><div class="eyebrow">ABOUT KOTONEYA｜ことねやの想い</div><h1>ことねやとは</h1><div class="heading-rule"></div><p class="lead">勘と経験を、次の経営に使える知識へ。</p><p class="origin">「ことねや」＝事を根付かせる場</p></div>
+<div class="heading"><div class="eyebrow">ABOUT KOTONEYA｜ことねやの想い</div><h1 class="brand-wordmark" aria-label="ことねや"><span class="wordmark-crop"><img src="/assets/kotoneya-official-logo.png?v=1" alt="ことねや" loading="eager"></span></h1><p class="lead">勘と経験を、次の経営に使える知識へ。</p><p class="origin">「ことねや」＝事を根付かせる場</p></div>
 <div class="about-grid">
-  <div class="logo-card"><div class="logo-title">ことねや ブランド／ロゴ</div><img class="logo-img" src="/assets/kotoneya-official-logo.png?v=1" alt="ことねやの公式ロゴ"></div>
+  <div class="logo-card"><div class="symbol-crop" role="img" aria-label="ことねやの公式ロゴのシンボル部分"><img src="/assets/kotoneya-official-logo.png?v=1" alt="" loading="eager"></div></div>
   <div class="meaning-card"><h2 class="meaning-title">ブランド／ロゴに込めた意味</h2><div class="meaning-body"><p>ことねやのロゴは、感覚や経験を記録・分析につなげ、判断と成長へ結びつけ、次の経営に活かしていく循環を表しています。</p><p>現場で得た気づきや経験を、使える知識に変えていく。その積み重ねが仕事に根づき、次の判断を支える土台となるように。「根づく支援」の想いを込めています。</p><ul class="flow" aria-label="ロゴに込めた4つの流れ"><li>感覚・経験</li><li>記録・分析</li><li>判断・成長</li><li>循環・根づく支援</li></ul></div></div>
 </div>
 </main>
@@ -118,7 +138,7 @@ h1{margin:14px 0 10px;color:#245d41;font-size:34px;line-height:1.3}
   mobile.addEventListener('click',function(){setMode('mobile',true)});
   pc.addEventListener('click',function(){setMode('pc',true)});
   window.addEventListener('resize',size);
-  document.querySelectorAll('.logo-img,.site-brand img').forEach(function(img){img.addEventListener('load',size)});
+  document.querySelectorAll('.wordmark-crop img,.symbol-crop img,.site-brand img').forEach(function(img){img.addEventListener('load',size)});
   setMode(mode,false);
 })();
 </script>
