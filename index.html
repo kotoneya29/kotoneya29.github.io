@@ -649,6 +649,27 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
   #about .brand-meaning-flow li{min-height:68px}
   #about .brand-logo-card img{max-height:230px}
 }
+
+/* Approved ABOUT KOTONEYA layout: official letter-art heading, unchanged full logo. */
+#about.brand-about{padding:50px 0 56px}
+#about .brand-about-head{margin:2px auto 21px}
+#about .brand-wordmark-heading{display:flex;justify-content:center;align-items:center;margin:8px auto 13px;min-height:66px;line-height:1}
+#about .brand-wordmark-heading::after{display:none}
+#about .brand-wordmark-heading .logo-letter{width:230px;max-width:80%;height:auto;object-fit:contain;display:block}
+#about .brand-wordmark-heading .logo-letter:not([src]){visibility:hidden}
+#about .brand-wordmark-heading .logo-load-fallback{font-size:.8rem;color:#9b3434;font-weight:600}
+#about .brand-about-grid{gap:20px}
+#about .brand-meaning-flow{margin-top:20px;gap:9px}
+#about .brand-meaning-flow li{min-height:94px;border:2px solid #96bb9e;background:#f0f7ec;border-radius:12px;box-shadow:0 2px 0 #dce8da;padding:9px 6px}
+#about .brand-meaning-flow li strong{font-size:.91rem;line-height:1.52;font-weight:850}
+@media(max-width:850px){#about .brand-about-head{margin-bottom:18px}}
+@media(max-width:480px){
+ #about.brand-about{padding:38px 0 48px}
+ #about .brand-wordmark-heading{min-height:51px;margin:6px auto 10px}
+ #about .brand-wordmark-heading .logo-letter{width:180px}
+ #about .brand-meaning-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:18px}
+ #about .brand-meaning-flow li{min-height:76px}
+}
 </style>
 </head>
 <body>
@@ -746,7 +767,7 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
     <div class="section-accent" aria-hidden="true"></div>
     <div class="brand-about-head">
       <div class="section-label">ABOUT KOTONEYA｜ことねやの想い</div>
-      <h2 class="section-title" id="about-title">ことねやとは</h2>
+      <h2 class="section-title brand-wordmark-heading" id="about-title"><img class="logo-letter" alt="ことねや（公式ロゴの文字部分）"><span class="logo-load-fallback" hidden>公式ロゴ画像を読み込めませんでした</span></h2>
       <p class="brand-about-lead">勘と経験を、次の経営に使える知識へ。</p>
       <p class="brand-about-origin">「ことねや」＝事を根付かせる場</p>
     </div>
@@ -759,15 +780,15 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
         <h3>ブランド／ロゴに込めた意味</h3>
         <p>ことねやのロゴは、感覚や経験を記録・分析につなげ、判断と成長へ結びつけ、次の経営に活かしていく循環を表しています。</p>
         <p>現場で得た気づきや経験を、使える知識に変えていく。その積み重ねが仕事に根づき、次の判断を支える土台となるように。「根づく支援」の想いを込めています。</p>
-        <ol class="brand-meaning-flow" aria-label="ロゴに込めた4つの流れ">
-          <li><span>01</span><strong>感覚・経験</strong></li>
-          <li><span>02</span><strong>記録・分析</strong></li>
-          <li><span>03</span><strong>判断・成長</strong></li>
-          <li><span>04</span><strong>循環・根づく支援</strong></li>
-        </ol>
+        <ul class="brand-meaning-flow" aria-label="ロゴに込めた4つの要素">
+          <li><strong>感覚・経験</strong></li>
+          <li><strong>記録・分析</strong></li>
+          <li><strong>判断・成長</strong></li>
+          <li><strong>循環・根づく支援</strong></li>
+        </ul>
       </div>
     </div>
-    <p class="brand-about-close">できるかな⁉︎をカタチに！</p>
+    
   </div>
 </section>
 </main>
@@ -822,6 +843,75 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
   cloud.hidden=false;panel.hidden=false;
  }
  buttons.forEach(button=>button.addEventListener('click',()=>update(button.dataset.methodPart)));
+})();
+</script>
+<script id="original-wordmark-only">
+/*
+ * Create a genuine transparent PNG wordmark from original logo pixels.
+ * The full logo in the lower card is rendered unchanged from the original file.
+ * Fixed content-relative crop boundaries have been checked against the visible official logo:
+ * wordmark letters AND their sweeping underline, without emblem or tagline.
+ */
+(function(){
+  const source=new Image();
+  const letter=document.querySelector('.logo-letter');
+  const fallback=document.querySelector('.logo-load-fallback');
+  const refresh=()=>window.dispatchEvent(new Event('resize'));
+  function crop(){
+    const w=source.naturalWidth,h=source.naturalHeight;
+    if(!w||!h)throw Error('Official original could not be read');
+    const inCanvas=document.createElement('canvas');
+    inCanvas.width=w;inCanvas.height=h;
+    const ctx=inCanvas.getContext('2d',{willReadFrequently:true});
+    ctx.drawImage(source,0,0);
+    const all=ctx.getImageData(0,0,w,h).data;
+    let top=h,bottom=-1;
+    const ink=(x,y)=>{
+      const p=4*(y*w+x);
+      const gray=all[p]*0.299+all[p+1]*0.587+all[p+2]*0.114;
+      return all[p+3]>40 && gray<166;
+    };
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+      if(ink(x,y)){top=Math.min(top,y);bottom=Math.max(bottom,y)}
+    }
+    if(bottom<=top)throw Error('No original logo ink detected');
+    const extent=bottom-top;
+    const y0=Math.max(0,Math.floor(top+extent*0.65));
+    const y1=Math.min(h,Math.ceil(top+extent*0.914));
+    let minX=w,maxX=-1;
+    for(let y=y0;y<y1;y++)for(let x=0;x<w;x++){
+      if(ink(x,y)){minX=Math.min(minX,x);maxX=Math.max(maxX,x)}
+    }
+    if(maxX<=minX)throw Error('Wordmark ink region missing');
+    const px=Math.max(3,Math.round(w*0.012));
+    const x0=Math.max(0,minX-px),x1=Math.min(w,maxX+px+1);
+    const png=document.createElement('canvas');
+    png.width=x1-x0;png.height=y1-y0;
+    const pctx=png.getContext('2d',{willReadFrequently:true});
+    pctx.drawImage(source,x0,y0,png.width,png.height,0,0,png.width,png.height);
+    const fragment=pctx.getImageData(0,0,png.width,png.height);
+    const data=fragment.data;
+    // Keep original RGB. Only white background becomes transparent.
+    for(let k=0;k<data.length;k+=4){
+      const min=Math.min(data[k],data[k+1],data[k+2]);
+      const fade=Math.min(1,Math.max(0,(250-min)/32));
+      data[k+3]=Math.round(data[k+3]*fade);
+    }
+    pctx.putImageData(fragment,0,0);
+    letter.addEventListener('load',refresh,{once:true});
+    letter.src=png.toDataURL('image/png');
+    refresh();
+  }
+  function error(e){
+    console.error('Original wordmark extraction:',e);
+    letter.style.display='none';
+    fallback.hidden=false;
+    fallback.textContent='公式ロゴ文字画像を表示できません';
+    refresh();
+  }
+  source.onload=()=>{try{crop()}catch(e){error(e)}};
+  source.onerror=()=>error(new Error('Original logo image not found'));
+  source.src='/assets/kotoneya-official-logo.png?v=1';
 })();
 </script>
 </body>
