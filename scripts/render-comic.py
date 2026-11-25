@@ -3,6 +3,7 @@
 import argparse
 import datetime
 import html
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -31,8 +32,13 @@ def build(data, output):
             raise ValueError("リポジトリ内の作品画像が必要です: " + item["file"])
         if not item["file"].startswith("assets/comics/"):
             raise ValueError("作品画像は assets/comics/ に保存してください。")
-        if not re.fullmatch(r"https://pbs\.twimg\.com/media/[^\s]+", item["source_url"]):
-            raise ValueError("各画像の公式配信元URLを記録してください。")
+        if item.get("source") == "user-upload":
+            if not item.get("original_filename"):
+                raise ValueError("添付画像の元ファイル名を記録してください。")
+            if item.get("sha256") != hashlib.sha256(path.read_bytes()).hexdigest():
+                raise ValueError("添付画像のSHA-256が一致しません: " + item["file"])
+        elif not re.fullmatch(r"https://pbs\.twimg\.com/media/[^\s]+", item.get("source_url", "")):
+            raise ValueError("画像の添付元、または公式配信元URLを記録してください。")
         with Image.open(path) as image:
             image.verify()
         with Image.open(path) as image:
@@ -62,7 +68,7 @@ def build(data, output):
         "THUMBNAIL_URL": thumbnail_url,
         "IMAGE_WIDTH": str(thumbnail["width"]),
         "IMAGE_HEIGHT": str(thumbnail["height"]),
-        "IMAGE_COUNT": str(len(images)), "NEW_LABEL": " NEW",
+        "IMAGE_COUNT": str(len(images)), "NEW_LABEL": " NEW" if data.get("is_latest", True) else "",
     }
     values = {key: html.escape(value, quote=True) for key, value in fields.items()}
     schema = {
@@ -78,6 +84,14 @@ def build(data, output):
     values["STRUCTURED_DATA"] = '<script type="application/ld+json">' + schema_json + '</script>'
     values["TAGS"] = '<div class="tags">' + ''.join(
         '<span class="tag">' + html.escape(tag) + '</span>' for tag in data["tags"]) + '</div>'
+    values["ARTWORK_IMAGES"] = ''.join(
+        '<a href="/' + html.escape(item["file"], quote=True) + '" target="_blank" rel="noopener noreferrer">'
+        '<img src="/' + html.escape(item["file"], quote=True) + '" alt="' +
+        html.escape(f'第{number}話『{data["title"]}』の4コマ漫画' +
+                    (f'（{index + 1}/{len(images)}）' if len(images) > 1 else ''), quote=True) +
+        f'" width="{item["width"]}" height="{item["height"]}" loading="' +
+        ('eager' if index == 0 else 'lazy') + '"></a>'
+        for index, item in enumerate(images))
     values["COMIC_FIGURE"] = render("figure.html.tmpl", values)
     links = f'<a href="/comics/{number - 1:03d}/">← 前の話</a>'
     links += '<a href="/comics/">バックナンバー一覧</a>'

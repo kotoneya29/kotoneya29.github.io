@@ -1,0 +1,28 @@
+{
+  "episode": 7,
+  "title": "片づけたのに、また散らかる？",
+  "date_published": "2026-11-18",
+  "post_url": "https://x.com/kotoneya29/status/2122978124833181993",
+  "summary": "鍵を探す5分も、週5回なら25分。頑張って片づけるより、戻しやすい場所を決めてみよう。",
+  "tagline": "続けられる仕組みをつくる",
+  "explanation": "片づけてもまた散らかるなら、頑張り方だけでなく仕組みを見直してみよう。鍵を探す時間を記録すると、1回5分でも週5回なら25分になります。戻しやすい場所を決め、小さく試して、探す時間が減ったかを確かめる。日常も仕事も、続けられる仕組みが大切です。",
+  "tags": [
+    "時間の見える化",
+    "仕組みづくり",
+    "改善"
+  ],
+  "thumbnail_index": 0,
+  "next_episode": 8,
+  "images": [
+    {
+      "file": "assets/comics/007.png",
+      "source": "user-upload",
+      "original_filename": "4コマ007話.png",
+      "sha256": "5189ee62d75c09346e1a1ef091f9fe6c1401f1271bed6e9bcbd17201ac58cc5d",
+      "width": 1122,
+      "height": 1402
+    }
+  ],
+  "artwork_verified": true,
+  "is_latest": false
+}
