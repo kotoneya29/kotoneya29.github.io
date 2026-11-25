@@ -1095,6 +1095,95 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  #app .company-lean .company-point{padding:14px 12px}
 }
 </style>
+
+<style id="kotoneya-tree-finance-balance-v3">
+/* TEST ONLY: sequences centered, comparisons and explanations placed side by side. */
+#sales .sales-flow,#sales .sales-two-cases .case2-modelsteps{justify-content:center;text-align:center}
+#sales .sales-two-cases .cases-flow{text-align:center}
+#app .story-join,#app .story-company-bridge{text-align:center}
+#app .concept-tree,#app .intro-tree-first .concept-tree{
+ display:grid;grid-template-columns:minmax(0,40%) minmax(0,1fr);gap:20px;align-items:center
+}
+#app .concept-tree-graphic{width:100%;max-width:none;border-radius:14px;overflow:hidden;background:#f8faf6}
+#app .concept-tree-content{min-width:0}
+#app .concept-tree .part-word-layer{display:none;position:absolute;inset:0;z-index:6;pointer-events:none}
+#app .concept-tree .concept-tree-graphic[data-current-part="root"] .part-word-layer[data-word-part="root"],
+#app .concept-tree .concept-tree-graphic[data-current-part="trunk"] .part-word-layer[data-word-part="trunk"],
+#app .concept-tree .concept-tree-graphic[data-current-part="branch"] .part-word-layer[data-word-part="branch"],
+#app .concept-tree .concept-tree-graphic[data-current-part="flower"] .part-word-layer[data-word-part="flower"]{display:block}
+#app .concept-tree .part-word{
+ position:absolute;display:flex;align-items:center;justify-content:center;
+ transform:translate(-50%,-50%);width:max-content;max-width:42%;min-height:27px;
+ padding:5px 8px;border-radius:8px;text-align:center;
+ font-size:clamp(.72rem,1.2vw,.86rem);line-height:1.35;font-weight:850;
+ white-space:normal;border:1.5px solid #85b395;
+ color:#225b3f;background:#f4f9f4;box-shadow:0 2px 6px #18382621
+}
+#app .concept-tree .part-word-layer[data-word-part="flower"] .part-word{background:rgba(255,248,218,.97);border-color:#c5a64e;color:#755315}
+#app .concept-tree .part-word-layer[data-word-part="branch"] .part-word{background:rgba(232,247,236,.97);border-color:#8eb897;color:#285a3d}
+#app .concept-tree .part-word-layer[data-word-part="trunk"] .part-word{background:rgba(233,246,252,.97);border-color:#86afc8;color:#265d80}
+#app .concept-tree .part-word-layer[data-word-part="root"] .part-word{background:rgba(252,242,228,.97);border-color:#bc9d77;color:#715234}
+#app .concept-tree .part-word-layer[data-word-part="flower"] .part-word:nth-child(1){left:17%;top:11%}
+#app .concept-tree .part-word-layer[data-word-part="flower"] .part-word:nth-child(2){left:18%;top:38%}
+#app .concept-tree .part-word-layer[data-word-part="flower"] .part-word:nth-child(3){left:83%;top:11%}
+#app .concept-tree .part-word-layer[data-word-part="flower"] .part-word:nth-child(4){left:82%;top:38%}
+#app .concept-tree .part-word-layer[data-word-part="branch"] .part-word:nth-child(1){left:18%;top:31%}
+#app .concept-tree .part-word-layer[data-word-part="branch"] .part-word:nth-child(2){left:17%;top:65%}
+#app .concept-tree .part-word-layer[data-word-part="branch"] .part-word:nth-child(3){left:82%;top:31%}
+#app .concept-tree .part-word-layer[data-word-part="branch"] .part-word:nth-child(4){left:83%;top:65%}
+#app .concept-tree .part-word-layer[data-word-part="trunk"] .part-word:nth-child(1){left:17%;top:50%}
+#app .concept-tree .part-word-layer[data-word-part="trunk"] .part-word:nth-child(2){left:17%;top:77%}
+#app .concept-tree .part-word-layer[data-word-part="trunk"] .part-word:nth-child(3){left:83%;top:50%}
+#app .concept-tree .part-word-layer[data-word-part="trunk"] .part-word:nth-child(4){left:83%;top:77%}
+#app .concept-tree .part-word-layer[data-word-part="root"] .part-word:nth-child(1){left:19%;top:76%}
+#app .concept-tree .part-word-layer[data-word-part="root"] .part-word:nth-child(2){left:17%;top:92%}
+#app .concept-tree .part-word-layer[data-word-part="root"] .part-word:nth-child(3){left:81%;top:76%}
+#app .concept-tree .part-word-layer[data-word-part="root"] .part-word:nth-child(4){left:83%;top:92%}
+#app .concept-tree-graphic[data-current-part="flower"] .tree-focus-label{background:#875f1d}
+#app .concept-tree-graphic[data-current-part="branch"] .tree-focus-label{background:#276e4c}
+#app .concept-tree-graphic[data-current-part="trunk"] .tree-focus-label{background:#2b708e}
+#app .concept-tree-graphic[data-current-part="root"] .tree-focus-label{background:#7c5c3e}
+#app .concept-tree-explain{padding:14px;line-height:1.75}
+#app .concept-tree-tabs{gap:7px}
+main#app .family36{padding:16px 18px}
+main#app .family36 .family36-layout{
+ display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+ align-items:start;gap:16px
+}
+main#app .family36 .family36-finances,main#app .family36 .family36-policy{min-width:0}
+main#app .family36 .family36-finances>strong{display:block;font-size:.94rem;color:#254f39}
+main#app .family36 .family36-finances>p{margin:4px 0 13px;font-size:.86rem}
+main#app .family36 .family36-finances>h3{margin:0 0 9px}
+main#app .family36 .family36-finances .tablewrap{max-width:440px;width:100%;margin:0}
+main#app .family36 .finance36{width:100%;table-layout:fixed}
+main#app .family36 .finance36 th:first-child{width:57%}
+main#app .family36 .finance36 td:last-child{width:43%;padding-right:10px;text-align:right}
+main#app .family36 .finance36 th,main#app .family36 .finance36 td{padding-top:10px;padding-bottom:10px}
+main#app .family36 .family36-policy{
+ padding:13px 14px;background:#fff;border:1px solid #d1e3d6;border-radius:11px
+}
+main#app .family36 .family-policy36{margin:0;padding:0;border:0}
+main#app .family36 .family-policy36 b{font-size:.9rem}
+main#app .family36 .family-policy36 p{margin:8px 0;line-height:1.83}
+main#app .family36 .family36-policy .condition36{
+ border-top:1px solid #e0e9e3;margin:10px 0 0;padding-top:10px;font-size:.73rem;line-height:1.65
+}
+@media(max-width:780px){
+ #app .concept-tree,#app .intro-tree-first .concept-tree{grid-template-columns:1fr;gap:12px}
+ #app .concept-tree-graphic,#app .intro-tree-first .concept-tree-graphic{
+  max-width:380px;width:min(100%,380px);margin:0 auto
+ }
+ #app .concept-tree-content{width:100%}
+ main#app .family36 .family36-layout{grid-template-columns:1fr;gap:11px}
+ main#app .family36 .family36-finances .tablewrap{max-width:470px}
+}
+@media(max-width:480px){
+ #app .concept-tree .part-word{font-size:.72rem;padding:4px 6px;max-width:43%}
+ main#app .family36{padding:12px 10px}
+ main#app .family36 .family36-policy{padding:11px 12px}
+ main#app .family36 .finance36 th,main#app .family36 .finance36 td{padding:9px 6px;font-size:.8rem}
+}
+</style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
   <span class="device-view-label">表示確認</span>
@@ -1257,7 +1346,7 @@ const DISPLAY36={"education-a":{"rows":[["月の自由残額（予定貯蓄維�
 const view36=()=>DISPLAY36[S.topic+'-'+S.decision];
 const val36=x=>String(x).startsWith('−')?'<span class="v36-negative">'+x+'</span>':x;
 function finance36(rows){return '<div class="tablewrap"><table class="finance36"><thead><tr><th scope="col">項目</th><th scope="col">'+(rows.every(r=>/^[-−]?[0-9,]+円$/.test(r[1]))?'金額':'金額・設定')+'</th></tr></thead><tbody>'+rows.map(([k,v,cl])=>'<tr class="'+(cl==='key-row'?cl:'')+'"><th scope="row">'+k+'</th><td class="'+(cl==='income'||cl==='expense'?cl:'')+'">'+val36(v)+'</td></tr>').join('')+'</tbody></table></div>'}
-function family36(){return '<div class="family-strip family36"><strong>地方都市の3人家族</strong><p>夫婦・片働き・小学生の子ども1人</p><h3>毎月の収支</h3>'+finance36([['手取り収入','320,000円','income'],['通常生活支出','285,000円','expense'],['予定貯蓄（積立）','25,000円',''],['自由残額','10,000円','key-row']])+'<div class="family-policy36"><b>資金状況・生活方針</b><p>現在の貯蓄は200万円。そのうち100万円は、いざというときの生活防衛資金として残しておきたい。</p></div><p class="condition36">各テーマは独立した架空の事例です。</p></div>'}
+function family36(){return '<div class="family-strip family36"><div class="family36-layout"><div class="family36-finances"><strong>地方都市の3人家族</strong><p>夫婦・片働き・小学生の子ども1人</p><h3>毎月の収支</h3>'+finance36([['手取り収入','320,000円','income'],['通常生活支出','285,000円','expense'],['予定貯蓄（積立）','25,000円',''],['自由残額','10,000円','key-row']])+'</div><aside class="family36-policy"><div class="family-policy36"><b>資金状況・生活方針</b><p>現在の貯蓄は200万円。そのうち100万円は、いざというときの生活防衛資金として残しておきたい。</p></div><p class="condition36">各テーマは独立した架空の事例です。</p></aside></div></div>'}
 function compare36(){const x=COMPARE36[S.topic],keys=['a','b','hold'],names=['A案','B案','保留'];const attr=k=>'class="plan-cell '+(S.decision===k?'chosen-col':'')+'" data-decision="'+k+'"';const mark=k=>S.decision===k?'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg>':'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>';return '<div class="compare-invite36"><b>あなたなら、どの方法を選びますか？</b><span>3つの縦列から一つ選択してください。列内のどこを押しても選べます。</span></div><div class="tablewrap compare-wrap36"><table class="compare36"><colgroup><col class="item-col"><col><col><col></colgroup><thead><tr><th scope="col">比較項目</th>'+keys.map((k,i)=>'<th scope="col" '+attr(k)+'><button type="button" class="plan-header36" data-decision="'+k+'" data-choice-key="'+k+'" aria-label="'+names[i]+'：'+x.names[i]+'を選ぶ" aria-pressed="'+(S.decision===k)+'"><span class="plan-mark">'+mark(k)+'</span><span class="compare-plan">'+names[i]+'</span><span class="compare-name">'+x.names[i]+'</span></button></th>').join('')+'</tr></thead><tbody>'+x.rows.map(r=>'<tr><th scope="row">'+r[0]+'</th>'+keys.map((k,i)=>'<td '+attr(k)+'>'+val36(r[i+1])+'</td>').join('')+'</tr>').join('')+'<tr class="compare-note-row"><th scope="row">内容・留意点</th>'+keys.map((k,i)=>'<td '+attr(k)+'>'+x.notes[i]+'</td>').join('')+'</tr></tbody></table></div><p class="condition36">'+x.foot+'</p>'}
 function conditions36(){return S.topic==='car'?finance36([['燃料単価','170円/L'],['月間走行距離','720km'],['旧車の燃費','10km/L'],['候補車の燃費','15km/L']])+'<p class="condition36">中古車の価格と燃費は架空の設定です。安全性の優劣を示すものではありません。月間燃料費は同じ条件での試算です。</p>':'<p class="condition36">'+theme().caution+'</p>'}
 function tableResults(r){let rows=r.rows.map(x=>x.slice()),reference='';if(S.topic==='car'&&S.decision!=='hold'){rows=rows.filter(x=>!x[0].includes('燃料費'));const b=S.decision==='b';reference='<div class="reference36"><h3>参考｜月間燃料費の試算</h3><div class="tablewrap"><table class="resulttable result36"><thead><tr><th scope="col">比較項目</th><th scope="col"><span class="comp-eyebrow">Before</span>従来</th><th scope="col"><span class="comp-eyebrow">After</span>選択案</th></tr></thead><tbody><tr><th scope="row">月間燃料費</th><td>12,240円</td><td>'+(b?'8,160円':'12,240円')+'</td></tr><tr><th scope="row">削減額</th><td>―</td><td>'+(b?'4,080円':'0円')+'</td></tr></tbody></table></div><p class="condition36">同じ条件での試算であり、実測値ではありません。</p></div>'}rows=rows.concat(view36().rows);return '<div class="tablewrap"><table class="resulttable result36"><thead><tr><th scope="col">確認項目</th><th scope="col"><span class="comp-eyebrow">Before</span>予定・基準</th><th scope="col"><span class="comp-eyebrow">After</span>実績・結果</th></tr></thead><tbody>'+rows.map(x=>'<tr><th scope="row">'+x[0]+'</th>'+x.slice(1).map(v=>'<td>'+val36(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'+reference}
@@ -1370,7 +1459,7 @@ function treeDiagram(finalMode=false,overview=false){
    <button type="button" class="tree-hit trunk" data-tree-part="trunk" aria-label="木の幹を選ぶ"></button>
    <button type="button" class="tree-hit root" data-tree-part="root" aria-label="木の根を選ぶ"></button>
    <span class="tree-focus-label" data-tree-focus-label>根</span>
-   ${overview&&!finalMode?Object.entries(TREE_VOCAB).map(([part,words])=>`<div class="part-word-layer" data-word-part="${part}" aria-hidden="true">${words.map((word,j)=>`<span class="part-word" style="animation-delay:${j*0.055}s">${word}</span>`).join('')}</div>`).join(''):''}
+   ${Object.entries(TREE_VOCAB).map(([part,words])=>`<div class="part-word-layer" data-word-part="${part}" aria-hidden="true">${words.map((word,j)=>`<span class="part-word" style="animation-delay:${j*0.055}s">${word}</span>`).join('')}</div>`).join('')}
   </div>
   <div class="concept-tree-content">
    <div class="concept-tree-tabs" aria-label="木の部分を選ぶ">${[['root','根｜目的'],['trunk','幹｜判断'],['branch','枝｜立場'],['flower','花｜結果']].map(([id,v])=>`<button type="button" data-tree-part="${id}" aria-pressed="${!overview&&id==='root'}" class="${!overview&&id==='root'?'selected':''}">${v}</button>`).join('')}</div>
