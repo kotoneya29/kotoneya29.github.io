@@ -678,42 +678,51 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
 @media(max-width:360px){.sales-two-cases .qmetricgrid{grid-template-columns:1fr}}
 
 
-/* Case 02: quantitative, compact break-even planning summary; preview only */
-.sales-two-cases .case2-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:9px 0 15px}
-.sales-two-cases .case2-fact{border:1px solid #d2e0d5;border-radius:11px;background:#fff;padding:13px 14px;min-width:0}
-.sales-two-cases .case2-fact>span{display:block;font-weight:850;font-size:.73rem;color:#5a7463}
-.sales-two-cases .case2-fact strong{font-size:1.6rem;font-weight:900;color:#205e3f;display:block;line-height:1.42;margin:4px 0}
-.sales-two-cases .case2-fact strong small{font-size:.57em;margin-left:4px}
-.sales-two-cases .case2-fact strong.case2-word{font-size:clamp(.98rem,2.4vw,1.17rem)}
-.sales-two-cases .case2-fact p{margin:0;color:#5c7062;font-size:.75rem;line-height:1.55}
-.sales-two-cases .case2-target{background:#edf6ef;border:1px solid #9bc6ab;border-radius:13px;padding:17px 19px}
-.sales-two-cases .case2-target-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.sales-two-cases .case2-target-head>div{flex:none}
-.sales-two-cases .case2-target-head span{display:block;font-weight:900;font-size:.78rem;color:#39664a}
-.sales-two-cases .case2-target-head strong{display:block;font-weight:900;font-size:clamp(2rem,4.3vw,2.9rem);font-variant-numeric:tabular-nums;color:#1b613d;line-height:1.3;letter-spacing:-.04em}
-.sales-two-cases .case2-target-head strong small{font-size:.46em;margin-left:5px;letter-spacing:0}
-.sales-two-cases .case2-target-head p{max-width:290px;margin:0;font-size:.89rem;color:#335a40;line-height:1.6}
-.sales-two-cases .case2-target-head b{color:#1f633f}
-.sales-two-cases .case2-timeline{margin:16px 0 10px}
-.sales-two-cases .case2-track{height:12px;display:flex;background:#d5e6da;border-radius:20px;overflow:hidden}
-.sales-two-cases .case2-before{width:77.7778%;background:#abc6b2}
-.sales-two-cases .case2-window{width:22.2222%;background:#2c8152}
-.sales-two-cases .case2-time{position:relative;height:20px;font-size:.70rem;color:#426750;margin-top:6px}
-.sales-two-cases .case2-time span{position:absolute;white-space:nowrap}
-.sales-two-cases .case2-time span:first-child{left:0}
-.sales-two-cases .case2-time span:nth-child(2){left:77.7778%;transform:translateX(-50%);font-weight:900}
-.sales-two-cases .case2-time span:last-child{right:0;font-weight:900}
-.sales-two-cases .case2-target-note{margin:0;font-size:.79rem;color:#446950;line-height:1.7}
-@media(max-width:650px){
- .sales-two-cases .case2-facts{gap:7px}
- .sales-two-cases .case2-fact{padding:11px 9px}
- .sales-two-cases .case2-fact strong{font-size:1.35rem}
- .sales-two-cases .case2-fact strong.case2-word{font-size:.96rem}
- .sales-two-cases .case2-target{padding:14px 12px}
- .sales-two-cases .case2-target-head{display:block}
- .sales-two-cases .case2-target-head strong{font-size:2.3rem}
- .sales-two-cases .case2-target-head p{max-width:none;margin:0 0 7px;font-size:.83rem}
- .sales-two-cases .case2-target-note{font-size:.76rem}
+
+/* PREVIEW 2026-11-25: quantified two cases, no interactive simulation */
+.sales-two-cases .case1-shift{margin:15px 0 11px;border:1px solid #cadfd0;background:#f6faf6;border-radius:11px;padding:13px}
+.sales-two-cases .case1-shift-top{font-weight:900;font-size:.85rem;color:#315943;margin-bottom:10px}
+.sales-two-cases .case1-shift-flow{display:grid;grid-template-columns:1fr 25px 1fr;gap:9px;align-items:center}
+.sales-two-cases .case1-shift-flow>div:not(.case1-shift-arrow){background:#fff;border-radius:8px;padding:11px;border:1px solid #d5e3d7}
+.sales-two-cases .case1-shift-flow small{display:block;color:#65796a;font-size:.71rem;font-weight:850}
+.sales-two-cases .case1-shift-flow strong{display:block;margin:6px 0;font-size:.9rem;color:#2d593e}
+.sales-two-cases .case1-shift-flow span{display:block;color:#5f7364;font-size:.73rem}
+.sales-two-cases .case1-shift-arrow{text-align:center;font-size:1.2rem;color:#488262;font-weight:900}
+.sales-two-cases .case2-keyfacts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:15px 0}
+.sales-two-cases .case2-keyfacts>div{border:1px solid #d3e2d6;border-radius:11px;padding:13px 11px;background:#fff;min-width:0}
+.sales-two-cases .case2-keyfacts small{display:block;font-size:.70rem;color:#617369;line-height:1.5;font-weight:800;min-height:2em}
+.sales-two-cases .case2-keyfacts strong{display:block;white-space:nowrap;font-size:clamp(1rem,2.1vw,1.36rem);color:#246141;font-weight:900;margin:7px 0 3px}
+.sales-two-cases .case2-keyfacts strong em{font-style:normal;font-size:.54em;font-weight:750;margin-left:3px}
+.sales-two-cases .case2-keyfacts .case2-mainfact{background:#e8f5ec;border-color:#9ac2a5}
+.sales-two-cases .case2-keyfacts .case2-mainfact strong{font-size:clamp(1.45rem,2.8vw,2rem)}
+.sales-two-cases .case2-modelsteps{display:flex;gap:5px;flex-wrap:wrap;align-items:center;background:#f5faf6;border:1px solid #d0dfd3;border-radius:10px;padding:11px;color:#356448;font-size:.74rem;line-height:1.5;margin:11px 0 14px}
+.sales-two-cases .case2-modelsteps span{background:#fff;border:1px solid #d8e5da;border-radius:6px;padding:6px 8px}
+.sales-two-cases .case2-modelsteps b{font-weight:900;color:#779a7f}
+.sales-two-cases .case2-modelsteps strong{font-size:.8rem;color:#206041}
+.sales-two-cases .case2-chartgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0}
+.sales-two-cases .case2-chartbox{min-width:0;margin:0;border:1px solid #d1e0d4;border-radius:11px;padding:12px;background:#fff;overflow:hidden}
+.sales-two-cases .case2-chartbox figcaption b{display:block;font-size:.87rem;line-height:1.48;color:#2a563c}
+.sales-two-cases .case2-chartbox figcaption small{display:block;font-size:.72rem;color:#617365;margin:3px 0}
+.sales-two-cases .case2-chartbox svg{width:100%;height:auto;display:block}
+.sales-two-cases .case2-legend{display:flex;gap:5px 12px;flex-wrap:wrap;font-size:.69rem;color:#607264;margin:9px 0}
+.sales-two-cases .case2-legend span{display:flex;align-items:center;gap:5px}
+.sales-two-cases .case2-legend i{width:15px;border-top:3px solid #246c4b;display:inline-block}
+.sales-two-cases .case2-legend i.case2-b{border-color:#518ca7}
+.sales-two-cases .case2-legend i.case2-be{border-color:#bb7658;border-top-style:dashed}
+.sales-two-cases .case2-legend i.case2-r{border-color:#467b9d}
+.sales-two-cases .case2-chartwarning{font-size:.70rem;line-height:1.55;color:#6a756c;background:#f5f8f5;border-radius:6px;padding:7px 8px;margin:5px 0 0}
+.sales-two-cases .case2-rule{border:1px solid #abd2b5;background:#eef7ef;border-radius:10px;padding:14px 15px;margin-top:11px}
+.sales-two-cases .case2-rule strong{display:block;color:#246241;font-weight:900;font-size:.98rem}
+.sales-two-cases .case2-rule span{display:block;font-size:.8rem;line-height:1.65;color:#526d59;margin-top:5px}
+@media(max-width:730px){.sales-two-cases .case2-chartgrid{grid-template-columns:1fr}}
+@media(max-width:600px){
+ .sales-two-cases .case1-shift-flow{grid-template-columns:1fr;gap:5px}
+ .sales-two-cases .case1-shift-arrow{transform:rotate(90deg);line-height:1}
+ .sales-two-cases .case2-keyfacts{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .sales-two-cases .case2-keyfacts strong{font-size:1.16rem}
+ .sales-two-cases .case2-keyfacts .case2-mainfact strong{font-size:1.7rem}
+ .sales-two-cases .case2-modelsteps{gap:5px}
+ .sales-two-cases .case2-modelsteps span{flex:1 1 38%;text-align:center}
 }
 </style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
@@ -779,35 +788,70 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
     <div class="qmetric"><span>売上高固定費率</span><div><b>40%</b><em>→</em><strong>25%</strong></div><small>−15ポイント</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:62.5%"></i></div></div>
    </div>
    <div class="qlegend"><span><i></i>Before</span><span><i class="aft"></i>After</span><small>棒の長さは各指標内の比較。指標間の大きさは比較しません。</small></div>
-   <p class="cases-note">※実務経験を機密に配慮して指数・比率で表現しています。固定費率の低下は固定費総額の減少を意味しません。変動費率や利益の実績は示していないため、損益分岐点の改善・利益増加までは断定しません。外注比率の算定基準は正式掲載前に要確認です。</p>
+   <div class="case1-shift">
+  <div class="case1-shift-top">数字の裏にある、受注・生産の判断基準の転換</div>
+  <div class="case1-shift-flow">
+   <div><small>BEFORE｜稼働を優先</small><strong>自社工場で量産を抱える</strong><span>設備・人員を動かすための受注</span></div>
+   <div class="case1-shift-arrow" aria-hidden="true">→</div>
+   <div><small>AFTER｜自社の強みを優先</small><strong>試作・特注は自社、量産は外注先</strong><span>熟練工の技術を活かす受注へ</span></div>
+  </div>
+ </div>
+ <p class="cases-note">※実務経験を機密に配慮して指数・比率で表現しています。固定費率の低下は固定費総額の減少を意味しません。変動費率や利益の実績は示していないため、損益分岐点の改善・利益増加までは断定しません。外注比率の算定基準は正式掲載前に要確認です。</p>
    <p class="cases-takeaway">見たい数字を「売上」だけで終わらせず、「どの仕事を、どの体制で担うか」という経営の選択につなげた。</p>
   </div>
  </details>
  
 <details class="cases-detail" id="case-b-detail" open>
-  <summary>事例02｜10営業所の実績から、新規支店の成長・採算モデルへ</summary>
-  <div class="cases-detail-body">
-   <p class="cases-detail-lead">既存10営業所の販売実績を地域別に属性化。売れ筋商品の構成比から売上と費用を組み立て、<strong>どの地域パターンでも、立ち上げ後14〜18か月で損益分岐点を超える</strong>ことを、新規支店計画の共通基準とした。</p>
-   <div class="cases-ba">
-    <div class="cases-era"><div class="cases-era-tag">BEFORE｜過去の営業所実績</div><h4>営業所ごとの売上は分かる。</h4><p>地域ごとの売れ方や費用の違いを、新規出店の採算計画へ直接つなげにくい。</p></div>
-    <div class="cases-era after"><div class="cases-era-tag">AFTER｜新規支店の経営モデル</div><h4>売上の伸び方と、採算までの期間が分かる。</h4><p>商品構成と費用を地域特性別に組み合わせ、黒字化までの道筋を計画できる。</p></div>
-   </div>
-   <h4 class="cases-metric-title">数字を、次の出店で使えるモデルに変える</h4>
-   <div class="case2-facts" aria-label="事例02の4つのモデル設計要素">
-    <div class="case2-fact"><span>分析対象</span><strong>10<small>営業所</small></strong><p>既存拠点の販売実績</p></div>
-    <div class="case2-fact"><span>地域の特徴</span><strong class="case2-word">商品構成比</strong><p>売れ筋商品の構成から属性化</p></div>
-    <div class="case2-fact"><span>費用構造</span><strong class="case2-word">変動費＋固定費</strong><p>売上に連動する費用と拠点費用</p></div>
-    <div class="case2-fact"><span>出店判断の基準</span><strong class="case2-word">損益分岐点</strong><p>売上・費用・月次損益を関連づける</p></div>
-   </div>
-   <div class="case2-target" aria-label="全地域パターン共通の損益分岐点到達基準">
-    <div class="case2-target-head"><div><span>全パターン共通｜新規支店の計画基準</span><strong>14〜18<small>か月</small></strong></div><p>立ち上げから、<b>月次の損益分岐点を超える</b>までの標準期間</p></div>
-    <div class="case2-timeline"><div class="case2-track"><div class="case2-before"></div><div class="case2-window"></div></div><div class="case2-time"><span>出店時</span><span>14か月</span><span>18か月</span></div></div>
-    <p class="case2-target-note">地域ごとに売上構成・費用は異なる。それでも、共通の採算到達期間を置き、出店計画を検証できるようにした。</p>
-   </div>
-   <p class="cases-note">※14〜18か月は当時設計したモデル上の計画基準です。実際に各支店が黒字化した時期や、累積損失を回収した時期を示すものではありません。売上・費用の個別実額は掲載していません。</p>
-   <p class="cases-takeaway">「どこに出店するか」だけでなく、<strong>「何をどれだけ売り、いつ採算に乗せるか」</strong>まで数字で設計する。</p>
+ <summary>事例02｜A型6営業所・B型4営業所から、新規支店の採算モデルへ</summary>
+ <div class="cases-detail-body">
+  <p class="cases-detail-lead">既存10営業所の<strong>季節変動の共通性</strong>をもとにA型6営業所・B型4営業所に分類。各型の売れ筋と売上の伸び方に、変動費・固定費・人員配置・備品購入時期を重ね、出店後の損益分岐点到達を計画した。</p>
+  <div class="cases-ba">
+   <div class="cases-era"><div class="cases-era-tag">BEFORE｜実績は拠点ごと</div><h4>売上実績はあるが、出店計画への使い方が定まらない。</h4><p>地域の季節変動・商品構成・費用発生の違いが整理できていない。</p></div>
+   <div class="cases-era after"><div class="cases-era-tag">AFTER｜共通する経営モデル</div><h4>地域特性別に、売上・費用・採算到達時期を計画する。</h4><p>A型・B型の傾向を用い、採算の基準を新規支店に適用できる。</p></div>
   </div>
- </details>
+  <div class="case2-keyfacts">
+   <div><small>分析対象</small><strong>10<em>営業所</em></strong></div>
+   <div><small>季節変動による分類</small><strong>A型 6<em>営業所</em></strong></div>
+   <div><small>季節変動による分類</small><strong>B型 4<em>営業所</em></strong></div>
+   <div class="case2-mainfact"><small>全パターン共通の計画基準</small><strong>14〜18<em>か月</em></strong></div>
+  </div>
+  <div class="case2-modelsteps" aria-label="モデル化に使った情報">
+   <span>季節変動・商品構成</span><b>＋</b><span>売上に連動する変動費</span><b>＋</b><span>固定費・人員・備品投入時期</span><b>→</b><strong>採算到達モデル</strong>
+  </div>
+  <div class="case2-chartgrid">
+   <figure class="case2-chartbox">
+    <figcaption><b>① 10営業所を季節変動でグループ化</b><small>売上指数の月別推移を比較する考え方</small></figcaption>
+    <div class="case2-legend"><span><i class="case2-a"></i>A型（6営業所）</span><span><i class="case2-b"></i>B型（4営業所）</span></div>
+    <svg viewBox="0 0 566 214" width="100%" role="img" aria-label="A型6営業所とB型4営業所の季節変動を指数化する方法を示す架空の例。両曲線の月別値は実績ではない。">
+ <title>季節変動の共通性を2型に分類する模式図</title>
+ <line x1="55" x2="543" y1="160.7" y2="160.7" stroke="#dbe7dd" stroke-width="1" /><text x="43" y="164.7" fill="#657368" text-anchor="end" font-size="11">80</text><line x1="55" x2="543" y1="99.5" y2="99.5" stroke="#dbe7dd" stroke-width="1" /><text x="43" y="103.5" fill="#657368" text-anchor="end" font-size="11">100</text><line x1="55" x2="543" y1="38.3" y2="38.3" stroke="#dbe7dd" stroke-width="1" /><text x="43" y="42.3" fill="#657368" text-anchor="end" font-size="11">120</text><path d="M55.0,151.5 L99.4,136.2 L143.7,114.8 L188.1,84.2 L232.5,59.7 L276.8,68.9 L321.2,108.7 L365.5,127.0 L409.9,78.1 L454.3,50.5 L498.6,68.9 L543.0,145.4" fill="none" stroke="#246c4b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+ <path d="M55.0,81.1 L99.4,99.5 L143.7,117.9 L188.1,133.2 L232.5,124.0 L276.8,102.6 L321.2,78.1 L365.5,65.8 L409.9,90.3 L454.3,120.9 L498.6,114.8 L543.0,65.8" fill="none" stroke="#518ca7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+ <text x="55.0" y="198" fill="#6b7e70" font-size="11" text-anchor="middle">1月</text><text x="143.7" y="198" fill="#6b7e70" font-size="11" text-anchor="middle">3月</text><text x="276.8" y="198" fill="#6b7e70" font-size="11" text-anchor="middle">6月</text><text x="409.9" y="198" fill="#6b7e70" font-size="11" text-anchor="middle">9月</text><text x="543.0" y="198" fill="#6b7e70" font-size="11" text-anchor="middle">12月</text><text x="10" y="13" fill="#64796a" font-size="11">売上指数（月平均=100）</text></svg>
+    <p class="case2-chartwarning">※曲線の山谷と月別指数は説明用の仮データ。実際の季節変動の形を示すものではありません。</p>
+   </figure>
+   <figure class="case2-chartbox">
+    <figcaption><b>② 売上と損益分岐比率を月次で計画</b><small>費用投入を織り込んだ採算到達の見える化</small></figcaption>
+    <div class="case2-legend"><span><i class="case2-s"></i>売上計画</span><span><i class="case2-be"></i>損益分岐点売上</span><span><i class="case2-r"></i>損益分岐比率</span></div>
+    <svg viewBox="0 0 572 376" width="100%" role="img" aria-label="架空の成長曲線で月商と損益分岐点売上を上段に、損益分岐比率を下段に表した模式図。16か月目で100パーセントを下回る例であり、実績値ではない。">
+ <title>売上成長と損益分岐比率のモデル化例（架空の指数）</title>
+ <rect x="392.1" y="25" width="104.6" height="310" fill="#e7f1e9" opacity=".88"/><line x1="52" y1="168.0" x2="549" y2="168.0" stroke="#dfe9e0"/><text x="44" y="172.0" text-anchor="end" font-size="10" fill="#66776a">0</text><line x1="52" y1="126.4" x2="549" y2="126.4" stroke="#dfe9e0"/><text x="44" y="130.4" text-anchor="end" font-size="10" fill="#66776a">50</text><line x1="52" y1="84.9" x2="549" y2="84.9" stroke="#dfe9e0"/><text x="44" y="88.9" text-anchor="end" font-size="10" fill="#66776a">100</text><line x1="52" y1="43.3" x2="549" y2="43.3" stroke="#dfe9e0"/><text x="44" y="47.3" text-anchor="end" font-size="10" fill="#66776a">150</text><line x1="52" y1="308.9" x2="549" y2="308.9" stroke="#b46d54" stroke-dasharray="5 3"/><text x="44" y="312.9" font-size="10" text-anchor="end" fill="#66776a">100%</text><line x1="52" y1="280.6" x2="549" y2="280.6" stroke="#dfe9e0" stroke-dasharray="none"/><text x="44" y="284.6" font-size="10" text-anchor="end" fill="#66776a">150%</text><line x1="52" y1="252.3" x2="549" y2="252.3" stroke="#dfe9e0" stroke-dasharray="none"/><text x="44" y="256.3" font-size="10" text-anchor="end" fill="#66776a">200%</text><line x1="52" y1="224.0" x2="549" y2="224.0" stroke="#dfe9e0" stroke-dasharray="none"/><text x="44" y="228.0" font-size="10" text-anchor="end" fill="#66776a">250%</text>
+ <text x="7" y="13" font-size="11" fill="#627768">売上指数</text>
+ <path d="M52.0,138.9 L78.2,133.9 L104.3,128.1 L130.5,123.1 L156.6,118.1 L182.8,112.3 L208.9,107.3 L235.1,103.2 L261.3,99.8 L287.4,95.7 L313.6,92.4 L339.7,89.0 L365.9,85.7 L392.1,83.2 L418.2,79.9 L444.4,74.9 L470.5,69.9 L496.7,64.9 L522.8,59.9 L549.0,55.0" stroke="#236b4b" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+ <path d="M52.0,89.0 L78.2,89.0 L104.3,89.0 L130.5,89.0 L156.6,89.0 L182.8,84.9 L208.9,84.9 L235.1,84.9 L261.3,84.9 L287.4,84.9 L313.6,81.5 L339.7,81.5 L365.9,81.5 L392.1,81.5 L418.2,77.4 L444.4,77.4 L470.5,77.4 L496.7,77.4 L522.8,77.4 L549.0,77.4" stroke="#bb7658" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4"/>
+ <text x="7" y="197" font-size="11" fill="#627768">損益分岐比率</text>
+ <path d="M52.0,211.9 L78.2,234.3 L104.3,253.4 L130.5,265.9 L156.6,275.8 L182.8,281.0 L208.9,287.9 L235.1,292.9 L261.3,296.4 L287.4,300.4 L313.6,300.8 L339.7,303.5 L365.9,306.0 L392.1,307.7 L418.2,307.3 L444.4,310.4 L470.5,313.2 L496.7,315.7 L522.8,318.0 L549.0,320.1" stroke="#467b9d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="444.4" cy="310.4" r="4" fill="#467b9d" stroke="white" stroke-width="1"/>
+ <text x="52.0" y="352" font-size="11" text-anchor="middle" fill="#5e7864">1</text><text x="182.8" y="352" font-size="11" text-anchor="middle" fill="#5e7864">6</text><text x="339.7" y="352" font-size="11" text-anchor="middle" fill="#5e7864">12</text><text x="392.1" y="352" font-size="11" text-anchor="middle" fill="#5e7864">14</text><text x="444.4" y="352" font-size="11" text-anchor="middle" fill="#5e7864">16</text><text x="496.7" y="352" font-size="11" text-anchor="middle" fill="#5e7864">18</text><text x="549.0" y="352" font-size="11" text-anchor="middle" fill="#5e7864">20</text>
+ <text x="548" y="369" fill="#6a7e70" text-anchor="end" font-size="11">出店後（月）</text>
+ <text x="444.4" y="20" fill="#327047" font-size="11" font-weight="bold" text-anchor="middle">14〜18か月</text></svg>
+    <p class="case2-chartwarning">※曲線・指数・費用変化の時期は説明用の仮データ。図では16か月目に比率100%を下回る例を描いています。</p>
+   </figure>
+  </div>
+  <div class="case2-rule"><strong>共通の判断基準：出店後14〜18か月で損益分岐点超え</strong><span>A型・B型で売上の季節性や費用の発生時期は異なっても、共通の採算到達期間を置いて計画を検証する。</span></div>
+  <p class="cases-note">※A型6営業所・B型4営業所の分類と14〜18か月の到達期間は、当時のモデル設計上の基準。実際の月別指数・費用投入額・損益分岐比率の数値は未提示のため、グラフの数値と形状はすべて模式的な例示です。14〜18か月は実際の支店の黒字化実績や累積損失の回収を保証するものではありません。</p>
+  <p class="cases-takeaway">過去の実績を「売上の記録」で終わらせず、<strong>地域ごとの成長・費用・採算到達を判断できる経営モデル</strong>に変えた。</p>
+ </div>
+</details>
  <div class="qend">
   <h3>数字が、次の判断に使えるようになる。</h3>
   <p>経営の目的に合わせて、必要な数字を選び直す。実績と計画を同じ基準で比べ、判断を変え、また検証する。</p>
