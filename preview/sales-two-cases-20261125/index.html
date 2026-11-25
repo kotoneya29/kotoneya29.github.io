@@ -1280,6 +1280,12 @@ main#app .tree-vertical .v3-tree-pair>div{
  main#app .tree-vertical .tree-part-card{min-height:140px}
  main#app .tree-vertical .v3-tree-pair{grid-template-columns:1fr;gap:8px}
 }
+</style><style id="preview-tree-legacy-overrides-v5">
+main#app .tree-vertical .concept-tree-graphic::before{display:none!important;content:none!important}
+main#app .tree-vertical .tree-hit::after{display:none!important;content:none!important}
+main#app .tree-vertical .method-words,main#app .tree-vertical .method-word,main#app .tree-vertical .method-label{display:none!important}
+main#app .tree-vertical .concept-tree-graphic{max-width:none!important}
+@media(min-width:781px){main#app .tree-vertical .tree-figure{width:min(100%,620px)}}
 </style></head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
   <span class="device-view-label">表示確認</span>
@@ -1703,6 +1709,9 @@ function returnSales(){app.hidden=true;document.getElementById('sales-return42')
 render();
 loadOriginalTree();
 </script>
+<script id="preview-tree-capture-v5">
+window.__PREVIEW_TREE_V5 = treeDiagram;
+</script>
 <style id="method-tree-four-layer-fallback">
 /* Built-in four-layer presentation; remains visible even if extension JS fails. */
 .concept-tree-graphic{position:relative!important;isolation:isolate}
@@ -1720,4 +1729,18 @@ loadOriginalTree();
 .concept-tree-tabs{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}
 .concept-tree-tabs button{min-height:46px!important;font-size:clamp(11px,1.8vw,14px)!important;padding:5px 3px!important;overflow-wrap:anywhere}
 @media(max-width:650px){.concept-tree-graphic{max-width:min(100%,400px)!important}.concept-tree-graphic .tree-hit::after{font-size:10px;padding:2px 4px}}
-</style><script src="/method/experience-20261122.js?v=20261123g"></script></body></html>
+</style><script src="/method/experience-20261122.js?v=20261123g"></script>
+<script id="preview-tree-restore-v5">
+(function(){
+  const treeV5=window.__PREVIEW_TREE_V5;
+  if(typeof treeV5==="function") treeDiagram=treeV5;
+  document.documentElement.setAttribute("data-preview-tree-layout","v5-vertical");
+  if(new URLSearchParams(location.search).get("previewTree")==="1"){
+    enterExperience();
+    requestAnimationFrame(function(){
+      const target=document.querySelector(".intro-tree-first");
+      if(target) target.scrollIntoView({block:"start"});
+    });
+  }
+})();
+</script></body></html>
