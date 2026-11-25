@@ -28,7 +28,6 @@
 #app .compare36 .plan-mark svg{width:17px;height:17px}
 #app .compare36 .compare-plan{font-size:.84rem}
 #app .compare36 .compare-name{font-size:.81rem!important;margin:2px 0!important;line-height:1.35}
-#app .compare36 .compare-note-row{display:none!important}
 #app .km-plan-notes{margin:8px 5px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:start}
 #app .km-plan-note{min-width:0;display:block;text-align:left;padding:9px 11px;border:1px solid #cbded1;border-radius:9px;background:#f8fbf8;color:#334d3c;font:inherit;font-size:.79rem;line-height:1.55;cursor:pointer;transition:border-color .15s,background .15s}
 #app .km-plan-note strong{display:block;color:#285a3e;font-size:.84rem;margin-bottom:2px}
@@ -115,7 +114,7 @@
  #app .compact-debrief,#app .company-lean{grid-template-columns:1fr!important;gap:9px!important}
  #app .compact-debrief .reflection-section,#app .compact-debrief .another-view-section,#app .company-lean .company-point{grid-column:1/-1!important}
  #app .family36{padding:10px 11px!important}
- #app .compare-wrap36,#app .km-plan-notes,#app .compare-scroll-hint{display:none!important}
+ #app .compare-wrap36.km-choices-enhanced,#app .km-plan-notes,#app .compare-scroll-hint{display:none!important}
  #app .km-plan-mobile{display:grid;grid-template-columns:1fr;gap:8px}
  #app .compare-invite36 span{display:none!important}
  #app .compare-invite36::after{content:"各案の金額と条件を見比べて選んでください。";display:block;color:#53705e;font-size:.82rem;margin-top:2px}
@@ -127,7 +126,6 @@
  #app .company-point{padding:11px 12px!important}
  #sales .sales-example{grid-template-columns:1fr!important;gap:9px!important}
  #sales .four-table{min-width:550px}
- #sales .sales-household{overflow-x:auto}
  #sales .sales-table th,#sales .sales-table td{padding:6px!important;font-size:.81rem!important}
  #app .intro-reading-item summary{padding:10px!important}
 }
