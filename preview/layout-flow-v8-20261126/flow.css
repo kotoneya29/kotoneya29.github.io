@@ -129,3 +129,10 @@
  #sales .sales-table th,#sales .sales-table td{padding:6px!important;font-size:.81rem!important}
  #app .intro-reading-item summary{padding:10px!important}
 }
+
+/* Narrow phones: one metric per line avoids squeezing labels next to amounts. */
+@media(max-width:440px){
+ #app .km-choice-metrics{grid-template-columns:1fr;gap:0}
+ #app .km-choice-row{font-size:.86rem;padding:5px 0}
+ #app .km-mobile-choice .km-choice-head strong{font-size:.94rem}
+}
