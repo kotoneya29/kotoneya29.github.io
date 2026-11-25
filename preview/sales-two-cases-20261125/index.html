@@ -706,6 +706,49 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  .sales-two-cases .qendgrid div{padding:11px 9px}
 }
 @media(max-width:360px){.sales-two-cases .qmetricgrid{grid-template-columns:1fr}}
+
+/* TEST ONLY: Sales, variable costs, fixed costs and profit planning demo */
+.sales-two-cases .qcontrols{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sales-two-cases .qstepopt{display:flex;gap:8px;align-items:flex-start;background:#eef5ef;color:#385742;border:1px solid #cedfd2;border-radius:9px;padding:11px 12px;margin-bottom:12px;font-size:.78rem;line-height:1.55;font-weight:750}
+.sales-two-cases .qstepopt input{width:17px;height:17px;accent-color:#26734e;flex:none;margin:2px 0 0}
+.sales-two-cases .qcomposition{border-top:1px solid #dce7dd;margin-top:12px;padding-top:10px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;color:#435c4a;font-size:.77rem;font-weight:750}
+.sales-two-cases .qcomposition strong{font-size:1.03rem;color:#235c3d;margin-left:auto}
+.sales-two-cases .qcomposition small{display:block;width:100%;font-weight:400;color:#627467;font-size:.70rem}
+.sales-two-cases .qprofitbox{background:#fbfdfb}
+.sales-two-cases .qpltable{border-collapse:collapse;width:100%;font-size:.79rem;font-variant-numeric:tabular-nums}
+.sales-two-cases .qpltable tr{border-bottom:1px solid #e2ebe3}
+.sales-two-cases .qpltable th,.sales-two-cases .qpltable td{padding:7px 4px;text-align:left}
+.sales-two-cases .qpltable td{text-align:right;font-weight:800;white-space:nowrap}
+.sales-two-cases .qplcon{color:#236244}
+.sales-two-cases .qplend{background:#eaf4ed;font-weight:900;color:#235939}
+.sales-two-cases .qprofitbox>small{display:block;color:#5d6d61;line-height:1.6;font-size:.7rem;margin-top:10px}
+.sales-two-cases .qpositive{color:#1e7150!important}
+.sales-two-cases .qnegative{color:#b14b49!important}
+.sales-two-cases .qmodelkpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}
+.sales-two-cases .qmodelkpi>div{border:1px solid #d0dfd3;border-radius:10px;background:white;padding:12px}
+.sales-two-cases .qmodelkpi small{display:block;color:#5b7060;font-size:.7rem;line-height:1.45;min-height:2em}
+.sales-two-cases .qmodelkpi strong{display:block;font-size:1.27rem;color:#225a3d;white-space:normal;font-variant-numeric:tabular-nums;margin:4px 0}
+.sales-two-cases .qmodelkpi span{display:block;font-size:.69rem;color:#647567;line-height:1.5}
+.sales-two-cases .qforecast{margin-top:13px}
+.sales-two-cases .qforecastwrap{overflow-x:auto;max-width:100%}
+.sales-two-cases .qforecasttable{width:100%;border-collapse:collapse;min-width:440px;font-size:.76rem;font-variant-numeric:tabular-nums}
+.sales-two-cases .qforecasttable th,.sales-two-cases .qforecasttable td{padding:9px 5px;text-align:right;border-bottom:1px solid #e0ebe2;white-space:nowrap}
+.sales-two-cases .qforecasttable thead th{background:#ecf4ee;color:#3c5945;font-size:.72rem}
+.sales-two-cases .qforecasttable th:first-child{text-align:left}
+.sales-two-cases .qforecasttable tbody th{font-weight:750;color:#48624e}
+.sales-two-cases .qforecasttable td:last-child{font-weight:850}
+.sales-two-cases .qforecastnote{font-size:.73rem!important;color:#5b7060!important;margin:10px 0!important;line-height:1.65!important}
+.sales-two-cases .qannual{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #c8dfcd;margin-top:12px;padding:12px 2px 2px;font-size:.81rem;font-weight:850;color:#355b42}
+.sales-two-cases .qannual strong{font-size:1.14rem;white-space:nowrap}
+@media(max-width:650px){
+ .sales-two-cases .qcontrols{grid-template-columns:1fr}
+ .sales-two-cases .qmodelkpi{grid-template-columns:1fr 1fr;gap:7px}
+ .sales-two-cases .qmodelkpi>div{padding:10px 8px}
+ .sales-two-cases .qmodelkpi strong{font-size:1.09rem}
+ .sales-two-cases .qmodelkpi>div:last-child{grid-column:span 2}
+ .sales-two-cases .qannual{align-items:start}
+ .sales-two-cases .qannual strong{text-align:right}
+}
 </style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
@@ -748,10 +791,10 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   </article>
   <article aria-labelledby="case-b-overview">
    <div class="cases-label"><span class="cases-count">02</span>地域別の出店計画をモデル化</div>
-   <h3 id="case-b-overview">営業所の実績を、<br>次の出店計画に変えた。</h3>
+   <h3 id="case-b-overview">10営業所の実績から、<br>新店の損益まで設計した。</h3>
    <div class="cases-hero-value">10 <small>既存営業所を分析</small></div>
-   <p>地域ごとの売れ筋と商品構成比から営業所を属性化。新規支店の販売構成と成長の道筋を、数値で組み立てる事例。</p>
-   <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">モデル化の流れを試す ›</a>
+   <p>地域別の商品構成比を起点に、売上連動の変動費と支店固定費を組み込み、損益・黒字化条件までモデル化した事例。</p>
+   <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">売上と費用の連動を試す ›</a>
   </article>
  </div>
  <details class="cases-detail" id="case-a-detail" open>
@@ -775,39 +818,64 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   </div>
  </details>
  <details class="cases-detail" id="case-b-detail" open>
-  <summary>事例02｜10営業所の実績を新規支店の計画に変える</summary>
+  <summary>事例02｜売上・変動費・固定費をつなぐ新規支店の損益モデル</summary>
   <div class="cases-detail-body">
-   <p class="cases-detail-lead">既存の10営業所の実績を商品構成比と地域性から整理し、新しい地域でどの商品を中心に、どのように伸ばすかを考える販売・成長モデルを設計した事例。</p>
+   <p class="cases-detail-lead">既存10営業所の地域特性と売れ筋商品の構成比から、新規支店の売上を見立てる。さらに商品別の変動費と、支店を維持する固定費を組み込み、月次の利益計画・損益分岐点まで設計した事例です。</p>
    <div class="cases-ba">
-    <div class="cases-era"><div class="cases-era-tag">BEFORE｜営業所別の実績</div><h4>売上の一覧はある。次の出店の根拠は整理しきれていない。</h4><p>地域ごとに売れ方が異なり、単純な全店平均では新規出店予定地の特徴が見えにくい。</p></div>
-    <div class="cases-era after"><div class="cases-era-tag">AFTER｜地域属性別の計画</div><h4>実績を「地域の商品構成」と「成長仮説」に組み直す。</h4><p>類似した地域の傾向を使い、商品別の販売構成と立ち上げ後の計画を数値化する。</p></div>
+    <div class="cases-era"><div class="cases-era-tag">BEFORE｜店舗ごとの実績集計</div><h4>売上の大小は見える。でも、どの売上が利益につながるかは分かりにくい。</h4><p>地域ごとの商品構成や費用構造が違い、売上高だけでは新規支店の採算を判断できない。</p></div>
+    <div class="cases-era after"><div class="cases-era-tag">AFTER｜採算まで見える事業計画</div><h4>地域の売上構成 × 変動費 × 固定費で、成長と採算を同時に計画する。</h4><p>商品別の販売計画に売上連動費用と支店固定費を重ね、立ち上げ期の損益や黒字化の条件を検証する。</p></div>
    </div>
-   <div class="cases-flow" aria-label="分析から計画への3段階">
-    <div class="cases-flow-step"><strong>① 10営業所の構成比</strong><span>商品ごとの売上比率を揃えて比較</span></div>
+   <div class="cases-flow" aria-label="分析から月次損益モデルへの3段階">
+    <div class="cases-flow-step"><strong>① 10営業所の売れ方を分析</strong><span>地域属性と商品別構成比を定義</span></div>
     <div class="cases-flow-arrow" aria-hidden="true">→</div>
-    <div class="cases-flow-step"><strong>② 地域の特徴を属性化</strong><span>似た売れ方をする地域を整理</span></div>
+    <div class="cases-flow-step"><strong>② 売上と変動費を推計</strong><span>商品別売上 × 変動費率＝変動費</span></div>
     <div class="cases-flow-arrow" aria-hidden="true">→</div>
-    <div class="cases-flow-step"><strong>③ 新規支店の月次計画</strong><span>商品構成と立ち上がりの仮説を置く</span></div>
+    <div class="cases-flow-step"><strong>③ 固定費を加え採算を計画</strong><span>限界利益 − 固定費＝概算損益</span></div>
    </div>
    <div class="qdemo" id="qdemo">
-    <div class="qdemohead"><div><span class="qtag">数字化のイメージを操作する</span><h4>地域の売れ方から、販売計画を組み立てる</h4></div><span class="qdummytag">全数値：説明用の架空値</span></div>
-    <p>商品構成比を地域ごとに変えると、同じ月商目標でも「何をいくら売るか」が変わります。これは手法を見せる簡易デモであり、過去の実績値や予測精度を示すものではありません。</p>
+    <div class="qdemohead"><div><span class="qtag">数字化デモ｜売上から損益まで連動</span><h4>「売れる支店」から「利益を生む支店」の計画へ</h4></div><span class="qdummytag">全数値：説明用の架空値</span></div>
+    <p>地域の売れ筋・目標売上・月額固定費・原価上昇の条件を変えてください。商品別構成比から変動費を計算し、月次の限界利益・損益・損益分岐点まで連動します。</p>
     <div class="qcontrols">
-     <label>想定する地域の特徴<select id="qregion"><option value="a">商品Aが中心の地域（仮）</option><option value="b">商品Bが中心の地域（仮）</option><option value="c">バランス型の地域（仮）</option></select></label>
-     <label>12か月後の月商目標 <strong id="qtargetlabel">300万円</strong><input id="qtarget" type="range" min="100" max="800" step="50" value="300" aria-label="12か月後の月商目標（万円）" /><small>100万～800万円（説明用）</small></label>
+     <label>新規出店地域の想定<select id="qregion"><option value="a">商品Aが中心の地域（仮）</option><option value="b">商品Bが中心の地域（仮）</option><option value="c">バランス型の地域（仮）</option></select></label>
+     <label>12か月後の月商目標 <strong id="qtargetlabel">300万円</strong><input id="qtarget" type="range" min="100" max="800" step="50" value="300" aria-label="12か月後の月商目標（万円）" /><small>100万～800万円</small></label>
+     <label>毎月の基本固定費 <strong id="qfixedlabel">100万円</strong><input id="qfixed" type="range" min="60" max="240" step="10" value="100" aria-label="毎月の基本固定費（万円）" /><small>家賃・人員などを含む費用（仮定）</small></label>
+     <label>変動費率の想定<select id="qcost"><option value="base">標準：商品A 55%・B 70%・C 60%</option><option value="up">コスト増：全商品＋5ポイント</option><option value="down">改善：全商品−5ポイント</option></select><small>仕入・販売量に連動する費用の合計を仮置き</small></label>
     </div>
+    <label class="qstepopt"><input id="qstep" type="checkbox" checked> 月商500万円を超えた月は、人員・設備等の追加固定費を30万円計上（仮定）</label>
     <div class="qdemobody">
-     <div class="qmixbox"><div class="qsectionname">想定する商品構成比</div><div class="qstack" id="qstack" aria-label="商品の構成比"><span id="qsa">55%</span><span id="qsb">25%</span><span id="qsc">20%</span></div>
+     <div class="qmixbox"><div class="qsectionname">12か月目｜地域別の商品構成と商品別売上</div>
+      <div class="qstack" id="qstack" aria-label="商品構成比"><span id="qsa">55%</span><span id="qsb">25%</span><span id="qsc">20%</span></div>
       <div class="qmixlegend"><span><i></i>商品A <b id="qa">55%／165万円</b></span><span><i></i>商品B <b id="qb">25%／75万円</b></span><span><i></i>商品C <b id="qc">20%／60万円</b></span></div>
+      <div class="qcomposition">加重平均変動費率 <strong id="qvcr">59.8%</strong> <small>商品構成比 × 商品別変動費率を合算</small></div>
      </div>
-     <div class="qrampbox"><div class="qsectionname">月商計画（12か月目を目標水準とした仮説）</div>
-      <div class="qmonthly" id="qmonthly" aria-live="polite"></div><small>立ち上がり方も仮置き。地域・人員・客数などの条件を検証して計画を更新します。</small>
+     <div class="qmixbox qprofitbox"><div class="qsectionname">12か月目｜簡易損益計画</div>
+      <table class="qpltable" aria-label="12か月目の売上と費用"><tbody>
+       <tr><th>売上高</th><td id="qplsales">300.0万円</td></tr>
+       <tr><th>変動費</th><td id="qplvar">179.3万円</td></tr>
+       <tr class="qplcon"><th>限界利益</th><td id="qplcontrib">120.8万円</td></tr>
+       <tr><th>固定費</th><td id="qplfixed">100.0万円</td></tr>
+       <tr class="qplend"><th>概算営業損益</th><td id="qplprofit">＋20.8万円</td></tr>
+      </tbody></table>
+      <small>概算営業損益＝売上高 − 売上連動の変動費 − 月額固定費</small>
      </div>
     </div>
-    <div class="qdemobottom"><b>計画は、当てるためだけの数字ではない。</b><span>実績が入ったら、商品別構成比と月次計画との差異を確認し、仕入・人員配置・販売施策を見直すための基準にする。</span></div>
+    <div class="qmodelkpi">
+     <div><small>限界利益率</small><strong id="qcontribrate">40.3%</strong><span>売上1万円増で残る割合</span></div>
+     <div><small>基本固定費での損益分岐点月商</small><strong id="qbreakeven">248.4万円</strong><span>固定費 ÷ 限界利益率</span></div>
+     <div><small>12か月目の判定</small><strong id="qstatus">黒字</strong><span id="qstatusdetail">＋20.8万円／月</span></div>
+    </div>
+    <div class="qrampbox qforecast">
+      <div class="qsectionname">新規支店｜立ち上げ期の月次損益計画（抜粋）</div>
+      <div class="qforecastwrap">
+       <table class="qforecasttable" aria-label="月ごとの売上 変動費 固定費 概算営業損益"><thead><tr><th>月</th><th>売上高</th><th>変動費</th><th>固定費</th><th>概算営業損益</th></tr></thead><tbody id="qforecastrows"></tbody></table>
+      </div>
+      <p class="qforecastnote">売上は1・3・6・12か月目の仮定水準をつないだ簡易計画。変動費は売上に比例し、固定費は一定範囲で維持しつつ、追加人員等が必要になった場合は段階的に増加する想定です。</p>
+      <div class="qannual"><span>初年度12か月の概算損益合計</span><strong id="qannualprofit">−</strong></div>
+    </div>
+    <div class="qdemobottom"><b>数字にすることで、検討すべき判断が変わる。</b><span>売上だけでなく、商品構成、限界利益、固定費、黒字化までを同じモデルで確認する。開業後は計画と実績の差を見て、販売商品・採用計画・費用配分を見直す。</span></div>
    </div>
-   <p class="cases-note">※実際に行ったのは10営業所の属性化と、新規支店の販売・成長モデルの設計です。デモの地域類型、商品A～Cの構成比、目標月商、月次値はすべて仮定であり、当時の実績・成果を再現したものではありません。</p>
-   <p class="cases-takeaway">過去の売上を「結果の集計」で終わらせず、「新しい地域ではどう売るか」の仮説に変え、実績で検証できる形をつくった。</p>
+   <p class="cases-note">※「10営業所の分析・属性化から新規支店の売上・費用・成長をモデル化する」という実務内容の紹介です。デモの構成比、変動費率、固定費、成長率、追加費用の発生条件はすべて説明用の仮定値で、実際の営業所の数値や成果を再現していません。簡易損益モデルであり、資金繰りや税務上の利益、予測精度を示すものではありません。</p>
+   <p class="cases-takeaway">「どれくらい売れそうか」から一歩進めて、「どの商品を、どの費用構造で販売し、いつ採算が合うのか」を計画と実績で検証する仕組みをつくった。</p>
   </div>
  </details>
  <div class="qend">
@@ -816,24 +884,75 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   <div class="qendgrid">
    <div><b>現状を測る</b><span>売上指数・商品構成比</span></div>
    <div><b>仕組みを変える</b><span>人員・外注比率・固定費率</span></div>
-   <div><b>次を設計する</b><span>地域属性・月次販売計画・予実差異</span></div>
+   <div><b>次を設計する</b><span>地域属性・変動費・固定費・月次損益</span></div>
   </div>
   <p class="cases-last">勘と経験を、数字で確かめる。<br><strong>使う会計から、つくる会計へ。</strong></p>
  </div>
 </section>
 <script id="qdemo-script">
 (function(){
- const input=document.getElementById('qtarget'),sel=document.getElementById('qregion');
- if(!input||!sel)return;
- const defs={a:{mix:[55,25,20],ramp:[30,54,77,100]},b:{mix:[25,55,20],ramp:[42,64,84,100]},c:{mix:[35,35,30],ramp:[36,59,81,100]}};
- const fmt=(n)=>Math.round(n).toLocaleString('ja-JP');
- function render(){
-   const model=defs[sel.value]||defs.a,goal=Number(input.value),mix=model.mix;
-   document.getElementById('qtargetlabel').textContent=fmt(goal)+'万円';
-   ['a','b','c'].forEach((k,i)=>{document.getElementById('q'+k).textContent=mix[i]+'%／'+fmt(goal*mix[i]/100)+'万円';const segment=document.getElementById('qs'+k);segment.textContent=mix[i]+'%';segment.style.width=mix[i]+'%';});
-   document.getElementById('qmonthly').innerHTML=[1,3,6,12].map((m,i)=>'<div class="qmonth"><span>'+m+'か月目</span><div class="qmonthbar"><i style="width:'+model.ramp[i]+'%"></i></div><strong>'+fmt(goal*model.ramp[i]/100)+'万円</strong></div>').join('');
+ const el=id=>document.getElementById(id);
+ const target=el('qtarget'),region=el('qregion'),fixedInput=el('qfixed'),cost=el('qcost'),step=el('qstep');
+ if(!target||!region||!fixedInput||!cost||!step)return;
+ const defs={
+   a:{mix:[55,25,20],ramp:[30,54,77,100]},
+   b:{mix:[25,55,20],ramp:[42,64,84,100]},
+   c:{mix:[35,35,30],ramp:[36,59,81,100]}
+ };
+ const fmt=n=>Number(n).toLocaleString('ja-JP',{minimumFractionDigits:1,maximumFractionDigits:1});
+ const money=n=>fmt(n)+'万円';
+ const signed=n=>(n< -0.00001?'−':n>0.00001?'＋':'±')+money(Math.abs(n));
+ function ramp(m,points){
+   const anchors=[[1,points[0]],[3,points[1]],[6,points[2]],[12,points[3]]];
+   for(let i=0;i<anchors.length-1;i++){
+     const [a,v]=anchors[i],[b,w]=anchors[i+1];
+     if(m>=a&&m<=b)return v+(w-v)*(m-a)/(b-a);
+   }
+   return points[3];
  }
- sel.addEventListener('change',render); input.addEventListener('input',render);render();
+ function render(){
+  const d=defs[region.value]||defs.a;
+  const goal=Number(target.value),baseFixed=Number(fixedInput.value);
+  const adj=cost.value==='up'?5:cost.value==='down'?-5:0;
+  const rates=[55,70,60].map(x=>x+adj),weighted=d.mix.reduce((sum,mix,i)=>sum+mix*rates[i]/10000,0);
+  const margin=1-weighted;
+  el('qtargetlabel').textContent=money(goal);
+  el('qfixedlabel').textContent=money(baseFixed);
+  el('qvcr').textContent=(weighted*100).toFixed(1)+'%';
+  ['a','b','c'].forEach((k,i)=>{
+    el('q'+k).textContent=d.mix[i]+'%／'+money(goal*d.mix[i]/100);
+    const bar=el('qs'+k);bar.style.width=d.mix[i]+'%';bar.textContent=d.mix[i]+'%';
+  });
+  const model=m=>{
+    const sales=goal*ramp(m,d.ramp)/100;
+    const varCost=sales*weighted;
+    const fixed=baseFixed+((step.checked&&sales>500)?30:0);
+    return {m,sales,varCost,fixed,contrib:sales-varCost,profit:sales-varCost-fixed};
+  };
+  const current=model(12);
+  el('qplsales').textContent=money(current.sales);
+  el('qplvar').textContent=money(current.varCost);
+  el('qplcontrib').textContent=money(current.contrib);
+  el('qplfixed').textContent=money(current.fixed);
+  el('qplprofit').textContent=signed(current.profit);
+  el('qplprofit').className=current.profit>=0?'qpositive':'qnegative';
+  el('qcontribrate').textContent=(margin*100).toFixed(1)+'%';
+  el('qbreakeven').textContent=money(baseFixed/margin);
+  el('qstatus').textContent=current.profit>=0?'黒字':'赤字';
+  el('qstatus').className=current.profit>=0?'qpositive':'qnegative';
+  el('qstatusdetail').textContent=signed(current.profit)+'／月';
+  const months=Array.from({length:12},(_,i)=>model(i+1));
+  const annual=months.reduce((sum,v)=>sum+v.profit,0);
+  el('qforecastrows').innerHTML=months.filter(x=>[1,3,6,12].includes(x.m)).map(x=>
+    '<tr><th>'+x.m+'か月目</th><td>'+money(x.sales)+'</td><td>'+money(x.varCost)+'</td><td>'+money(x.fixed)+'</td><td class="'+(x.profit>=0?'qpositive':'qnegative')+'">'+signed(x.profit)+'</td></tr>'
+  ).join('');
+  el('qannualprofit').textContent=signed(annual);
+  el('qannualprofit').className=annual>=0?'qpositive':'qnegative';
+ }
+ [region,cost].forEach(x=>x.addEventListener('change',render));
+ [target,fixedInput].forEach(x=>x.addEventListener('input',render));
+ step.addEventListener('change',render);
+ render();
 })();
 </script>
 
