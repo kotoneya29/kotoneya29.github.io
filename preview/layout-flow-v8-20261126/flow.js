@@ -29,6 +29,7 @@
         return '<button type="button" class="km-mobile-choice'+(chosen?' is-selected':'')+'" data-decision="'+key+'" aria-pressed="'+Boolean(chosen)+'"><span class="km-choice-head"><b>'+label+'</b><strong>'+escape(name)+'</strong><em>'+(chosen?'選択中':'この案を選ぶ')+'</em></span><span class="km-choice-metrics">'+rows.map(x=>'<span class="km-choice-row"><span>'+escape(x.name)+'</span><strong>'+escape(x.values[i]||'—')+'</strong></span>').join('')+'</span><span class="km-choice-note">'+escape(values[i])+'</span></button>';
       }).join('');
       row.remove();
+      wrap.classList.add('km-choices-enhanced');
       wrap.insertAdjacentElement('afterend',notes);
       notes.insertAdjacentElement('afterend',mobile);
       const hint=document.createElement('p');
