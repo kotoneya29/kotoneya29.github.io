@@ -678,29 +678,42 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
 @media(max-width:360px){.sales-two-cases .qmetricgrid{grid-template-columns:1fr}}
 
 
-/* Case 02: concise static break-even example; preview only */
-.sales-two-cases .case2-simple{background:#f5faf6;border:1px solid #c5dec9;border-radius:12px;padding:14px;margin:17px 0 0}
-.sales-two-cases .case2-simple-label{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px}
-.sales-two-cases .case2-simple-label strong{font-size:.91rem;color:#2a573e}
-.sales-two-cases .case2-simple-label small{color:#657666;font-size:.69rem}
-.sales-two-cases .case2-calc{display:grid;grid-template-columns:minmax(0,1fr) 13px minmax(0,1fr) 24px minmax(0,1.35fr);gap:7px;align-items:center}
-.sales-two-cases .case2-input,.sales-two-cases .case2-answer{background:#fff;border:1px solid #d9e7dc;border-radius:9px;padding:12px 9px;min-width:0}
-.sales-two-cases .case2-input span,.sales-two-cases .case2-answer span{display:block;color:#50695a;font-size:.73rem;font-weight:750}
-.sales-two-cases .case2-input strong,.sales-two-cases .case2-answer strong{display:block;font-variant-numeric:tabular-nums;white-space:nowrap;color:#23593e;font-size:clamp(1rem,2.5vw,1.22rem);margin:5px 0}
-.sales-two-cases .case2-answer{border:2px solid #65a47a;background:#e7f3eb}
-.sales-two-cases .case2-answer strong{font-size:clamp(1.2rem,2.8vw,1.65rem);font-weight:900;color:#14623d}
-.sales-two-cases .case2-input small,.sales-two-cases .case2-answer small{display:block;color:#697c6e;font-size:.67rem;line-height:1.5}
-.sales-two-cases .case2-symbol,.sales-two-cases .case2-arrow{text-align:center;color:#698a75;font-size:1.16rem;font-weight:850}
+/* Case 02: quantitative, compact break-even planning summary; preview only */
+.sales-two-cases .case2-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:9px 0 15px}
+.sales-two-cases .case2-fact{border:1px solid #d2e0d5;border-radius:11px;background:#fff;padding:13px 14px;min-width:0}
+.sales-two-cases .case2-fact>span{display:block;font-weight:850;font-size:.73rem;color:#5a7463}
+.sales-two-cases .case2-fact strong{font-size:1.6rem;font-weight:900;color:#205e3f;display:block;line-height:1.42;margin:4px 0}
+.sales-two-cases .case2-fact strong small{font-size:.57em;margin-left:4px}
+.sales-two-cases .case2-fact strong.case2-word{font-size:clamp(.98rem,2.4vw,1.17rem)}
+.sales-two-cases .case2-fact p{margin:0;color:#5c7062;font-size:.75rem;line-height:1.55}
+.sales-two-cases .case2-target{background:#edf6ef;border:1px solid #9bc6ab;border-radius:13px;padding:17px 19px}
+.sales-two-cases .case2-target-head{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.sales-two-cases .case2-target-head>div{flex:none}
+.sales-two-cases .case2-target-head span{display:block;font-weight:900;font-size:.78rem;color:#39664a}
+.sales-two-cases .case2-target-head strong{display:block;font-weight:900;font-size:clamp(2rem,4.3vw,2.9rem);font-variant-numeric:tabular-nums;color:#1b613d;line-height:1.3;letter-spacing:-.04em}
+.sales-two-cases .case2-target-head strong small{font-size:.46em;margin-left:5px;letter-spacing:0}
+.sales-two-cases .case2-target-head p{max-width:290px;margin:0;font-size:.89rem;color:#335a40;line-height:1.6}
+.sales-two-cases .case2-target-head b{color:#1f633f}
+.sales-two-cases .case2-timeline{margin:16px 0 10px}
+.sales-two-cases .case2-track{height:12px;display:flex;background:#d5e6da;border-radius:20px;overflow:hidden}
+.sales-two-cases .case2-before{width:77.7778%;background:#abc6b2}
+.sales-two-cases .case2-window{width:22.2222%;background:#2c8152}
+.sales-two-cases .case2-time{position:relative;height:20px;font-size:.70rem;color:#426750;margin-top:6px}
+.sales-two-cases .case2-time span{position:absolute;white-space:nowrap}
+.sales-two-cases .case2-time span:first-child{left:0}
+.sales-two-cases .case2-time span:nth-child(2){left:77.7778%;transform:translateX(-50%);font-weight:900}
+.sales-two-cases .case2-time span:last-child{right:0;font-weight:900}
+.sales-two-cases .case2-target-note{margin:0;font-size:.79rem;color:#446950;line-height:1.7}
 @media(max-width:650px){
- .sales-two-cases .case2-simple{padding:11px 9px}
- .sales-two-cases .case2-simple-label{display:block}
- .sales-two-cases .case2-simple-label small{display:block;margin-top:3px}
- .sales-two-cases .case2-calc{grid-template-columns:1fr 12px 1fr;gap:6px}
- .sales-two-cases .case2-arrow{grid-column:1/-1;transform:rotate(90deg);height:19px;line-height:1}
- .sales-two-cases .case2-answer{grid-column:1/-1;text-align:center}
- .sales-two-cases .case2-input,.sales-two-cases .case2-answer{padding:11px 7px}
- .sales-two-cases .case2-input strong{font-size:1rem}
- .sales-two-cases .case2-answer strong{font-size:1.55rem}
+ .sales-two-cases .case2-facts{gap:7px}
+ .sales-two-cases .case2-fact{padding:11px 9px}
+ .sales-two-cases .case2-fact strong{font-size:1.35rem}
+ .sales-two-cases .case2-fact strong.case2-word{font-size:.96rem}
+ .sales-two-cases .case2-target{padding:14px 12px}
+ .sales-two-cases .case2-target-head{display:block}
+ .sales-two-cases .case2-target-head strong{font-size:2.3rem}
+ .sales-two-cases .case2-target-head p{max-width:none;margin:0 0 7px;font-size:.83rem}
+ .sales-two-cases .case2-target-note{font-size:.76rem}
 }
 </style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
@@ -744,9 +757,9 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   </article>
   <article aria-labelledby="case-b-overview">
    <div class="cases-label"><span class="cases-count">02</span>地域別の出店計画をモデル化</div>
-   <h3 id="case-b-overview">10営業所を分析し、<br>新店の採算ラインを設計。</h3>
-   <div class="cases-hero-value">10 <small>既存営業所を分析</small></div>
-   <p>地域別の商品構成と費用をモデル化し、黒字化に必要な売上を設計した事例。</p>
+   <h3 id="case-b-overview">どの地域でも、<br>14〜18か月で採算へ。</h3>
+   <div class="cases-hero-value">14〜18 <small>か月｜モデル上の損益分岐点到達期間</small></div>
+   <p>既存10営業所の商品構成と地域性をモデル化。売上・変動費・固定費を組み込み、全パターンに共通する採算到達基準を設計。</p>
    <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">事例02のBefore／Afterを見る ›</a>
   </article>
  </div>
@@ -772,27 +785,29 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  </details>
  
 <details class="cases-detail" id="case-b-detail" open>
- <summary>事例02｜10営業所の実績を、新規支店の損益分岐点へ</summary>
- <div class="cases-detail-body">
-  <p class="cases-detail-lead">既存10営業所の商品構成比と地域特性を分析。売上に応じた変動費と支店の固定費をモデル化し、新規支店が<strong>いくら売れば黒字になるか</strong>を計画する。</p>
-  <div class="cases-ba">
-   <div class="cases-era"><div class="cases-era-tag">BEFORE｜実績の集計</div><h4>地域ごとの売上は分かる。</h4><p>しかし、新規支店の採算ラインまでは見えにくい。</p></div>
-   <div class="cases-era after"><div class="cases-era-tag">AFTER｜経営判断のモデル</div><h4>黒字化に必要な売上が分かる。</h4><p>地域別の売れ筋・変動費・固定費から採算を設計。</p></div>
-  </div>
-  <div class="case2-simple" aria-label="損益分岐点のコンパクトな算出例">
-   <div class="case2-simple-label"><strong>損益分岐点の見える化</strong><small>金額・比率はすべて説明用の仮定値</small></div>
-   <div class="case2-calc">
-    <div class="case2-input"><span>固定費</span><strong>100万円/月</strong><small>売上と独立して発生する費用</small></div>
-    <span class="case2-symbol" aria-hidden="true">÷</span>
-    <div class="case2-input"><span>限界利益率</span><strong>40%</strong><small>商品構成・変動費から算出</small></div>
-    <span class="case2-arrow" aria-hidden="true">→</span>
-    <div class="case2-answer"><span>損益分岐点月商</span><strong>250万円</strong><small>固定費100万円 ÷ 限界利益率40%</small></div>
+  <summary>事例02｜10営業所の実績から、新規支店の成長・採算モデルへ</summary>
+  <div class="cases-detail-body">
+   <p class="cases-detail-lead">既存10営業所の販売実績を地域別に属性化。売れ筋商品の構成比から売上と費用を組み立て、<strong>どの地域パターンでも、立ち上げ後14〜18か月で損益分岐点を超える</strong>ことを、新規支店計画の共通基準とした。</p>
+   <div class="cases-ba">
+    <div class="cases-era"><div class="cases-era-tag">BEFORE｜過去の営業所実績</div><h4>営業所ごとの売上は分かる。</h4><p>地域ごとの売れ方や費用の違いを、新規出店の採算計画へ直接つなげにくい。</p></div>
+    <div class="cases-era after"><div class="cases-era-tag">AFTER｜新規支店の経営モデル</div><h4>売上の伸び方と、採算までの期間が分かる。</h4><p>商品構成と費用を地域特性別に組み合わせ、黒字化までの道筋を計画できる。</p></div>
    </div>
+   <h4 class="cases-metric-title">数字を、次の出店で使えるモデルに変える</h4>
+   <div class="case2-facts" aria-label="事例02の4つのモデル設計要素">
+    <div class="case2-fact"><span>分析対象</span><strong>10<small>営業所</small></strong><p>既存拠点の販売実績</p></div>
+    <div class="case2-fact"><span>地域の特徴</span><strong class="case2-word">商品構成比</strong><p>売れ筋商品の構成から属性化</p></div>
+    <div class="case2-fact"><span>費用構造</span><strong class="case2-word">変動費＋固定費</strong><p>売上に連動する費用と拠点費用</p></div>
+    <div class="case2-fact"><span>出店判断の基準</span><strong class="case2-word">損益分岐点</strong><p>売上・費用・月次損益を関連づける</p></div>
+   </div>
+   <div class="case2-target" aria-label="全地域パターン共通の損益分岐点到達基準">
+    <div class="case2-target-head"><div><span>全パターン共通｜新規支店の計画基準</span><strong>14〜18<small>か月</small></strong></div><p>立ち上げから、<b>月次の損益分岐点を超える</b>までの標準期間</p></div>
+    <div class="case2-timeline"><div class="case2-track"><div class="case2-before"></div><div class="case2-window"></div></div><div class="case2-time"><span>出店時</span><span>14か月</span><span>18か月</span></div></div>
+    <p class="case2-target-note">地域ごとに売上構成・費用は異なる。それでも、共通の採算到達期間を置き、出店計画を検証できるようにした。</p>
+   </div>
+   <p class="cases-note">※14〜18か月は当時設計したモデル上の計画基準です。実際に各支店が黒字化した時期や、累積損失を回収した時期を示すものではありません。売上・費用の個別実額は掲載していません。</p>
+   <p class="cases-takeaway">「どこに出店するか」だけでなく、<strong>「何をどれだけ売り、いつ採算に乗せるか」</strong>まで数字で設計する。</p>
   </div>
-  <p class="cases-note">※10営業所の分析・新規支店のモデル設計は実務経験です。上の40%・100万円・250万円は仕組みを示す架空の計算例で、実績や開業後の成果ではありません。</p>
-  <p class="cases-takeaway">「どれだけ売れそうか」だけでなく、<strong>「いくら売れば採算が合うか」</strong>を、地域の特徴に合わせて数字で設計する。</p>
- </div>
-</details>
+ </details>
  <div class="qend">
   <h3>数字が、次の判断に使えるようになる。</h3>
   <p>経営の目的に合わせて、必要な数字を選び直す。実績と計画を同じ基準で比べ、判断を変え、また検証する。</p>
