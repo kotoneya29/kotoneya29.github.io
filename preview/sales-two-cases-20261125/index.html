@@ -1184,7 +1184,103 @@ main#app .family36 .family36-policy .condition36{
  main#app .family36 .finance36 th,main#app .family36 .finance36 td{padding:9px 6px;font-size:.8rem}
 }
 </style>
-</head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
+<style id="kotoneya-tree-centered-four-cards-v4">
+/* TEST ONLY: original tree centered, four permanent level labels, explanation cards below. */
+main#app .intro-tree-first>h2,main#app .intro-tree-first>.tree-lead,
+main#app .final-tree>h2,main#app .final-tree>.small-guide{text-align:center}
+main#app .intro-tree-first>.tree-lead,main#app .final-tree>.small-guide{
+ max-width:740px;margin:0 auto 20px;line-height:1.82
+}
+main#app .concept-tree.tree-vertical,
+main#app .intro-tree-first .concept-tree.tree-vertical,
+main#app .final-tree .concept-tree.tree-vertical{
+ display:flex!important;flex-direction:column;align-items:center;gap:20px;
+ width:100%;max-width:100%;margin:0 auto;
+}
+main#app .tree-vertical .tree-figure{width:min(100%,570px);margin:0 auto;min-width:0}
+main#app .tree-vertical .concept-tree-graphic,
+main#app .intro-tree-first .tree-vertical .concept-tree-graphic{
+ width:100%;max-width:none;margin:0 auto;aspect-ratio:373/350;
+ position:relative;overflow:hidden;border-radius:16px;
+ background:#fcfdf9;border:1px solid #d9e6db;box-shadow:0 6px 28px #284d3710
+}
+main#app .tree-vertical .concept-tree-art,
+main#app .tree-vertical .concept-tree-art img{display:block;width:100%;height:100%}
+main#app .tree-vertical .concept-tree-art img{object-fit:fill}
+main#app .tree-vertical .concept-tree-graphic[data-current-part="overview"] .tree-focus-overlay{display:none}
+main#app .tree-vertical .part-word-layer,main#app .tree-vertical .tree-vocab,
+main#app .tree-vertical .tree-focus-label{display:none!important}
+main#app .tree-vertical .tree-core-label{
+ position:absolute;left:50%;z-index:7;pointer-events:none;
+ transform:translate(-50%,-50%);display:inline-flex;
+ align-items:center;justify-content:center;
+ white-space:nowrap;font-size:clamp(.83rem,1.6vw,1rem);
+ line-height:1.35;font-weight:900;border-radius:8px;padding:6px 13px;
+ border:1.5px solid;box-shadow:0 2px 9px #2f49372b;
+}
+main#app .tree-vertical .tree-core-label.flower{top:11%;background:#fff4cf;border-color:#d6a843;color:#815d16}
+main#app .tree-vertical .tree-core-label.branch{top:49%;background:#e8f6e8;border-color:#7daf8a;color:#285c3c}
+main#app .tree-vertical .tree-core-label.trunk{top:68%;background:#e7f3fa;border-color:#80b5d1;color:#265d79}
+main#app .tree-vertical .tree-core-label.root{top:91%;background:#f9eadc;border-color:#c5a17d;color:#765132}
+main#app .tree-vertical .concept-tree-content{
+ display:flex;flex-direction:column;gap:13px;width:100%;max-width:990px;min-width:0
+}
+main#app .tree-vertical .concept-tree-tabs.tree-part-cards{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
+ margin:0;width:100%;
+}
+main#app .tree-vertical .tree-part-card{
+ display:flex;flex-direction:column;align-items:stretch;text-align:left;
+ justify-content:flex-start;gap:9px;padding:16px 13px;min-width:0;
+ min-height:156px;margin:0;border-radius:12px;
+ border:1px solid #cfdfd3;background:#fff;white-space:normal;
+ line-height:1.48;box-shadow:none;color:#2d4a37;
+}
+main#app .tree-vertical .tree-part-card.selected{box-shadow:0 0 0 2px #4e8b6b35}
+main#app .tree-vertical .tree-part-card.root{border-top:4px solid #bb976c;background:#fdf7f0}
+main#app .tree-vertical .tree-part-card.trunk{border-top:4px solid #689fc2;background:#f2f8fc}
+main#app .tree-vertical .tree-part-card.branch{border-top:4px solid #77ab85;background:#f1f9f2}
+main#app .tree-vertical .tree-part-card.flower{border-top:4px solid #d4aa49;background:#fffaeb}
+main#app .tree-vertical .tree-part-heading{font-size:.98rem;font-weight:900;color:#244c37;line-height:1.5}
+main#app .tree-vertical .tree-part-lead{
+ font-size:.83rem;line-height:1.66;font-weight:650;color:#536857;min-height:2.8em;
+}
+main#app .tree-vertical .tree-part-words{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+main#app .tree-vertical .tree-part-words span{
+ display:inline-block;background:#ffffffd9;border:1px solid #dde4de;
+ border-radius:6px;padding:4px 6px;font-size:.68rem;font-weight:700;line-height:1.35;color:#53685b
+}
+main#app .tree-vertical .concept-tree-explain.tree-explain-detail{
+ width:100%;padding:16px 20px;background:#f7faf7;border:1px solid #c8d9ce;
+ border-radius:12px;line-height:1.8;min-height:0;margin:0
+}
+main#app .tree-vertical .tree-explain-detail[hidden]{display:none!important}
+main#app .tree-vertical .tree-explain-detail>div>strong{
+ display:block;font-size:1rem;color:#27583f;margin:0 0 8px
+}
+main#app .tree-vertical .tree-explain-detail p{margin:5px 0;line-height:1.8}
+main#app .tree-vertical .v3-tree-pair{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px
+}
+main#app .tree-vertical .v3-tree-pair>div{
+ min-width:0;padding:12px 14px;background:#fff;border:1px solid #d7e5da;border-radius:10px
+}
+@media(max-width:700px){
+ main#app .tree-vertical .tree-figure{width:min(100%,510px)}
+ main#app .tree-vertical .concept-tree-tabs.tree-part-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ main#app .tree-vertical .tree-part-card{padding:12px 10px;min-height:138px;gap:6px}
+ main#app .tree-vertical .tree-part-heading{font-size:.89rem}
+ main#app .tree-vertical .tree-part-lead{font-size:.76rem;min-height:0}
+ main#app .tree-vertical .tree-part-words span{font-size:.64rem;padding:3px 5px}
+ main#app .tree-vertical .tree-explain-detail{padding:12px 13px}
+}
+@media(max-width:470px){
+ main#app .tree-vertical .tree-core-label{padding:4px 8px;font-size:clamp(.72rem,2.6vw,.85rem)}
+ main#app .tree-vertical .tree-figure{width:100%}
+ main#app .tree-vertical .tree-part-card{min-height:140px}
+ main#app .tree-vertical .v3-tree-pair{grid-template-columns:1fr;gap:8px}
+}
+</style></head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
   <span class="device-view-label">表示確認</span>
   <div class="device-view-actions" role="group" aria-label="表示する画面">
@@ -1428,46 +1524,63 @@ const TREE_VOCAB={
 const TREE_LABELS={root:'根',trunk:'幹',branch:'枝',flower:'花'};
 function treeDiagram(finalMode=false,overview=false){
  const q=finalMode?theme():null;
- const r=finalMode?q.results[S.decision]:null;
- const selected=finalMode?q.options[S.decision]:null;
- const g=finalMode?COMPANY_GUIDE[S.topic]:null;
  const w=finalMode?work():null;
  const pair=(home,business)=>`<div class="v3-tree-pair"><div><b>家計では</b><p>${home}</p></div><div><b>会社では</b><p>${business}</p></div></div>`;
  const t=finalMode?V3_TREES[S.topic]:null;
  const descriptions=finalMode?{
- root:pair(q.purpose,w.purpose),
- trunk:pair(t[0],t[1]),
- branch:pair(t[2],t[3]),
- flower:S.decision==='hold'?pair('得られた判断材料を確認する。','点検・試行の結果から、次の判断材料を整理する。実施後の成果はまだ確認できない。'):pair(t[4],t[5])
+  root:pair(q.purpose,w.purpose),
+  trunk:pair(t[0],t[1]),
+  branch:pair(t[2],t[3]),
+  flower:S.decision==='hold'?pair('得られた判断材料を確認する。','点検・試行の結果から、次の判断材料を整理する。実施後の成果はまだ確認できない。'):pair(t[4],t[5])
  }:{
   root:'何のために取り組むのか。目的・必要性・大切にしたい価値が出発点です。',
   trunk:'何を優先し、どの数字や条件で比べるのか。目的に沿った判断基準を考えます。',
   branch:'経営者・社員・総務経理。それぞれが異なる役割を持ち、共通の目的に向かいます。',
   flower:'結果として何が変わり、何が実現できたのか。成果・変化・満足を確かめ、次につなぎます。'
  };
- return `<div class="concept-tree" data-tree-block>
-  <div class="concept-tree-graphic" data-current-part="${overview?'overview':'root'}">
-   <div class="concept-tree-art" data-original-tree>${FALLBACK_TREE}</div>
-   <svg class="tree-focus-overlay" viewBox="0 0 373 350" preserveAspectRatio="none" aria-hidden="true">
-    <defs><mask id="tree-selected-focus"><rect width="373" height="350" fill="white"/><path data-tree-hole d="${TREE_REGIONS.root}" fill="black"/></mask></defs>
-    <rect width="373" height="350" fill="#fff" opacity=".36" mask="url(#tree-selected-focus)"/>
-    <path data-tree-outline d="${TREE_REGIONS.root}" fill="none" stroke="#fff" stroke-width="7" opacity=".87"/>
-    <path data-tree-outline d="${TREE_REGIONS.root}" fill="none" stroke="#256347" stroke-width="3" opacity=".95" stroke-linejoin="round"/>
-   </svg>
-   <button type="button" class="tree-hit flower" data-tree-part="flower" aria-label="木の花を選ぶ"></button>
-   <button type="button" class="tree-hit branch" data-tree-part="branch" aria-label="木の枝を選ぶ"></button>
-   <button type="button" class="tree-hit trunk" data-tree-part="trunk" aria-label="木の幹を選ぶ"></button>
-   <button type="button" class="tree-hit root" data-tree-part="root" aria-label="木の根を選ぶ"></button>
-   <span class="tree-focus-label" data-tree-focus-label>根</span>
-   ${Object.entries(TREE_VOCAB).map(([part,words])=>`<div class="part-word-layer" data-word-part="${part}" aria-hidden="true">${words.map((word,j)=>`<span class="part-word" style="animation-delay:${j*0.055}s">${word}</span>`).join('')}</div>`).join('')}
+ const parts=[
+  {id:'root',title:'根｜経営の土台',prompt:'何のために？',intro:'目的・必要性・価値観をそろえる'},
+  {id:'trunk',title:'幹｜管理会計',prompt:'何を基準に判断する？',intro:'数字とルールで比較・検証する'},
+  {id:'branch',title:'枝｜立場と役割',prompt:'誰が、どう動く？',intro:'それぞれの視点と責任をつなぐ'},
+  {id:'flower',title:'花｜経営の成果',prompt:'何が実現できた？',intro:'結果・変化・満足を確かめる'}
+ ];
+ return `<div class="concept-tree tree-vertical" data-tree-block>
+  <div class="tree-figure">
+   <div class="concept-tree-graphic" data-current-part="${overview?'overview':'root'}">
+    <div class="concept-tree-art" data-original-tree>${FALLBACK_TREE}</div>
+    <svg class="tree-focus-overlay" viewBox="0 0 373 350" preserveAspectRatio="none" aria-hidden="true">
+     <defs><mask id="tree-selected-focus"><rect width="373" height="350" fill="white"/><path data-tree-hole d="${TREE_REGIONS.root}" fill="black"/></mask></defs>
+     <rect width="373" height="350" fill="#fff" opacity=".28" mask="url(#tree-selected-focus)"/>
+     <path data-tree-outline d="${TREE_REGIONS.root}" fill="none" stroke="#fff" stroke-width="5" opacity=".66"/>
+     <path data-tree-outline d="${TREE_REGIONS.root}" fill="none" stroke="#256347" stroke-width="2" opacity=".72" stroke-linejoin="round"/>
+    </svg>
+    <button type="button" class="tree-hit flower" data-tree-part="flower" tabindex="-1" aria-hidden="true"></button>
+    <button type="button" class="tree-hit branch" data-tree-part="branch" tabindex="-1" aria-hidden="true"></button>
+    <button type="button" class="tree-hit trunk" data-tree-part="trunk" tabindex="-1" aria-hidden="true"></button>
+    <button type="button" class="tree-hit root" data-tree-part="root" tabindex="-1" aria-hidden="true"></button>
+    <span class="tree-core-label flower">花｜経営の成果</span>
+    <span class="tree-core-label branch">枝｜立場と役割</span>
+    <span class="tree-core-label trunk">幹｜管理会計</span>
+    <span class="tree-core-label root">根｜経営の土台</span>
+   </div>
   </div>
   <div class="concept-tree-content">
-   <div class="concept-tree-tabs" aria-label="木の部分を選ぶ">${[['root','根｜目的'],['trunk','幹｜判断'],['branch','枝｜立場'],['flower','花｜結果']].map(([id,v])=>`<button type="button" data-tree-part="${id}" aria-pressed="${!overview&&id==='root'}" class="${!overview&&id==='root'?'selected':''}">${v}</button>`).join('')}</div>
-   <div class="concept-tree-explain" aria-live="polite">${overview?`<div data-tree-content="overview"><strong>一本の木で考える</strong><div class="tree-legend"><span><b>根</b>｜目的</span><span><b>幹</b>｜判断</span><span><b>枝</b>｜立場</span><span><b>花</b>｜結果</span></div><p>木の部分やボタンを押すと、それぞれの意味を確認できます。</p></div>`:""}${[['root','根｜目的'],['trunk','幹｜判断'],['branch','枝｜立場'],['flower','花｜結果']].map(([id,v])=>`<div data-tree-content="${id}" ${!overview&&id==='root'?'':'hidden'}><strong>${v}${finalMode?"　"+({root:"何を実現したい？",trunk:"何を基準に選ぶ？",branch:"誰が、何を大切にする？",flower:"何が実現できた？"}[id]):""}</strong>${finalMode?descriptions[id]:`<div class="tree-vocab" aria-label="関連する言葉">${TREE_VOCAB[id].map((word,j)=>`<span style="animation-delay:${j*0.055}s">${word}</span>`).join('')}</div><p>${descriptions[id]}</p>`}</div>`).join('')}</div>
+   <div class="concept-tree-tabs tree-part-cards" aria-label="根・幹・枝・花の説明">
+    ${parts.map(part=>`<button type="button" class="tree-part-card ${part.id}${!overview&&part.id==='root'?' selected':''}" data-tree-part="${part.id}" aria-pressed="${!overview&&part.id==='root'}">
+      <span class="tree-part-heading">${part.title}</span>
+      <span class="tree-part-lead">${finalMode?part.prompt:part.intro}</span>
+      ${finalMode?'':`<span class="tree-part-words">${TREE_VOCAB[part.id].map(word=>`<span>${word}</span>`).join('')}</span>`}
+    </button>`).join('')}
+   </div>
+   <div class="concept-tree-explain tree-explain-detail" aria-live="polite" ${overview?'hidden':''}>
+    ${parts.map(part=>`<div data-tree-content="${part.id}" ${!overview&&part.id==='root'?'':'hidden'}>
+     <strong>${part.title}${finalMode?'｜'+part.prompt:''}</strong>
+     ${descriptions[part.id]}
+    </div>`).join('')}
+   </div>
   </div>
  </div>`;
 }
-
 const INTRO=[{"title":"家計簿のように、会社のお金を考える","question":"何に使った？　どうしたかった？","lead":"数字になる前には、必ず人の思いや判断があります。身近な家計簿から、お金の使い方と目的を考えます。","parts":[["記録","何に使った？"],["目的","どうしたかった？"],["結果","どうだった？"],["改善","次はどうする？"]],"end":"支出が増えたことだけで良い・悪いを決めず、何を実現したかったのか、結果に満足できたのかを問い直します。"},{"title":"一人ひとりの目標を、組織の目標へ","question":"何を目指す？　自分には何ができる？","lead":"全員に同じ数字を追わせるのではなく、組織としての目的と到達目標を明確にします。","parts":[["到達点を定める","組織の目的"],["経営・部門・個人","役割別の目標"],["目標に向かって動く","判断と行動"]],"end":"経営者・社員・総務経理では役割が異なります。それぞれの目標が共通の到達点にどう貢献するかを考えます。"},{"title":"勘と経験を、次の経営に使える知識へ","question":"なぜ、そう思った？　数字で確かめられる？","lead":"勘や経験は捨てずに、判断の出発点として活かします。","parts":[["判断の仮説","勘・経験"],["事実を共有","記録・見える化"],["次の判断へ","分析・検証"]],"end":"経験を仮説にし、記録・見える化・分析で確かめる。PDCAを繰り返し、個人の経験を組織で共有できる知識に変えていきます。"},{"title":"自分たちに必要な会計を、自分たちでつくる","question":"何を知りたい？　何を判断したい？","lead":"既存の管理表を使うだけでなく、自分たちの目標に合わせて必要な数字と判断基準を選びます。","parts":[["何を知りたいか","目的"],["どの数字で判断するか","基準"],["結果を次へ活かす","改善"]],"end":"財務会計のルールを変えるのではなく、経営のための管理会計を自分たちで設計し、使いながら改善していきます。"},{"title":"数字を結果で終わらせず、次の行動へ","question":"どうだった？　次はどうする？","lead":"成果を確かめて終わりにせず、判断や行動を見直し、改善を繰り返します。","parts":[["何のために","根｜目的"],["何を優先するか","幹｜判断"],["それぞれの役割","枝｜立場"],["何を実現したか","花｜結果"]],"end":"ことねや式では、目的・判断・立場・結果を一本の木に重ねて考えます。結果から学び、必要なら根・幹・枝を見直すことがPDCAの循環です。"}];
 
 function journey(){
@@ -1551,6 +1664,7 @@ app.addEventListener('click',e=>{
   const selected=el.dataset.treePart===part;el.classList.toggle('selected',selected);el.setAttribute('aria-pressed',String(selected));
  });
  tree.querySelectorAll('[data-tree-content]').forEach(el=>{el.hidden=el.dataset.treeContent!==part});
+ const detail=tree.querySelector('.tree-explain-detail');if(detail)detail.hidden=false;
  const region=TREE_REGIONS[part];
  if(region){
   tree.querySelectorAll('[data-tree-hole],[data-tree-outline]').forEach(el=>el.setAttribute('d',region));
