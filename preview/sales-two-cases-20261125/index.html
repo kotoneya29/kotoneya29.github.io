@@ -954,6 +954,147 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  #sales .sales-paths .btn{transition:none!important}
 }
 </style>
+
+<style id="kotoneya-typography-and-compare-v2">
+/* TEST PAGE ONLY: narrative rhythm, consistent comparisons, proportionate space. */
+#sales{--km-space-xs:7px;--km-space-sm:13px;--km-space-md:22px;--km-space-lg:33px}
+#sales .sales-sec-head p{margin:9px auto 0;max-width:770px;line-height:1.78}
+#sales .sales-experience-bridge .sales-sec-head p:first-of-type{margin-top:15px}
+#sales .sales-experience-bridge .sales-work-change{
+ max-width:660px;margin:16px auto 0;line-height:1.8;
+}
+#sales .sales-topic-label{
+ display:inline-block;margin-right:9px;padding:2px 8px;border-radius:6px;
+ background:#d7eaf6;color:#265c78;font-size:.79rem;font-weight:900;
+}
+#sales .sales-experience-bridge .sales-work-guide{
+ margin:18px auto 0;padding-top:13px;max-width:660px;
+ border-top:1px solid #c9dfe9;line-height:1.72;font-weight:750;
+}
+#sales .sales-two-cases .cases-intro{line-height:1.95;margin:10px auto 24px}
+#sales .sales-two-cases .cases-intro strong{color:#2a6349;font-weight:850}
+#sales .sales-two-cases .cases-detail{margin-top:18px}
+#sales .sales-two-cases .cases-detail-body{
+ padding:21px 20px 23px;
+}
+#sales .sales-two-cases .cases-detail-lead{margin-bottom:19px;max-width:850px;line-height:1.87}
+#sales .sales-two-cases .cases-ba{
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+ gap:14px;margin:19px 0 23px;align-items:stretch;
+}
+#sales .sales-two-cases .cases-ba .cases-era{
+ min-width:0;display:flex;flex-direction:column;gap:9px;padding:17px 16px;
+ border-radius:12px;
+}
+#sales .sales-two-cases .cases-ba .cases-era h4{margin:0;line-height:1.63}
+#sales .sales-two-cases .cases-ba .cases-era p{margin:0;line-height:1.73}
+#sales .sales-two-cases .cases-ba .cases-era-tag{margin:0;font-size:.76rem}
+#sales .sales-two-cases .cases-ba .km-before{
+ background:#f5f7f6!important;border:1px solid #cdd8d0!important;
+}
+#sales .sales-two-cases .cases-ba .km-before .cases-era-tag{
+ color:#5d6d63!important;
+}
+#sales .sales-two-cases .cases-ba .km-after{
+ background:#eaf5ee!important;border:1px solid #abd2b7!important;
+}
+#sales .sales-two-cases .cases-ba .km-after .cases-era-tag{
+ color:#1b754e!important;
+}
+#sales .sales-two-cases .cases-metric-title{
+ margin-top:21px;margin-bottom:14px;line-height:1.6;
+}
+#sales .sales-two-cases .qmetricgrid{margin-top:8px;margin-bottom:12px}
+#sales .sales-two-cases .qmetric-before,#sales .sales-two-cases .qmetric-after{
+ position:relative;display:inline-flex;flex-direction:column;align-items:center;
+ justify-content:end;white-space:nowrap;
+}
+#sales .sales-two-cases .qmetric-before::before,
+#sales .sales-two-cases .qmetric-after::before{
+ font-size:.60rem;line-height:1.15;font-weight:800;margin-bottom:4px;
+}
+#sales .sales-two-cases .qmetric-before::before{content:"Before";color:#697a6d}
+#sales .sales-two-cases .qmetric-after::before{content:"After";color:#1f7551}
+#sales .sales-two-cases .qmetric-before{color:#6d7a70}
+#sales .sales-two-cases .qmetric-after{color:#1f7551}
+#sales .sales-two-cases .qlegend{margin:13px 0 17px}
+#sales .sales-two-cases .cases-note{
+ margin:18px 2px 0;padding:10px 12px;border-top:1px solid #e3ebe5;
+ font-size:.72rem;line-height:1.72;color:#617267;
+}
+#sales .sales-two-cases .cases-takeaway{
+ margin:16px 0 1px;padding:14px 16px;line-height:1.8;
+}
+#sales .sales-two-cases .case2-keyfacts{margin:15px 0 19px;gap:12px}
+#sales .sales-two-cases .case2-chartgrid{gap:14px;margin:19px 0}
+#sales .sales-two-cases .case2-chartbox{padding:15px}
+#sales .sales-two-cases .case2-rule{margin:18px 0 0}
+#sales .sales-what-next .sales-support-shift{
+ margin-top:15px;padding-top:13px;border-top:1px solid #d5e6d9;
+}
+#sales .sales-what-next .sales-support-row{margin-top:22px}
+#sales .sales-support-row>div{
+ display:flex;flex-direction:column;gap:8px;
+ padding:19px 16px;min-height:122px;
+}
+#sales .sales-support-row strong{margin:0;line-height:1.5}
+#sales .sales-support-row span{line-height:1.8}
+#sales .sales-closing .sales-paths{margin-top:24px}
+#sales .sales-closing .sales-paths>div{gap:15px;padding:23px 19px}
+#sales .sales-paths>div h3{margin:0}
+#sales .sales-paths>div p{margin:0;line-height:1.9}
+#sales .sales-paths>div button,#sales .sales-paths>div a{margin-top:auto}
+@media(max-width:720px){
+ #sales .sales-two-cases .cases-detail-body{padding:15px 12px 17px}
+ #sales .sales-two-cases .cases-ba{grid-template-columns:1fr;gap:9px;margin:15px 0 18px}
+ #sales .sales-two-cases .cases-ba .cases-era{padding:13px 12px;gap:6px}
+ #sales .sales-two-cases .cases-intro{line-height:1.85}
+ #sales .sales-two-cases .case2-keyfacts{gap:7px}
+ #sales .sales-two-cases .case2-chartbox{padding:11px}
+ #sales .sales-experience-bridge .sales-work-change{margin-top:12px}
+ #sales .sales-experience-bridge .sales-work-guide{margin-top:14px}
+ #sales .sales-support-row>div{min-height:0;padding:13px 12px}
+ #sales .sales-closing .sales-paths>div{padding:17px 13px;gap:9px}
+}
+</style>
+<style id="kotoneya-experience-compare-and-spacing-v2">
+/* Simulation only: preserve separate conceptual stages, align genuine before/after comparisons. */
+#app .resulttable.result36 thead th:nth-child(2){background:#e9efec;color:#576d60}
+#app .resulttable.result36 thead th:nth-child(3){background:#e9f5ed;color:#226345}
+#app .resulttable .comp-eyebrow{
+ display:block;font-size:.70rem;line-height:1.3;font-weight:850;
+ letter-spacing:.02em;margin-bottom:5px;
+}
+#app .resulttable th:nth-child(2) .comp-eyebrow{color:#627369}
+#app .resulttable th:nth-child(3) .comp-eyebrow{color:#247750}
+#app .compact-debrief .debrief-section{
+ margin:0 0 12px;padding:17px 16px;border:1px solid #d2e2d7;
+ border-left:3px solid #4a9470;border-radius:11px;
+ background:#fff;
+}
+#app .compact-debrief .debrief-section.reflection-section{border-left-color:#4a9470}
+#app .compact-debrief .debrief-section.another-view-section{border-left-color:#5f91ae}
+#app .compact-debrief .debrief-section:not(.reflection-section):not(.another-view-section):last-of-type{border-left-color:#b7954b}
+#app .compact-debrief .debrief-section h2{margin:0 0 9px;line-height:1.55}
+#app .compact-debrief .debrief-section p{line-height:1.88;margin:0}
+#app .compact-debrief .story-bridge{
+ margin:19px 0 0;padding:24px 13px 20px;
+ border-top:1px solid #bdd5c5;border-bottom:1px solid #d7e3da;
+}
+#app .compact-debrief .story-bridge h2{line-height:1.58;margin-bottom:12px}
+#app .compact-debrief .story-bridge p{line-height:1.84;margin:0}
+#app .compact-debrief .selection-ribbon{margin-bottom:21px}
+#app .compact-debrief .debrief-section .tablewrap{margin-top:8px}
+#app .company-lean .company-point{margin:0 0 12px;padding:17px 16px;line-height:1.83}
+#app .company-lean .company-point small{display:block;margin-bottom:8px}
+#app .company-lean .company-point p{line-height:1.85}
+#app .company-lean .story-company-bridge{margin-top:22px}
+@media(max-width:650px){
+ #app .compact-debrief .debrief-section{padding:14px 12px;margin-bottom:9px}
+ #app .compact-debrief .story-bridge{padding:20px 11px 17px}
+ #app .company-lean .company-point{padding:14px 12px}
+}
+</style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
   <span class="device-view-label">表示確認</span>
@@ -982,15 +1123,16 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   <div class="sales-sec-head">
    <div class="sales-kicker">家計で考えたことを、会社の仕組みへ</div>
    <h2 id="sales-work">考え方は、仕事の中でどう役立つ？</h2>
-   <p>家計では「何を大切にするか」を決めて、数字を確かめ、次を選びました。会社でも同じように、<strong>判断に必要な数字と、仕事の進め方を組み立てる</strong>ことができます。</p>
-   <p class="sales-work-guide">その考え方を、実際の業務でどう形にしたのか。2つの事例で紹介します。</p>
+   <p>家計では「何を大切にするか」を決めて、数字を確かめ、次を選びました。</p>
+   <p class="sales-work-change"><span class="sales-topic-label">会社の仕事なら</span><strong>判断に必要な数字と、仕事の進め方を組み立てる</strong>ことができます。</p>
+   <p class="sales-work-guide">その考え方を、実際の業務でどう形にしたのか。<br>2つの事例で紹介します。</p>
   </div>
  </section>
 
 <section class="sales-two-cases" id="sales-cases" aria-labelledby="sales-cases-title">
  <div class="cases-kicker"><span>実務で形にした2つの事例</span><span class="cases-test">テストページ・未公開確認用</span></div>
  <h2 class="cases-title" id="sales-cases-title">数字を、判断できる仕組みに変える。</h2>
- <p class="cases-intro">「どう仕事を変えるか」「次の事業をどう育てるか」。数字を集めるだけで終わらせず、判断に使える形まで設計した事例です。</p>
+ <p class="cases-intro">事例①は、いまある事業をどう変えるか。<br>事例②は、これから始める事業をどう育てるか。<br><strong>数字を、判断に使える仕組みまで設計した事例です。</strong></p>
  <div class="cases-overview">
   <article aria-labelledby="case-a-overview">
    <div class="cases-label"><span class="cases-count">01</span>工場の事業構造を再設計</div>
@@ -1012,26 +1154,18 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   <div class="cases-detail-body">
    <p class="cases-detail-lead">量産中心の自社工場を、試作・特注に強い体制へ。量産は外注先で担い、熟練工の仕事を優先できる役割分担へ転換した。</p>
    <div class="cases-ba">
-    <div class="cases-era"><div class="cases-era-tag">BEFORE｜量産中心</div><h4>設備と人員を維持するために、仕事を確保する。</h4><p>工場の稼働や作業員数が先にあり、それに合わせた受注を必要とする構造。</p></div>
-    <div class="cases-era after"><div class="cases-era-tag">AFTER｜試作・特注中心</div><h4>自社の強みに合わせて、受注と生産を分担する。</h4><p>熟練工は試作・個別受注を担い、量産は外注先と連携して対応する構造。</p></div>
+    <div class="cases-era km-before"><div class="cases-era-tag">Before｜量産中心</div><h4>設備と人員を維持するために、仕事を確保する。</h4><p>工場の稼働や作業員数が先にあり、それに合わせた受注を必要とする構造。</p></div>
+    <div class="cases-era after km-after"><div class="cases-era-tag">After｜試作・特注中心</div><h4>自社の強みに合わせて、受注と生産を分担する。</h4><p>熟練工は試作・個別受注を担い、量産は外注先と連携して対応する構造。</p></div>
    </div>
    <h4 class="cases-metric-title">結果を、異なる4つの指標で確かめる</h4>
    <div class="qmetricgrid" aria-label="事例01の4指標 Before After">
-    <div class="qmetric"><span>売上規模（指数）</span><div><b>1</b><em>→</em><strong>5</strong></div><small>5倍（実額非公開）</small><div class="qtrack"><i style="width:20%"></i><i class="aft" style="width:100%"></i></div></div>
-    <div class="qmetric"><span>作業員数</span><div><b>35名</b><em>→</em><strong>15名</strong></div><small>20名減（約57%減）</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:42.86%"></i></div></div>
-    <div class="qmetric"><span>外注比率</span><div><b>10%</b><em>→</em><strong>90%</strong></div><small>＋80ポイント</small><div class="qtrack"><i style="width:10%"></i><i class="aft" style="width:90%"></i></div></div>
-    <div class="qmetric"><span>売上高固定費率</span><div><b>40%</b><em>→</em><strong>25%</strong></div><small>−15ポイント</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:62.5%"></i></div></div>
+    <div class="qmetric"><span>売上規模（指数）</span><div><b class="qmetric-before">1</b><em>→</em><strong class="qmetric-after">5</strong></div><small>5倍（実額非公開）</small><div class="qtrack"><i style="width:20%"></i><i class="aft" style="width:100%"></i></div></div>
+    <div class="qmetric"><span>作業員数</span><div><b class="qmetric-before">35名</b><em>→</em><strong class="qmetric-after">15名</strong></div><small>20名減（約57%減）</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:42.86%"></i></div></div>
+    <div class="qmetric"><span>外注比率</span><div><b class="qmetric-before">10%</b><em>→</em><strong class="qmetric-after">90%</strong></div><small>＋80ポイント</small><div class="qtrack"><i style="width:10%"></i><i class="aft" style="width:90%"></i></div></div>
+    <div class="qmetric"><span>売上高固定費率</span><div><b class="qmetric-before">40%</b><em>→</em><strong class="qmetric-after">25%</strong></div><small>−15ポイント</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:62.5%"></i></div></div>
    </div>
    <div class="qlegend"><span><i></i>Before</span><span><i class="aft"></i>After</span><small>棒の長さは各指標内の比較。指標間の大きさは比較しません。</small></div>
-   <div class="case1-shift">
-  <div class="case1-shift-top">数字の裏にある、受注・生産の判断基準の転換</div>
-  <div class="case1-shift-flow">
-   <div><small>BEFORE｜稼働を優先</small><strong>自社工場で量産を抱える</strong><span>設備・人員を動かすための受注</span></div>
-   <div class="case1-shift-arrow" aria-hidden="true">→</div>
-   <div><small>AFTER｜自社の強みを優先</small><strong>試作・特注は自社、量産は外注先</strong><span>熟練工の技術を活かす受注へ</span></div>
-  </div>
- </div>
- <p class="cases-note">※実務経験を機密に配慮して指数・比率で表現しています。固定費率の低下は固定費総額の減少を意味しません。変動費率や利益の実績は示していないため、損益分岐点の改善・利益増加までは断定しません。外注比率の算定基準は正式掲載前に要確認です。</p>
+   <p class="cases-note">※実務経験を機密に配慮して指数・比率で表現しています。固定費率の低下は固定費総額の減少を意味しません。変動費率や利益の実績は示していないため、損益分岐点の改善・利益増加までは断定しません。外注比率の算定基準は正式掲載前に要確認です。</p>
    <p class="cases-takeaway">見たい数字を「売上」だけで終わらせず、「どの仕事を、どの体制で担うか」という経営の選択につなげた。</p>
   </div>
  </details>
@@ -1041,8 +1175,8 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  <div class="cases-detail-body">
   <p class="cases-detail-lead">既存10営業所の<strong>季節変動の共通性</strong>をもとにA型6営業所・B型4営業所に分類。各型の売れ筋と売上の伸び方に、変動費・固定費・人員配置・備品購入時期を重ね、出店後の損益分岐点到達を計画した。</p>
   <div class="cases-ba">
-   <div class="cases-era"><div class="cases-era-tag">BEFORE｜実績は拠点ごと</div><h4>売上実績はあるが、出店計画への使い方が定まらない。</h4><p>地域の季節変動・商品構成・費用発生の違いが整理できていない。</p></div>
-   <div class="cases-era after"><div class="cases-era-tag">AFTER｜共通する経営モデル</div><h4>地域特性別に、売上・費用・採算到達時期を計画する。</h4><p>A型・B型の傾向を用い、採算の基準を新規支店に適用できる。</p></div>
+   <div class="cases-era km-before"><div class="cases-era-tag">Before｜実績は拠点ごと</div><h4>売上実績はあるが、出店計画への使い方が定まらない。</h4><p>地域の季節変動・商品構成・費用発生の違いが整理できていない。</p></div>
+   <div class="cases-era after km-after"><div class="cases-era-tag">After｜共通する経営モデル</div><h4>地域特性別に、売上・費用・採算到達時期を計画する。</h4><p>A型・B型の傾向を用い、採算の基準を新規支店に適用できる。</p></div>
   </div>
   <div class="case2-keyfacts">
    <div><small>分析対象</small><strong>10<em>営業所</em></strong></div>
@@ -1094,7 +1228,7 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  <div class="sales-sec-head">
   <div class="sales-kicker">ことねや式で支援すること</div>
   <h2 id="sales-next-title">事例の経験を、自社で使える仕組みに。</h2>
-  <p>予算・原価管理システムの設計では、数字だけでなく、業務フロー・決裁に関わる人・回覧順・帳票まで組み立ててきました。必要な数字と判断のルールを、自社の仕事に合わせて整理します。</p>
+  <p>予算・原価管理システムの設計では、数字だけでなく、業務フロー・決裁に関わる人・回覧順・帳票まで組み立ててきました。</p><p class="sales-support-shift">その経験をもとに、必要な数字と判断のルールを自社の仕事に合わせて整理します。</p>
  </div>
  <div class="sales-support-row">
   <div><strong>数字を見える形に</strong><span>原価の把握、予算と実績の比較</span></div>
@@ -1126,7 +1260,7 @@ function finance36(rows){return '<div class="tablewrap"><table class="finance36"
 function family36(){return '<div class="family-strip family36"><strong>地方都市の3人家族</strong><p>夫婦・片働き・小学生の子ども1人</p><h3>毎月の収支</h3>'+finance36([['手取り収入','320,000円','income'],['通常生活支出','285,000円','expense'],['予定貯蓄（積立）','25,000円',''],['自由残額','10,000円','key-row']])+'<div class="family-policy36"><b>資金状況・生活方針</b><p>現在の貯蓄は200万円。そのうち100万円は、いざというときの生活防衛資金として残しておきたい。</p></div><p class="condition36">各テーマは独立した架空の事例です。</p></div>'}
 function compare36(){const x=COMPARE36[S.topic],keys=['a','b','hold'],names=['A案','B案','保留'];const attr=k=>'class="plan-cell '+(S.decision===k?'chosen-col':'')+'" data-decision="'+k+'"';const mark=k=>S.decision===k?'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg>':'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>';return '<div class="compare-invite36"><b>あなたなら、どの方法を選びますか？</b><span>3つの縦列から一つ選択してください。列内のどこを押しても選べます。</span></div><div class="tablewrap compare-wrap36"><table class="compare36"><colgroup><col class="item-col"><col><col><col></colgroup><thead><tr><th scope="col">比較項目</th>'+keys.map((k,i)=>'<th scope="col" '+attr(k)+'><button type="button" class="plan-header36" data-decision="'+k+'" data-choice-key="'+k+'" aria-label="'+names[i]+'：'+x.names[i]+'を選ぶ" aria-pressed="'+(S.decision===k)+'"><span class="plan-mark">'+mark(k)+'</span><span class="compare-plan">'+names[i]+'</span><span class="compare-name">'+x.names[i]+'</span></button></th>').join('')+'</tr></thead><tbody>'+x.rows.map(r=>'<tr><th scope="row">'+r[0]+'</th>'+keys.map((k,i)=>'<td '+attr(k)+'>'+val36(r[i+1])+'</td>').join('')+'</tr>').join('')+'<tr class="compare-note-row"><th scope="row">内容・留意点</th>'+keys.map((k,i)=>'<td '+attr(k)+'>'+x.notes[i]+'</td>').join('')+'</tr></tbody></table></div><p class="condition36">'+x.foot+'</p>'}
 function conditions36(){return S.topic==='car'?finance36([['燃料単価','170円/L'],['月間走行距離','720km'],['旧車の燃費','10km/L'],['候補車の燃費','15km/L']])+'<p class="condition36">中古車の価格と燃費は架空の設定です。安全性の優劣を示すものではありません。月間燃料費は同じ条件での試算です。</p>':'<p class="condition36">'+theme().caution+'</p>'}
-function tableResults(r){let rows=r.rows.map(x=>x.slice()),reference='';if(S.topic==='car'&&S.decision!=='hold'){rows=rows.filter(x=>!x[0].includes('燃料費'));const b=S.decision==='b';reference='<div class="reference36"><h3>参考｜月間燃料費の試算</h3><div class="tablewrap"><table class="resulttable result36"><thead><tr><th scope="col">比較項目</th><th scope="col">従来</th><th scope="col">選択案</th></tr></thead><tbody><tr><th scope="row">月間燃料費</th><td>12,240円</td><td>'+(b?'8,160円':'12,240円')+'</td></tr><tr><th scope="row">削減額</th><td>―</td><td>'+(b?'4,080円':'0円')+'</td></tr></tbody></table></div><p class="condition36">同じ条件での試算であり、実測値ではありません。</p></div>'}rows=rows.concat(view36().rows);return '<div class="tablewrap"><table class="resulttable result36"><thead><tr><th scope="col">確認項目</th><th scope="col">予定・基準</th><th scope="col">実績・結果</th></tr></thead><tbody>'+rows.map(x=>'<tr><th scope="row">'+x[0]+'</th>'+x.slice(1).map(v=>'<td>'+val36(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'+reference}
+function tableResults(r){let rows=r.rows.map(x=>x.slice()),reference='';if(S.topic==='car'&&S.decision!=='hold'){rows=rows.filter(x=>!x[0].includes('燃料費'));const b=S.decision==='b';reference='<div class="reference36"><h3>参考｜月間燃料費の試算</h3><div class="tablewrap"><table class="resulttable result36"><thead><tr><th scope="col">比較項目</th><th scope="col"><span class="comp-eyebrow">Before</span>従来</th><th scope="col"><span class="comp-eyebrow">After</span>選択案</th></tr></thead><tbody><tr><th scope="row">月間燃料費</th><td>12,240円</td><td>'+(b?'8,160円':'12,240円')+'</td></tr><tr><th scope="row">削減額</th><td>―</td><td>'+(b?'4,080円':'0円')+'</td></tr></tbody></table></div><p class="condition36">同じ条件での試算であり、実測値ではありません。</p></div>'}rows=rows.concat(view36().rows);return '<div class="tablewrap"><table class="resulttable result36"><thead><tr><th scope="col">確認項目</th><th scope="col"><span class="comp-eyebrow">Before</span>予定・基準</th><th scope="col"><span class="comp-eyebrow">After</span>実績・結果</th></tr></thead><tbody>'+rows.map(x=>'<tr><th scope="row">'+x[0]+'</th>'+x.slice(1).map(v=>'<td>'+val36(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'+reference}
 function resultFootnote37(){return S.topic==='home'&&['a','b'].includes(S.decision)?'<p class="condition36">※季節や使用状況によって不調日数は変わります。</p>':'';}
 function household(){const q=S.topic?theme():null,selected=q&&S.decision?q.options[S.decision]:null,r=q&&S.decision?q.results[S.decision]:null;
 return `<section class="one-household"><div class="eyebrow">02 家計簿｜選んで、結果を見る</div><h1 class="qhead">家計なら、どうする？</h1><p class="story-lead">限られたお金や時間の中で、あなたなら何を優先しますか？</p><p>目的を考え、方法を選び、その結果を確かめてみましょう。</p>
