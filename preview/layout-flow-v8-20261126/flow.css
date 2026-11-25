@@ -1,0 +1,133 @@
+/* TEST ONLY v8 (2026-11-26): reading order, compact tables, proportional typography. */
+#app .one-household,#app .compact-debrief,#app .company-lean,#app .final-lean{max-width:960px}
+#app .one-household>h1,#app .compact-debrief>h1,#app .company-lean>h1{margin:4px 0 8px}
+#app .one-household .story-lead,#app .company-lean .story-lead{max-width:770px;margin-bottom:8px;line-height:1.65}
+#app .family36{max-width:910px;margin:14px auto 15px!important;padding:13px 15px!important}
+#app .family36 .family36-layout{display:grid!important;grid-template-columns:minmax(0,1.13fr) minmax(240px,.87fr)!important;gap:13px!important;align-items:start}
+#app .family36 .family36-finances .tablewrap{max-width:none!important;width:100%}
+#app .family36 .family36-finances>p{margin:2px 0 6px!important}
+#app .family36 .family36-finances>h3{margin:2px 0 5px!important}
+#app .family36 .finance36{table-layout:fixed}
+#app .family36 .finance36 th,#app .family36 .finance36 td{padding:6px 9px!important;font-size:clamp(12px,1.18vw,14px)!important;line-height:1.4!important}
+#app .family36 .finance36 th:first-child{width:56%!important}
+#app .family36 .finance36 td:last-child{width:44%!important}
+#app .family36 .family36-policy{padding:11px 13px!important}
+#app .family36 .family-policy36 p{margin:5px 0!important;line-height:1.6!important;font-size:.85rem!important}
+#app .family36 .family36-policy .condition36{margin:7px 0 0!important;padding-top:7px!important}
+#app .topic-tabs{margin:8px 0 12px}
+#app .scenario-header{margin:10px 0 5px}
+#app .compare-invite36{margin:10px 0 8px!important;text-align:left!important}
+#app .compare-invite36 b{font-size:1rem!important}
+#app .compare-invite36 span{line-height:1.5;margin-top:2px}
+#app .compare-wrap36{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
+#app .compare36{width:100%!important;table-layout:fixed!important;border-spacing:5px 0!important;margin:0!important;font-size:.87rem!important}
+#app .compare36 .item-col{width:25%!important}
+#app .compare36 th,#app .compare36 td{padding:7px 7px!important;line-height:1.45!important}
+#app .compare36 thead .plan-cell{padding:8px 5px!important}
+#app .compare36 .plan-mark{height:20px!important;line-height:20px!important}
+#app .compare36 .plan-mark svg{width:17px;height:17px}
+#app .compare36 .compare-plan{font-size:.84rem}
+#app .compare36 .compare-name{font-size:.81rem!important;margin:2px 0!important;line-height:1.35}
+#app .compare36 .compare-note-row{display:none!important}
+#app .km-plan-notes{margin:8px 5px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:start}
+#app .km-plan-note{min-width:0;display:block;text-align:left;padding:9px 11px;border:1px solid #cbded1;border-radius:9px;background:#f8fbf8;color:#334d3c;font:inherit;font-size:.79rem;line-height:1.55;cursor:pointer;transition:border-color .15s,background .15s}
+#app .km-plan-note strong{display:block;color:#285a3e;font-size:.84rem;margin-bottom:2px}
+#app .km-plan-note.is-selected{background:#edf7ef;border:2px solid #276247;padding:8px 10px}
+#app .km-plan-note:hover{background:#eff7f0}
+#app .km-plan-note:focus-visible{outline:3px solid #5c9a72;outline-offset:2px}
+#app .compare-scroll-hint{display:none;color:#486953;font-size:.79rem;margin:4px 0 0}
+#app .km-plan-mobile{display:none}
+#app .km-mobile-choice{width:100%;min-width:0;display:block;text-align:left;padding:0;border:1px solid #bcd5c4;border-radius:11px;background:white;color:#223b2d;font:inherit;overflow:hidden}
+#app .km-mobile-choice.is-selected{border:2px solid #246447;background:#f6fbf6}
+#app .km-mobile-choice .km-choice-head{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;background:#edf5ef;padding:8px 10px}
+#app .km-mobile-choice .km-choice-head b{font-size:.85rem;color:#245c40}
+#app .km-mobile-choice .km-choice-head strong{font-size:.9rem;flex:1;min-width:0}
+#app .km-mobile-choice .km-choice-head em{font-style:normal;font-size:.7rem;color:#427554}
+#app .km-mobile-choice.is-selected .km-choice-head{background:#dceddf}
+#app .km-choice-metrics{display:grid;grid-template-columns:1fr 1fr;gap:0 10px;padding:5px 10px}
+#app .km-choice-row{display:flex;justify-content:space-between;align-items:baseline;gap:5px;padding:5px 0;border-bottom:1px solid #e2ebe3;font-size:.8rem;line-height:1.4}
+#app .km-choice-row strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+#app .km-choice-note{display:block;margin:3px 10px 8px;color:#4d6354;font-size:.77rem;line-height:1.5}
+#app .km-mobile-choice:focus-visible{outline:3px solid #58976e;outline-offset:2px}
+#app .resulttable.result36{width:100%;table-layout:fixed;margin:4px 0 7px!important;border-collapse:collapse}
+#app .resulttable.result36 th,#app .resulttable.result36 td{padding:8px 11px!important;line-height:1.42!important;font-size:.88rem!important;vertical-align:middle}
+#app .resulttable.result36 th:first-child{width:42%}
+#app .resulttable.result36 thead th:nth-child(2),#app .resulttable.result36 thead th:nth-child(3){width:29%}
+#app .resulttable.result36 td:nth-child(3){background:#f2f8f3;color:#245a3b;font-weight:750}
+#app .resulttable.result36 .comp-eyebrow{margin-bottom:2px!important;font-size:.66rem}
+#app .inline-results{margin-top:12px;padding:12px 14px!important}
+#app .inline-money{margin:7px 0!important;padding:8px 10px;background:#f4f9f4;border-left:3px solid #719e7c}
+#app .inline-bottom{margin-top:11px}
+/* 03: facts first, then two reading perspectives side-by-side, followed by action. */
+#app .compact-debrief{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 13px;align-items:start}
+#app .compact-debrief > :not(.reflection-section):not(.another-view-section){grid-column:1/-1;min-width:0}
+#app .compact-debrief .debrief-section{margin:0!important;min-width:0;padding:13px 15px!important}
+#app .compact-debrief .reflection-section,#app .compact-debrief .another-view-section{grid-column:auto}
+#app .compact-debrief .debrief-section h2{margin:0 0 5px!important}
+#app .compact-debrief .debrief-section p{line-height:1.72!important}
+#app .compact-debrief .story-bridge{margin:4px 0 0!important;padding:15px 12px!important}
+/* 04: purpose -> (scene, responsibility, measures) -> collective alignment. */
+#app .company-lean{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px;align-items:start}
+#app .company-lean > :not(.company-point){grid-column:1/-1;min-width:0}
+#app .company-lean .goalbox{margin:5px 0!important;padding:12px 15px}
+#app .company-lean .company-point{min-width:0;margin:0!important;padding:12px 14px!important;line-height:1.65!important}
+#app .company-lean .company-point small{font-size:.76rem;margin:0 0 4px!important;color:#346746;font-weight:850}
+#app .company-lean .company-point p{font-size:.88rem;line-height:1.68!important;margin:0}
+#app .company-lean .story-company-bridge{margin-top:12px!important;padding-top:13px}
+#app .story-roles>div{padding:9px 8px}
+#app .story-roles>div span{line-height:1.5}
+/* 05: causes, organizational change, next decision -- a single horizontal scan on PC. */
+#app .final-impact{margin-top:18px;padding-top:18px}
+#app .impact-foundation{padding:12px 15px}
+#app .impact-changes{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px!important;align-items:start}
+#app .impact-changes>div{padding:12px 13px!important;min-width:0}
+#app .impact-changes h3{font-size:1rem!important;margin:7px 0 5px!important}
+#app .impact-changes p{font-size:.84rem;line-height:1.65!important}
+#app .payoff-changes .payoff-before{display:block;text-align:left!important;line-height:1.6!important;margin:0 0 7px!important}
+#app .payoff-changes>div>h3,#app .payoff-changes>div>p:not(.payoff-before){text-align:left!important}
+#app .payoff-changes .payoff-outcome{margin-top:8px;padding-top:7px}
+#app .impact-cycle{padding:13px;margin:11px 0}
+#app .intro-reading-item summary{min-height:0!important;padding:11px 13px!important}
+#app .intro-reading-item .reading-body{padding:12px 15px 15px!important}
+#app .intro-part{padding:9px 11px}
+/* Sales page tables and summary cards share the same compact rhythm. */
+#sales .sales-sec{padding:22px 0 24px!important}
+#sales .sales-sec-head{margin-bottom:12px!important}
+#sales .sales-example{gap:14px!important;align-items:start!important}
+#sales .sales-example>div{min-width:0}
+#sales .sales-table{table-layout:fixed;font-size:.88rem!important}
+#sales .sales-table th,#sales .sales-table td{padding:7px 8px!important;line-height:1.45!important}
+#sales .four-table th,#sales .four-table td{font-size:.83rem!important;padding:8px!important}
+#sales .sales-case{gap:10px}
+#sales .sales-case>div{padding:12px 14px!important}
+#sales .sales-paths>div{padding:14px 13px!important;gap:6px}
+#sales .sales-support-row>div{padding:13px 12px!important}
+/* Tablet and phone: vertical reading order, legible numeric comparisons, no compressed microtype. */
+@media(max-width:780px){
+ #app .family36 .family36-layout{grid-template-columns:1fr!important;gap:9px!important}
+ #app .family36 .family36-policy{padding:9px 11px!important}
+ #app .company-lean{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ #app .company-lean .company-point:last-of-type{grid-column:1/-1}
+ #app .impact-changes{grid-template-columns:1fr!important}
+ #app .impact-changes>div{padding:11px 13px!important}
+}
+@media(max-width:650px){
+ #app .compact-debrief,#app .company-lean{grid-template-columns:1fr!important;gap:9px!important}
+ #app .compact-debrief .reflection-section,#app .compact-debrief .another-view-section,#app .company-lean .company-point{grid-column:1/-1!important}
+ #app .family36{padding:10px 11px!important}
+ #app .compare-wrap36,#app .km-plan-notes,#app .compare-scroll-hint{display:none!important}
+ #app .km-plan-mobile{display:grid;grid-template-columns:1fr;gap:8px}
+ #app .compare-invite36 span{display:none!important}
+ #app .compare-invite36::after{content:"各案の金額と条件を見比べて選んでください。";display:block;color:#53705e;font-size:.82rem;margin-top:2px}
+ #app .resulttable.result36 th,#app .resulttable.result36 td{padding:7px 5px!important;font-size:clamp(12px,3vw,14px)!important;line-height:1.55!important}
+ #app .resulttable.result36 th:first-child{width:40%}
+ #app .resulttable.result36 thead th:nth-child(2),#app .resulttable.result36 thead th:nth-child(3){width:30%}
+ #app .inline-results{padding:10px 9px!important}
+ #app .debrief-section{padding:11px 12px!important}
+ #app .company-point{padding:11px 12px!important}
+ #sales .sales-example{grid-template-columns:1fr!important;gap:9px!important}
+ #sales .four-table{min-width:550px}
+ #sales .sales-household{overflow-x:auto}
+ #sales .sales-table th,#sales .sales-table td{padding:6px!important;font-size:.81rem!important}
+ #app .intro-reading-item summary{padding:10px!important}
+}
