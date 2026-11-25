@@ -639,6 +639,73 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  .sales-two-cases .cases-flow-step{min-height:0;padding:11px}
  .sales-two-cases .cases-abilities{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* TEST ONLY: quantified business cases 2026-11-25 */
+.sales-two-cases .qmetricgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sales-two-cases .qmetric{border:1px solid #d1e0d4;background:#fbfdfb;border-radius:11px;padding:15px}
+.sales-two-cases .qmetric>span{display:block;color:#526d5b;font-size:.79rem;font-weight:850}
+.sales-two-cases .qmetric>div:not(.qtrack){display:flex;align-items:baseline;gap:8px;margin:4px 0 0;font-variant-numeric:tabular-nums;flex-wrap:wrap}
+.sales-two-cases .qmetric b{font-size:1.26rem;color:#5e7165}.sales-two-cases .qmetric em{font-style:normal;color:#708979}.sales-two-cases .qmetric strong{font-size:1.84rem;line-height:1.4;color:#176141}
+.sales-two-cases .qmetric small{color:#3e6750;font-size:.77rem;font-weight:800}
+.sales-two-cases .qtrack{display:flex;flex-direction:column;gap:4px;margin-top:10px}
+.sales-two-cases .qtrack i{height:7px;border-radius:7px;background:#abb9af;display:block;max-width:100%}
+.sales-two-cases .qtrack i.aft{background:#317c55}
+.sales-two-cases .qlegend{display:flex;gap:13px;align-items:center;flex-wrap:wrap;font-size:.73rem;color:#5f6f64;margin:8px 0 0}
+.sales-two-cases .qlegend>span{display:flex;align-items:center;gap:5px}
+.sales-two-cases .qlegend i{display:inline-block;background:#abb9af;width:14px;height:6px;border-radius:4px}
+.sales-two-cases .qlegend i.aft{background:#317c55}
+.sales-two-cases .qlegend small{font-size:.68rem}
+.sales-two-cases .qdemo{margin:17px 0 0;padding:17px;border:1px solid #9dbfa8;border-radius:14px;background:#f7faf7}
+.sales-two-cases .qdemohead{display:flex;align-items:start;justify-content:space-between;gap:8px}
+.sales-two-cases .qtag{font-size:.72rem;letter-spacing:.04em;color:#417254;font-weight:900}
+.sales-two-cases .qdemo h4{margin:5px 0 7px;font-size:1.05rem;color:#2c5139}
+.sales-two-cases .qdummytag{font-size:.70rem;font-weight:850;color:#755c32;background:#fff5de;border:1px solid #dcca9a;border-radius:7px;padding:5px 7px;white-space:nowrap}
+.sales-two-cases .qdemo p{color:#586b5d;font-size:.83rem;margin:5px 0 13px;line-height:1.7}
+.sales-two-cases .qcontrols{display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:12px;background:#fff;border:1px solid #d5e2d8;border-radius:10px;margin-bottom:12px}
+.sales-two-cases .qcontrols label{font-size:.78rem;font-weight:850;color:#48614e;display:block}
+.sales-two-cases .qcontrols select{display:block;width:100%;min-width:0;border:1px solid #9ebca7;border-radius:7px;background:#fff;font:inherit;color:#214e36;padding:8px 9px;margin-top:6px;min-height:41px}
+.sales-two-cases .qcontrols input[type=range]{display:block;width:100%;accent-color:#26734e;margin:12px 0 5px}
+.sales-two-cases .qcontrols strong{color:#176141;font-size:1.15rem;white-space:nowrap}
+.sales-two-cases .qcontrols small{display:block;color:#647769;font-weight:500}
+.sales-two-cases .qdemobody{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.sales-two-cases .qmixbox,.sales-two-cases .qrampbox{border:1px solid #d6e4d9;background:white;padding:13px;border-radius:10px;min-width:0}
+.sales-two-cases .qsectionname{font-size:.79rem;color:#335f44;font-weight:900;margin-bottom:11px}
+.sales-two-cases .qstack{height:31px;display:flex;overflow:hidden;border-radius:6px;color:#fff;font-size:.75rem;font-weight:850}
+.sales-two-cases .qstack span{display:flex;align-items:center;justify-content:center;min-width:0;transition:width .15s}
+.sales-two-cases #qsa{background:#245d43}.sales-two-cases #qsb{background:#3e8790}.sales-two-cases #qsc{background:#897b55}
+.sales-two-cases .qmixlegend{margin-top:10px;display:grid;gap:9px}
+.sales-two-cases .qmixlegend span{font-size:.75rem;color:#435c4a;display:flex;gap:6px;align-items:center}
+.sales-two-cases .qmixlegend span b{margin-left:auto;white-space:nowrap;color:#244d37}
+.sales-two-cases .qmixlegend i{width:9px;height:9px;border-radius:3px;background:#245d43;flex:none}
+.sales-two-cases .qmixlegend span:nth-child(2) i{background:#3e8790}
+.sales-two-cases .qmixlegend span:nth-child(3) i{background:#897b55}
+.sales-two-cases .qmonth{display:grid;grid-template-columns:53px 1fr 65px;align-items:center;gap:5px;margin:8px 0;font-size:.73rem;color:#54705c;font-variant-numeric:tabular-nums}
+.sales-two-cases .qmonthbar{height:10px;background:#edf3ee;border-radius:7px;overflow:hidden}
+.sales-two-cases .qmonthbar i{height:100%;display:block;background:#318158;border-radius:6px}
+.sales-two-cases .qmonth strong{text-align:right;color:#214f37;white-space:nowrap}
+.sales-two-cases .qrampbox>small{display:block;color:#647769;font-size:.7rem;line-height:1.55;margin-top:9px}
+.sales-two-cases .qdemobottom{display:grid;gap:4px;border-left:3px solid #4a986a;background:#eaf4ed;color:#2c5a3d;margin-top:12px;padding:11px 12px;font-size:.8rem;line-height:1.7}
+.sales-two-cases .qend{border-top:1px solid #d3e4d7;margin-top:28px;padding:25px 0 3px;text-align:center}
+.sales-two-cases .qend h3{margin:0 0 6px;color:#244f36;font-size:1.18rem}
+.sales-two-cases .qend>p{margin:0 auto 17px;font-size:.88rem;line-height:1.75;max-width:700px;color:#526457}
+.sales-two-cases .qendgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sales-two-cases .qendgrid div{background:white;border:1px solid #cadfce;border-radius:10px;padding:15px 7px}
+.sales-two-cases .qendgrid b{display:block;font-size:.93rem;color:#22583a}
+.sales-two-cases .qendgrid span{font-size:.74rem;line-height:1.6;color:#5c6f62}
+.sales-two-cases .qend .cases-last{margin-top:21px}
+@media(max-width:650px){
+ .sales-two-cases .qmetricgrid{grid-template-columns:1fr 1fr;gap:7px}
+ .sales-two-cases .qmetric{padding:10px 9px}
+ .sales-two-cases .qmetric>div:not(.qtrack){gap:5px}
+ .sales-two-cases .qmetric b{font-size:1rem}.sales-two-cases .qmetric strong{font-size:1.45rem}
+ .sales-two-cases .qcontrols,.sales-two-cases .qdemobody{grid-template-columns:1fr}
+ .sales-two-cases .qdemo{padding:12px 9px}
+ .sales-two-cases .qdemohead{display:block}
+ .sales-two-cases .qdummytag{display:inline-block;margin:5px 0 9px}
+ .sales-two-cases .qendgrid{grid-template-columns:1fr;gap:7px}
+ .sales-two-cases .qendgrid div{padding:11px 9px}
+}
+@media(max-width:360px){.sales-two-cases .qmetricgrid{grid-template-columns:1fr}}
 </style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
@@ -666,91 +733,109 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
 <section class="sales-sec" aria-labelledby="sales-home"><div class="sales-sec-head"><div class="sales-kicker">家計簿から考える管理会計</div><h2 id="sales-home">家計簿なら、どう考えますか？</h2><p>収入が増えたのに、残ったお金は減った。それって、悪いこと？</p></div><div class="sales-example"><div><b>ある家庭の1か月（例）</b><table class="sales-table"><thead><tr><th scope="col">項目</th><th scope="col">先月</th><th scope="col">今月</th><th scope="col">増減</th></tr></thead><tbody><tr><th scope="row">収入</th><td>30万円</td><td>33万円</td><td class="pos">＋3万円</td></tr><tr><th scope="row">支出</th><td>28万円</td><td>33万円</td><td>＋5万円</td></tr><tr class="balance"><th scope="row">残り</th><td>2万円</td><td>0円</td><td class="neg">−2万円</td></tr></tbody></table><div class="sales-note">残り＝収入−支出</div></div><div class="sales-ask"><h2>ところで、幸せになった？<br>満足した？</h2><p>数字だけで「良かった・悪かった」は決められない。</p></div></div><h3>身近な使い道を、4つの問いで振り返ってみよう。</h3><table class="sales-table four-table"><thead><tr><th scope="col">4つの問い</th><th scope="col">学費・教育費</th><th scope="col">車の購入費</th><th scope="col">住宅・生活設備費</th></tr></thead><tbody><tr><th scope="row">01 事実<br>何に使った？</th><td>塾の費用</td><td>車の買い替え</td><td>エアコン購入</td></tr><tr><th scope="row">02 思い<br>どうしたかった？</th><td>学ぶ機会を増やしたい</td><td>家族の移動を楽にしたい</td><td>夏を快適に過ごしたい</td></tr><tr><th scope="row">03 結果・満足<br>どうだった？</th><td>学ぶ意欲は高まった？</td><td>便利になった？ 満足した？</td><td>快適になった？ 電気代は？</td></tr><tr><th scope="row">04 次の判断<br>次はどうする？</th><td>続ける？ 別の方法も試す？</td><td>維持費を見直す？ 次は新車か中古か？</td><td>他の部屋も替える？ 修理でも十分？</td></tr></tbody></table><div class="sales-sec-head" style="margin-top:20px;margin-bottom:0"><h3>同じ支出でも、何を得られたかは人それぞれ。</h3><p>数字を見て、思いを知り、結果を確かめ、次を決める。</p><div class="sales-flow"><span>見える化</span>→<span>対話・検証</span>→<span>ルール化</span></div><p class="sales-note">家計の現金収支と、会社の利益・資金は区別して考えます。</p></div></section>
 <section class="sales-sec" aria-labelledby="sales-work"><div class="sales-sec-head"><div class="sales-kicker">実務経験・支援できること</div><h2 id="sales-work">考え方を、実際の仕組みに。</h2><p>実務経験をもとに、数字と業務をつなぐ仕組みづくりを支援します。</p></div><div class="sales-case"><div><div class="sales-kicker">実務経験</div><h3>予算・原価管理の仕組み設計</h3><p>予算原価管理の初期システム設計に携わり、社内の業務フロー、決裁に関わる人員・回覧順、帳票・書式を設計。</p></div><div><div class="sales-kicker">ことねや式で支援すること</div><h3>必要な数字とルールを、自社で使える形に</h3><p>原価の把握、予算と実績の比較、判断基準の整理、役割の明確化、検証と改善。</p><p>自社で考え、判断し、改善を続けられる仕組みを一緒に考えます。</p></div></div></section>
 
+
 <section class="sales-two-cases" id="sales-cases" aria-labelledby="sales-cases-title">
- <div class="cases-kicker"><span>実務経験から考える経営の選択</span><span class="cases-test">2事例テスト｜確認用</span></div>
- <h2 class="cases-title" id="sales-cases-title">会社が目指すものが変われば、<br>数字の使い方も変わる。</h2>
- <p class="cases-intro">管理会計は「この経営が正解」と決めるためのものではありません。何を目指し、何を比べ、どのように判断するか。実務で取り組んだ2つの事例から考えてみます。</p>
+ <div class="cases-kicker"><span>実務事例｜数字を経営判断につなげる</span><span class="cases-test">テストページ・未公開確認用</span></div>
+ <h2 class="cases-title" id="sales-cases-title">数字を集めるだけでは、<br>経営は変わらない。</h2>
+ <p class="cases-intro">何を目指すかを決め、必要な指標を選び、事実を比較する。その数字を、仕事の組み替えや次の事業計画につなげた2つの事例です。</p>
  <div class="cases-overview">
   <article aria-labelledby="case-a-overview">
-   <div class="cases-label"><span class="cases-count">01</span>仕事の役割を変える｜工場再編</div>
-   <h3 id="case-a-overview">自社で担う仕事を見直した。<br>売上規模は5倍に。</h3>
+   <div class="cases-label"><span class="cases-count">01</span>工場の事業構造を再設計</div>
+   <h3 id="case-a-overview">自社で担う仕事を変え、<br>事業構造を組み替えた。</h3>
    <div class="cases-hero-value">1 → 5 <small>売上規模（指数）</small></div>
-   <p>自社で量産を抱える体制から、試作・特注品に集中する体制へ。量産は外注先と分担し、得意分野の仕事を優先した。</p>
-   <a class="cases-jump" href="#case-a-detail" onclick="document.getElementById('case-a-detail').open=true">事例01のBefore／Afterを見る ›</a>
+   <p>量産は外注先と分担し、自社は熟練工による試作・特注に集中。売上だけでなく、人員・外注・固定費率を合わせて見る事例。</p>
+   <a class="cases-jump" href="#case-a-detail" onclick="document.getElementById('case-a-detail').open=true">4指標でBefore／Afterを見る ›</a>
   </article>
   <article aria-labelledby="case-b-overview">
-   <div class="cases-label"><span class="cases-count">02</span>成長の道筋をつくる｜新規支店</div>
-   <h3 id="case-b-overview">10営業所の売れ方から、<br>新規支店の成長を描く。</h3>
-   <div class="cases-hero-value">10 <small>営業所を分析・属性化</small></div>
-   <p>既存営業所の商品構成比と地域性を整理し、新しい地域で何をどう売り、どう成長するかを考えるモデルを設計した。</p>
-   <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">事例02のBefore／Afterを見る ›</a>
+   <div class="cases-label"><span class="cases-count">02</span>地域別の出店計画をモデル化</div>
+   <h3 id="case-b-overview">営業所の実績を、<br>次の出店計画に変えた。</h3>
+   <div class="cases-hero-value">10 <small>既存営業所を分析</small></div>
+   <p>地域ごとの売れ筋と商品構成比から営業所を属性化。新規支店の販売構成と成長の道筋を、数値で組み立てる事例。</p>
+   <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">モデル化の流れを試す ›</a>
   </article>
  </div>
  <details class="cases-detail" id="case-a-detail" open>
-  <summary>事例01｜工場の役割と、受注の判断基準を変える</summary>
+  <summary>事例01｜事業構造の変更を4つの数字で検証</summary>
   <div class="cases-detail-body">
-   <p class="cases-detail-lead">工場の稼働を維持するために受注を確保する状態から、熟練工の技術を活かせる仕事へ自社の役割を移した事例です。</p>
+   <p class="cases-detail-lead">量産中心の自社工場を、試作・特注に強い体制へ。量産は外注先で担い、熟練工の仕事を優先できる役割分担へ転換した。</p>
    <div class="cases-ba">
-    <div class="cases-era"><div class="cases-era-tag">BEFORE｜量産中心</div><h4>工場を動かすために、仕事を確保する。</h4><p>量産のために作業員を維持・育成する必要があり、工場の能力と人員を前提に仕事を確保する体制だった。</p></div>
-    <div class="cases-era after"><div class="cases-era-tag">AFTER｜試作・特注中心</div><h4>強みを活かす仕事に、自社の力を集中する。</h4><p>量産は外注先と分担。自社は熟練工による試作・特注品へ注力し、新たな個別受注に対応しやすい体制へ転換した。</p></div>
+    <div class="cases-era"><div class="cases-era-tag">BEFORE｜量産中心</div><h4>設備と人員を維持するために、仕事を確保する。</h4><p>工場の稼働や作業員数が先にあり、それに合わせた受注を必要とする構造。</p></div>
+    <div class="cases-era after"><div class="cases-era-tag">AFTER｜試作・特注中心</div><h4>自社の強みに合わせて、受注と生産を分担する。</h4><p>熟練工は試作・個別受注を担い、量産は外注先と連携して対応する構造。</p></div>
    </div>
-   <h4 class="cases-metric-title">前後の比較</h4>
-   <div class="cases-table-wrap"><table class="cases-table">
-    <thead><tr><th scope="col">項目</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
-    <tbody>
-     <tr><td>売上規模（指数）</td><td>1</td><td>5</td></tr>
-     <tr><td>作業員数</td><td>35名</td><td>15名</td></tr>
-     <tr><td>外注比率</td><td>10%</td><td>90%</td></tr>
-     <tr><td>固定費率（売上高比）</td><td>40%</td><td>25%</td></tr>
-     <tr><td>自社で担う仕事</td><td>量産中心</td><td>試作・特注中心</td></tr>
-    </tbody>
-   </table></div>
-   <p class="cases-note">売上高の実額は非公開。売上高固定費率の低下は固定費額そのものの減少を意味せず、変動費率の情報がないため損益分岐点比率の実績改善も断定しません。外注比率の算定基準は公開前の確認事項です。</p>
-   <p class="cases-takeaway">「自社でどれだけ生産するか」から、「何を自社で担うか」へ。判断の基準を組み替えた。</p>
+   <h4 class="cases-metric-title">結果を、異なる4つの指標で確かめる</h4>
+   <div class="qmetricgrid" aria-label="事例01の4指標 Before After">
+    <div class="qmetric"><span>売上規模（指数）</span><div><b>1</b><em>→</em><strong>5</strong></div><small>5倍（実額非公開）</small><div class="qtrack"><i style="width:20%"></i><i class="aft" style="width:100%"></i></div></div>
+    <div class="qmetric"><span>作業員数</span><div><b>35名</b><em>→</em><strong>15名</strong></div><small>20名減（約57%減）</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:42.86%"></i></div></div>
+    <div class="qmetric"><span>外注比率</span><div><b>10%</b><em>→</em><strong>90%</strong></div><small>＋80ポイント</small><div class="qtrack"><i style="width:10%"></i><i class="aft" style="width:90%"></i></div></div>
+    <div class="qmetric"><span>売上高固定費率</span><div><b>40%</b><em>→</em><strong>25%</strong></div><small>−15ポイント</small><div class="qtrack"><i style="width:100%"></i><i class="aft" style="width:62.5%"></i></div></div>
+   </div>
+   <div class="qlegend"><span><i></i>Before</span><span><i class="aft"></i>After</span><small>棒の長さは各指標内の比較。指標間の大きさは比較しません。</small></div>
+   <p class="cases-note">※実務経験を機密に配慮して指数・比率で表現しています。固定費率の低下は固定費総額の減少を意味しません。変動費率や利益の実績は示していないため、損益分岐点の改善・利益増加までは断定しません。外注比率の算定基準は正式掲載前に要確認です。</p>
+   <p class="cases-takeaway">見たい数字を「売上」だけで終わらせず、「どの仕事を、どの体制で担うか」という経営の選択につなげた。</p>
   </div>
  </details>
  <details class="cases-detail" id="case-b-detail" open>
-  <summary>事例02｜地域の違いを、新規支店の成長モデルへ</summary>
+  <summary>事例02｜10営業所の実績を新規支店の計画に変える</summary>
   <div class="cases-detail-body">
-   <p class="cases-detail-lead">既存の10営業所で蓄積した販売実績を、次の出店で利用できるようにする。地域ごとの売れ筋商品の構成比から営業所の特性を整理し、新規支店の計画づくりにつなげた事例です。</p>
+   <p class="cases-detail-lead">既存の10営業所の実績を商品構成比と地域性から整理し、新しい地域でどの商品を中心に、どのように伸ばすかを考える販売・成長モデルを設計した事例。</p>
    <div class="cases-ba">
-    <div class="cases-era"><div class="cases-era-tag">BEFORE｜営業所ごとの実績</div><h4>同じ商品でも、地域によって売れ方が違う。</h4><p>既存営業所にはそれぞれ商品構成の特徴がある。新規支店の立ち上げに向け、どの実績を参考にし、どう計画に生かすかが課題だった。</p></div>
-    <div class="cases-era after"><div class="cases-era-tag">AFTER｜地域属性と成長モデル</div><h4>地域の特徴から、販売計画と成長の道筋を組み立てる。</h4><p>商品構成比を手がかりに10営業所を属性化。新規出店予定地域に対応する商品構成と、立ち上げ後の成長を考えるモデルを設計した。</p></div>
+    <div class="cases-era"><div class="cases-era-tag">BEFORE｜営業所別の実績</div><h4>売上の一覧はある。次の出店の根拠は整理しきれていない。</h4><p>地域ごとに売れ方が異なり、単純な全店平均では新規出店予定地の特徴が見えにくい。</p></div>
+    <div class="cases-era after"><div class="cases-era-tag">AFTER｜地域属性別の計画</div><h4>実績を「地域の商品構成」と「成長仮説」に組み直す。</h4><p>類似した地域の傾向を使い、商品別の販売構成と立ち上げ後の計画を数値化する。</p></div>
    </div>
-   <h4 class="cases-metric-title">どうやってモデルをつくる？</h4>
-   <div class="cases-flow" aria-label="10営業所の分析から新規支店の成長モデルを設計する流れ">
-    <div class="cases-flow-step"><strong>既存10営業所を分析</strong><span>売れ筋商品と構成比の違いを把握</span></div>
+   <div class="cases-flow" aria-label="分析から計画への3段階">
+    <div class="cases-flow-step"><strong>① 10営業所の構成比</strong><span>商品ごとの売上比率を揃えて比較</span></div>
     <div class="cases-flow-arrow" aria-hidden="true">→</div>
-    <div class="cases-flow-step"><strong>地域の特性を属性化</strong><span>構成の似た営業所から傾向を整理</span></div>
+    <div class="cases-flow-step"><strong>② 地域の特徴を属性化</strong><span>似た売れ方をする地域を整理</span></div>
     <div class="cases-flow-arrow" aria-hidden="true">→</div>
-    <div class="cases-flow-step"><strong>新規支店の計画をモデル化</strong><span>商品構成の仮説と成長の見通しを設計</span></div>
+    <div class="cases-flow-step"><strong>③ 新規支店の月次計画</strong><span>商品構成と立ち上がりの仮説を置く</span></div>
    </div>
-   <h4 class="cases-metric-title">前後の比較</h4>
-   <div class="cases-table-wrap"><table class="cases-table">
-    <thead><tr><th scope="col">項目</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
-    <tbody>
-     <tr><td>活用する情報</td><td>各営業所の実績</td><td>地域属性別に整理</td></tr>
-     <tr><td>商品構成</td><td>営業所ごとに把握</td><td>地域に応じて想定</td></tr>
-     <tr><td>新規支店の計画</td><td>参照基準が課題</td><td>成長モデルを設計</td></tr>
-     <tr><td>検証の基準</td><td>個別の実績確認</td><td>仮説と実績の比較に活用可能</td></tr>
-    </tbody>
-   </table></div>
-   <p class="cases-note">10営業所の分析・属性化と新規支店の成長モデル設計という実務経験を表現しています。新規支店の実際の売上成長・出店成果・予測精度など、未確認の結果は掲載していません。</p>
-   <p class="cases-takeaway">「過去の売上を集計する」から、「次の判断のために数字を組み立てる」へ。</p>
+   <div class="qdemo" id="qdemo">
+    <div class="qdemohead"><div><span class="qtag">数字化のイメージを操作する</span><h4>地域の売れ方から、販売計画を組み立てる</h4></div><span class="qdummytag">全数値：説明用の架空値</span></div>
+    <p>商品構成比を地域ごとに変えると、同じ月商目標でも「何をいくら売るか」が変わります。これは手法を見せる簡易デモであり、過去の実績値や予測精度を示すものではありません。</p>
+    <div class="qcontrols">
+     <label>想定する地域の特徴<select id="qregion"><option value="a">商品Aが中心の地域（仮）</option><option value="b">商品Bが中心の地域（仮）</option><option value="c">バランス型の地域（仮）</option></select></label>
+     <label>12か月後の月商目標 <strong id="qtargetlabel">300万円</strong><input id="qtarget" type="range" min="100" max="800" step="50" value="300" aria-label="12か月後の月商目標（万円）" /><small>100万～800万円（説明用）</small></label>
+    </div>
+    <div class="qdemobody">
+     <div class="qmixbox"><div class="qsectionname">想定する商品構成比</div><div class="qstack" id="qstack" aria-label="商品の構成比"><span id="qsa">55%</span><span id="qsb">25%</span><span id="qsc">20%</span></div>
+      <div class="qmixlegend"><span><i></i>商品A <b id="qa">55%／165万円</b></span><span><i></i>商品B <b id="qb">25%／75万円</b></span><span><i></i>商品C <b id="qc">20%／60万円</b></span></div>
+     </div>
+     <div class="qrampbox"><div class="qsectionname">月商計画（12か月目を目標水準とした仮説）</div>
+      <div class="qmonthly" id="qmonthly" aria-live="polite"></div><small>立ち上がり方も仮置き。地域・人員・客数などの条件を検証して計画を更新します。</small>
+     </div>
+    </div>
+    <div class="qdemobottom"><b>計画は、当てるためだけの数字ではない。</b><span>実績が入ったら、商品別構成比と月次計画との差異を確認し、仕入・人員配置・販売施策を見直すための基準にする。</span></div>
+   </div>
+   <p class="cases-note">※実際に行ったのは10営業所の属性化と、新規支店の販売・成長モデルの設計です。デモの地域類型、商品A～Cの構成比、目標月商、月次値はすべて仮定であり、当時の実績・成果を再現したものではありません。</p>
+   <p class="cases-takeaway">過去の売上を「結果の集計」で終わらせず、「新しい地域ではどう売るか」の仮説に変え、実績で検証できる形をつくった。</p>
   </div>
  </details>
- <div class="cases-choose">
-  <h3>あなたの会社なら、どの能力を伸ばしたい？</h3>
-  <p>RPGに例えるなら、攻撃力を重視する会社も、防御力を重視する会社もあります。どれが正解かではなく、何を目指すかによって必要な数字が変わります。</p>
-  <div class="cases-abilities">
-   <div class="cases-ability"><span class="sym" aria-hidden="true">↗</span><strong>攻撃力</strong><small>売上・受注機会をどう伸ばす？</small></div>
-   <div class="cases-ability"><span class="sym" aria-hidden="true">◇</span><strong>防御力</strong><small>損益分岐点や資金面の耐性をどう見る？</small></div>
-   <div class="cases-ability"><span class="sym" aria-hidden="true">≫</span><strong>素早さ</strong><small>需要の変化にどう対応する？</small></div>
-   <div class="cases-ability"><span class="sym" aria-hidden="true">★</span><strong>得意技</strong><small>独自の強みをどこに生かす？</small></div>
+ <div class="qend">
+  <h3>数字が、次の判断に使えるようになる。</h3>
+  <p>経営の目的に合わせて、必要な数字を選び直す。実績と計画を同じ基準で比べ、判断を変え、また検証する。</p>
+  <div class="qendgrid">
+   <div><b>現状を測る</b><span>売上指数・商品構成比</span></div>
+   <div><b>仕組みを変える</b><span>人員・外注比率・固定費率</span></div>
+   <div><b>次を設計する</b><span>地域属性・月次販売計画・予実差異</span></div>
   </div>
-  <p class="cases-last">どんな経営を目指したいのか。その目的から、比較する数字と判断の仕組みを考える。<br><strong>使う会計から、つくる会計へ。</strong></p>
+  <p class="cases-last">勘と経験を、数字で確かめる。<br><strong>使う会計から、つくる会計へ。</strong></p>
  </div>
 </section>
+<script id="qdemo-script">
+(function(){
+ const input=document.getElementById('qtarget'),sel=document.getElementById('qregion');
+ if(!input||!sel)return;
+ const defs={a:{mix:[55,25,20],ramp:[30,54,77,100]},b:{mix:[25,55,20],ramp:[42,64,84,100]},c:{mix:[35,35,30],ramp:[36,59,81,100]}};
+ const fmt=(n)=>Math.round(n).toLocaleString('ja-JP');
+ function render(){
+   const model=defs[sel.value]||defs.a,goal=Number(input.value),mix=model.mix;
+   document.getElementById('qtargetlabel').textContent=fmt(goal)+'万円';
+   ['a','b','c'].forEach((k,i)=>{document.getElementById('q'+k).textContent=mix[i]+'%／'+fmt(goal*mix[i]/100)+'万円';const segment=document.getElementById('qs'+k);segment.textContent=mix[i]+'%';segment.style.width=mix[i]+'%';});
+   document.getElementById('qmonthly').innerHTML=[1,3,6,12].map((m,i)=>'<div class="qmonth"><span>'+m+'か月目</span><div class="qmonthbar"><i style="width:'+model.ramp[i]+'%"></i></div><strong>'+fmt(goal*model.ramp[i]/100)+'万円</strong></div>').join('');
+ }
+ sel.addEventListener('change',render); input.addEventListener('input',render);render();
+})();
+</script>
 
 <section class="sales-closing sales-contact-link" id="sales-contact"><div class="sales-kicker">KOTONEYA METHOD</div><h2>使う会計から、つくる会計へ。</h2><p>まず、一つの困りごとから。</p><div class="sales-paths"><div><h3>もっと深く知りたい・体験したい</h3><p>家計の判断を体験し、会社の経営に置き換えてみましょう。</p><button class="btn" type="button" onclick="enterExperience()">ことねや式を体験する ›</button></div><div class="contactpath"><h3>自社の経営について相談したい</h3><p>何から始めればいいのか。<br>そこから一緒に考えましょう。</p><a class="btn primary" href="/contact/">まずは相談してみる ›</a></div></div><small>できるかな⁉︎をカタチに！</small></section></main>
 <div id="sales-return42" class="sales-return42" hidden><button class="btn" type="button" onclick="returnSales()">‹ 営業紹介へ</button></div><main id="app" hidden></main><script>
