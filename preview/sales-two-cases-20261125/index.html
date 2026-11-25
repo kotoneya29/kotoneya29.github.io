@@ -749,6 +749,40 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
  .sales-two-cases .qannual{align-items:start}
  .sales-two-cases .qannual strong{text-align:right}
 }
+
+/* TEST: Break-even visualization for case 02 */
+.sales-two-cases .qbep{border:1px solid #a8c6b0;border-radius:14px;padding:16px;background:#f5faf6;margin:14px 0}
+.sales-two-cases .qbephead{display:flex;justify-content:space-between;align-items:flex-start;gap:13px}
+.sales-two-cases .qbephead h4{margin:4px 0 8px;color:#215439;font-size:1.07rem}
+.sales-two-cases .qbephead .qbepsub{font-size:.77rem;font-weight:900;background:white;border:1px solid #d2e2d6;border-radius:7px;padding:7px 8px;white-space:nowrap}
+.sales-two-cases .qbep p{font-size:.8rem;line-height:1.75;color:#4c6152;margin:4px 0 12px}
+.sales-two-cases .qbepstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:14px 0}
+.sales-two-cases .qbepstats>div{background:#fff;border:1px solid #d1e1d4;border-radius:9px;padding:13px;min-width:0}
+.sales-two-cases .qbepstats small{display:block;color:#597062;font-size:.73rem;font-weight:800}
+.sales-two-cases .qbepstats strong{display:block;font-size:1.4rem;color:#245b3e;margin:4px 0;font-variant-numeric:tabular-nums}
+.sales-two-cases .qbepstats span{font-size:.7rem;color:#65796b;line-height:1.55;display:block}
+.sales-two-cases .qbepstats [hidden]{display:none!important}
+.sales-two-cases .qbepgraph{background:#fff;border:1px solid #d4e3d7;border-radius:10px;overflow:hidden;margin-top:9px}
+.sales-two-cases .qbepgraph svg{display:block;width:100%;height:auto;min-height:170px}
+.sales-two-cases .qbepchartlegend{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 12px;color:#526a59;font-size:.74rem}
+.sales-two-cases .qbepchartlegend span{display:flex;align-items:center;gap:6px}
+.sales-two-cases .qbepchartlegend i{display:inline-block;width:20px;height:0;border-top:3px solid #28664d}
+.sales-two-cases .qbepchartlegend i.qcostline{border-color:#b97352}
+.sales-two-cases .qbepchartlegend i.qtargetline{border-color:#4b7fa7;border-top-style:dashed}
+.sales-two-cases .qbepnote{padding:10px 12px;background:#fff;border-left:3px solid #b77e52;margin:10px 0!important;border-radius:5px}
+.sales-two-cases .qbepdecision{display:grid;gap:3px;padding:12px 13px;background:#e9f3eb;border-radius:9px;line-height:1.75;color:#2f5740;font-size:.79rem}
+.sales-two-cases .qbepdecision strong{font-size:.83rem}
+.sales-two-cases .qblackmonths{text-align:right;font-size:.76rem;color:#446b4e;font-weight:800;margin-top:8px}
+@media(max-width:650px){
+ .sales-two-cases .qbep{padding:11px 9px}
+ .sales-two-cases .qbephead{display:block}
+ .sales-two-cases .qbephead .qbepsub{display:inline-block;margin:5px 0 8px}
+ .sales-two-cases .qbepstats>div{padding:10px 8px}
+ .sales-two-cases .qbepstats strong{font-size:1.16rem}
+ .sales-two-cases .qbepstats small{font-size:.69rem}
+ .sales-two-cases .qbepchartlegend{gap:7px 13px}
+}
+@media(max-width:350px){.sales-two-cases .qbepstats{grid-template-columns:1fr}}
 </style>
 </head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
@@ -791,10 +825,10 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   </article>
   <article aria-labelledby="case-b-overview">
    <div class="cases-label"><span class="cases-count">02</span>地域別の出店計画をモデル化</div>
-   <h3 id="case-b-overview">10営業所の実績から、<br>新店の損益まで設計した。</h3>
+   <h3 id="case-b-overview">10営業所の実績から、<br>新店の黒字化条件を設計した。</h3>
    <div class="cases-hero-value">10 <small>既存営業所を分析</small></div>
-   <p>地域別の商品構成比を起点に、売上連動の変動費と支店固定費を組み込み、損益・黒字化条件までモデル化した事例。</p>
-   <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">売上と費用の連動を試す ›</a>
+   <p>商品構成・変動費・固定費から「いくら売れば黒字になるか」を算出。地域ごとの損益分岐点を新店計画に組み込んだ事例。</p>
+   <a class="cases-jump" href="#case-b-detail" onclick="document.getElementById('case-b-detail').open=true">損益分岐点が動く様子を見る ›</a>
   </article>
  </div>
  <details class="cases-detail" id="case-a-detail" open>
@@ -818,23 +852,23 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   </div>
  </details>
  <details class="cases-detail" id="case-b-detail" open>
-  <summary>事例02｜売上・変動費・固定費をつなぐ新規支店の損益モデル</summary>
+  <summary>事例02｜地域別の損益分岐点から、新規支店の黒字化を計画する</summary>
   <div class="cases-detail-body">
-   <p class="cases-detail-lead">既存10営業所の地域特性と売れ筋商品の構成比から、新規支店の売上を見立てる。さらに商品別の変動費と、支店を維持する固定費を組み込み、月次の利益計画・損益分岐点まで設計した事例です。</p>
+   <p class="cases-detail-lead">既存10営業所を商品構成と地域特性で類型化。地域ごとの限界利益率に固定費を重ね、「どれだけ売れば採算に届くか」を算出し、新規支店の成長計画と黒字化条件を設計した事例です。</p>
    <div class="cases-ba">
     <div class="cases-era"><div class="cases-era-tag">BEFORE｜店舗ごとの実績集計</div><h4>売上の大小は見える。でも、どの売上が利益につながるかは分かりにくい。</h4><p>地域ごとの商品構成や費用構造が違い、売上高だけでは新規支店の採算を判断できない。</p></div>
-    <div class="cases-era after"><div class="cases-era-tag">AFTER｜採算まで見える事業計画</div><h4>地域の売上構成 × 変動費 × 固定費で、成長と採算を同時に計画する。</h4><p>商品別の販売計画に売上連動費用と支店固定費を重ね、立ち上げ期の損益や黒字化の条件を検証する。</p></div>
+    <div class="cases-era after"><div class="cases-era-tag">AFTER｜採算まで見える事業計画</div><h4>商品構成別の限界利益率から、損益分岐点売上高を設定する。</h4><p>商品構成・変動費・固定費を合わせ、地域別の採算ラインと月次の黒字化時期を検証する。</p></div>
    </div>
    <div class="cases-flow" aria-label="分析から月次損益モデルへの3段階">
     <div class="cases-flow-step"><strong>① 10営業所の売れ方を分析</strong><span>地域属性と商品別構成比を定義</span></div>
     <div class="cases-flow-arrow" aria-hidden="true">→</div>
-    <div class="cases-flow-step"><strong>② 売上と変動費を推計</strong><span>商品別売上 × 変動費率＝変動費</span></div>
+    <div class="cases-flow-step"><strong>② 限界利益率を算出</strong><span>商品別売上 × 変動費率＝変動費</span></div>
     <div class="cases-flow-arrow" aria-hidden="true">→</div>
-    <div class="cases-flow-step"><strong>③ 固定費を加え採算を計画</strong><span>限界利益 − 固定費＝概算損益</span></div>
+    <div class="cases-flow-step"><strong>③ 損益分岐点と月次損益</strong><span>固定費 ÷ 限界利益率＝採算ライン</span></div>
    </div>
    <div class="qdemo" id="qdemo">
-    <div class="qdemohead"><div><span class="qtag">数字化デモ｜売上から損益まで連動</span><h4>「売れる支店」から「利益を生む支店」の計画へ</h4></div><span class="qdummytag">全数値：説明用の架空値</span></div>
-    <p>地域の売れ筋・目標売上・月額固定費・原価上昇の条件を変えてください。商品別構成比から変動費を計算し、月次の限界利益・損益・損益分岐点まで連動します。</p>
+    <div class="qdemohead"><div><span class="qtag">数字化デモ｜売上・費用・損益分岐点まで連動</span><h4>「いくら売れば黒字か」を地域ごとに見える化</h4></div><span class="qdummytag">全数値：説明用の架空値</span></div>
+    <p>地域の売れ筋・目標売上・固定費・変動費率を変えると、限界利益率だけでなく「採算に必要な月商」も変わります。まず損益分岐点を確かめ、12か月の成長計画と比べてください。</p>
     <div class="qcontrols">
      <label>新規出店地域の想定<select id="qregion"><option value="a">商品Aが中心の地域（仮）</option><option value="b">商品Bが中心の地域（仮）</option><option value="c">バランス型の地域（仮）</option></select></label>
      <label>12か月後の月商目標 <strong id="qtargetlabel">300万円</strong><input id="qtarget" type="range" min="100" max="800" step="50" value="300" aria-label="12か月後の月商目標（万円）" /><small>100万～800万円</small></label>
@@ -859,23 +893,32 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
       <small>概算営業損益＝売上高 − 売上連動の変動費 − 月額固定費</small>
      </div>
     </div>
-    <div class="qmodelkpi">
-     <div><small>限界利益率</small><strong id="qcontribrate">40.3%</strong><span>売上1万円増で残る割合</span></div>
-     <div><small>基本固定費での損益分岐点月商</small><strong id="qbreakeven">248.4万円</strong><span>固定費 ÷ 限界利益率</span></div>
-     <div><small>12か月目の判定</small><strong id="qstatus">黒字</strong><span id="qstatusdetail">＋20.8万円／月</span></div>
-    </div>
+    <section class="qbep" aria-labelledby="qbep-title">
+      <div class="qbephead"><div><span class="qtag">経営判断の基準｜損益分岐点</span><h4 id="qbep-title">売上が何万円になれば、赤字を抜ける？</h4></div><span class="qbepsub" id="qbepsub">12か月目：黒字</span></div>
+      <p>売上だけでは採算は決まりません。<strong>限界利益率</strong>が高い商品構成ほど、固定費を回収するために必要な売上を抑えられます。条件を変えて、2本の線が交わる場所を見比べてください。</p>
+      <div class="qbepstats">
+       <div><small>加重平均 限界利益率</small><strong id="qcontribrate">40.3%</strong><span>売上高 − 変動費の割合</span></div>
+       <div><small id="qbasecaption">基本固定費の損益分岐点月商</small><strong id="qbreakeven">248.4万円</strong><span>基本固定費 ÷ 限界利益率</span></div>
+       <div id="qexpandedwrap"><small>追加固定費を含む損益分岐点月商</small><strong id="qbreakevenplus">322.9万円</strong><span>月商500万円超の費用段階の参考値</span></div>
+       <div><small>12か月目の月商目標との差</small><strong id="qgap">＋51.6万円</strong><span>その売上に適用される費用段階で比較</span></div>
+      </div>
+      <div class="qbepgraph"><svg id="qbepchart" viewBox="0 0 760 310" role="img" aria-label="横軸が月商、縦軸が金額。売上線と総費用線の交点が損益分岐点を表すグラフ"><title>売上高と総費用の交点（損益分岐点）</title></svg></div>
+      <div class="qbepchartlegend"><span><i class="qrevline"></i>売上高</span><span><i class="qcostline"></i>総費用（変動費＋固定費）</span><span><i class="qtargetline"></i>12か月目の目標月商</span></div>
+      <p class="qbepnote" id="qbepnote">基本固定費を回収する売上が損益分岐点です。</p>
+      <div class="qbepdecision"><strong>判断の視点</strong><span>「売上を何万円増やすか」だけでなく、商品構成を変えて限界利益率を高めるか、固定費を抑えるか。損益分岐点の動きが、出店条件と営業方針を考える基準になります。</span></div>
+    </section>
     <div class="qrampbox qforecast">
       <div class="qsectionname">新規支店｜立ち上げ期の月次損益計画（抜粋）</div>
       <div class="qforecastwrap">
        <table class="qforecasttable" aria-label="月ごとの売上 変動費 固定費 概算営業損益"><thead><tr><th>月</th><th>売上高</th><th>変動費</th><th>固定費</th><th>概算営業損益</th></tr></thead><tbody id="qforecastrows"></tbody></table>
       </div>
       <p class="qforecastnote">売上は1・3・6・12か月目の仮定水準をつないだ簡易計画。変動費は売上に比例し、固定費は一定範囲で維持しつつ、追加人員等が必要になった場合は段階的に増加する想定です。</p>
-      <div class="qannual"><span>初年度12か月の概算損益合計</span><strong id="qannualprofit">−</strong></div>
+      <div class="qannual"><span>初年度12か月の概算損益合計</span><strong id="qannualprofit">−</strong></div><div class="qblackmonths" id="qblackmonths">月次黒字：集計中</div>
     </div>
-    <div class="qdemobottom"><b>数字にすることで、検討すべき判断が変わる。</b><span>売上だけでなく、商品構成、限界利益、固定費、黒字化までを同じモデルで確認する。開業後は計画と実績の差を見て、販売商品・採用計画・費用配分を見直す。</span></div>
+    <div class="qdemobottom"><b>数字にすることで、検討すべき判断が変わる。</b><span>損益分岐点を下げるために商品構成を見直すのか、固定費を抑えるのか、それとも売上成長を優先するのか。開業後は計画と実績を比較し、採用・仕入・営業方針を再検討する。</span></div>
    </div>
    <p class="cases-note">※「10営業所の分析・属性化から新規支店の売上・費用・成長をモデル化する」という実務内容の紹介です。デモの構成比、変動費率、固定費、成長率、追加費用の発生条件はすべて説明用の仮定値で、実際の営業所の数値や成果を再現していません。簡易損益モデルであり、資金繰りや税務上の利益、予測精度を示すものではありません。</p>
-   <p class="cases-takeaway">「どれくらい売れそうか」から一歩進めて、「どの商品を、どの費用構造で販売し、いつ採算が合うのか」を計画と実績で検証する仕組みをつくった。</p>
+   <p class="cases-takeaway">「どれくらい売れるか」だけでなく、「いくら売れば採算に届くか」を地域別にモデル化。損益分岐点を新規支店の経営判断の基準にした。</p>
   </div>
  </details>
  <div class="qend">
@@ -910,12 +953,50 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
    }
    return points[3];
  }
+ function chart({goal,weighted,margin,baseFixed,b0,b1,hasStep}){
+  const w=760,h=310,left=72,right=20,top=20,bottom=43,plotW=w-left-right,plotH=h-top-bottom;
+  const maxX=Math.ceil(Math.max(800,goal*1.12,b0*1.14,hasStep?b1*1.14:0)/100)*100;
+  const maxY=Math.ceil(Math.max(maxX,baseFixed+weighted*maxX+(hasStep&&maxX>500?30:0))*1.07/100)*100;
+  const X=v=>left+Math.max(0,v)/maxX*plotW,Y=v=>h-bottom-Math.max(0,v)/maxY*plotH;
+  const num=v=>Number(v).toFixed(1);
+  const pt=(x,y)=>num(X(x))+','+num(Y(y));
+  const costY=(x,extra)=>baseFixed+weighted*x+extra;
+  let marks='';
+  for(let i=0;i<=4;i++){
+   const y=maxY*i/4;
+   marks+='<line x1="'+left+'" y1="'+num(Y(y))+'" x2="'+(w-right)+'" y2="'+num(Y(y))+'" stroke="#e6ede8" stroke-width="1"/>';
+   marks+='<text x="'+(left-9)+'" y="'+num(Y(y)+4)+'" text-anchor="end" font-size="12" fill="#66786b">'+Math.round(y)+'</text>';
+   const x=maxX*i/4;
+   marks+='<text x="'+num(X(x))+'" y="'+(h-bottom+20)+'" text-anchor="middle" font-size="12" fill="#66786b">'+Math.round(x)+'</text>';
+  }
+  const revenue='<path d="M'+pt(0,0)+' L'+pt(maxX,maxX)+'" fill="none" stroke="#28664d" stroke-width="3.3" stroke-linecap="round"/>';
+  let costs='<path d="M'+pt(0,costY(0,0))+' L'+pt(hasStep?500:maxX,costY(hasStep?500:maxX,0))+'" fill="none" stroke="#b97352" stroke-width="3.3" stroke-linecap="round"/>';
+  if(hasStep){
+   costs+='<path d="M'+pt(500,costY(500,0))+' L'+pt(500,costY(500,30))+' L'+pt(maxX,costY(maxX,30))+'" fill="none" stroke="#b97352" stroke-width="3.3" stroke-linecap="round"/>';
+  }
+  const dot=(x,color,label)=>{
+    if(x<0||x>maxX)return '';
+    return '<circle cx="'+num(X(x))+'" cy="'+num(Y(x))+'" r="6.1" fill="white" stroke="'+color+'" stroke-width="3"/>'+
+       '<text x="'+num(X(x))+'" y="'+num(Y(x)-11)+'" text-anchor="middle" fill="'+color+'" font-size="12" font-weight="800">'+label+'</text>';
+  };
+  let crosses='';
+  if(!hasStep||b0<=500)crosses+=dot(b0,'#236047','BEP');
+  if(hasStep&&b1>500)crosses+=dot(b1,'#94603e',b0<=500?'BEP②':'BEP');
+  const goalLine='<line x1="'+num(X(goal))+'" y1="'+num(Y(0))+'" x2="'+num(X(goal))+'" y2="'+num(Y(goal))+'" stroke="#4b7fa7" stroke-width="2" stroke-dasharray="5 5"/>'+
+      '<circle cx="'+num(X(goal))+'" cy="'+num(Y(goal))+'" r="4.8" fill="#4b7fa7"/>';
+  const axes='<line x1="'+left+'" y1="'+top+'" x2="'+left+'" y2="'+(h-bottom)+'" stroke="#7c9684"/><line x1="'+left+'" y1="'+(h-bottom)+'" x2="'+(w-right)+'" y2="'+(h-bottom)+'" stroke="#7c9684"/>'+
+      '<text x="12" y="14" font-size="12" fill="#586e60">金額（万円）</text><text x="'+(w-right)+'" y="'+(h-3)+'" font-size="12" text-anchor="end" fill="#586e60">月商（万円）</text>';
+  const jump=hasStep?'<line x1="'+num(X(500))+'" x2="'+num(X(500))+'" y1="'+top+'" y2="'+(h-bottom)+'" stroke="#b7bcae" stroke-width="1" stroke-dasharray="2 5"/><text x="'+num(X(500)+5)+'" y="'+(top+13)+'" font-size="11" fill="#7a745e">固定費＋30</text>':'';
+  const graph=el('qbepchart');
+  graph.innerHTML=marks+axes+jump+revenue+costs+goalLine+crosses;
+  graph.setAttribute('aria-label','横軸月商、縦軸金額。基本固定費での損益分岐点'+money(b0)+(hasStep?'、追加固定費を含む損益分岐点の参考値'+money(b1):'')+'。12か月目目標月商'+money(goal));
+ }
  function render(){
-  const d=defs[region.value]||defs.a;
-  const goal=Number(target.value),baseFixed=Number(fixedInput.value);
+  const d=defs[region.value]||defs.a,goal=Number(target.value),baseFixed=Number(fixedInput.value),hasStep=step.checked;
   const adj=cost.value==='up'?5:cost.value==='down'?-5:0;
   const rates=[55,70,60].map(x=>x+adj),weighted=d.mix.reduce((sum,mix,i)=>sum+mix*rates[i]/10000,0);
   const margin=1-weighted;
+  const b0=baseFixed/margin,b1=(baseFixed+30)/margin;
   el('qtargetlabel').textContent=money(goal);
   el('qfixedlabel').textContent=money(baseFixed);
   el('qvcr').textContent=(weighted*100).toFixed(1)+'%';
@@ -926,10 +1007,10 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   const model=m=>{
     const sales=goal*ramp(m,d.ramp)/100;
     const varCost=sales*weighted;
-    const fixed=baseFixed+((step.checked&&sales>500)?30:0);
+    const fixed=baseFixed+((hasStep&&sales>500)?30:0);
     return {m,sales,varCost,fixed,contrib:sales-varCost,profit:sales-varCost-fixed};
   };
-  const current=model(12);
+  const current=model(12),activeBep=(hasStep&&goal>500)?b1:b0,goalGap=goal-activeBep;
   el('qplsales').textContent=money(current.sales);
   el('qplvar').textContent=money(current.varCost);
   el('qplcontrib').textContent=money(current.contrib);
@@ -937,17 +1018,34 @@ main button.btn[data-final-back],main button.btn[data-company-back],main button.
   el('qplprofit').textContent=signed(current.profit);
   el('qplprofit').className=current.profit>=0?'qpositive':'qnegative';
   el('qcontribrate').textContent=(margin*100).toFixed(1)+'%';
-  el('qbreakeven').textContent=money(baseFixed/margin);
-  el('qstatus').textContent=current.profit>=0?'黒字':'赤字';
-  el('qstatus').className=current.profit>=0?'qpositive':'qnegative';
-  el('qstatusdetail').textContent=signed(current.profit)+'／月';
+  el('qbreakeven').textContent=money(b0);
+  el('qbasecaption').textContent=hasStep&&b0>500?'基本固定費だけの場合（参考）':'基本固定費の損益分岐点月商';
+  el('qexpandedwrap').hidden=!hasStep;
+  el('qbreakevenplus').textContent=money(b1);
+  el('qgap').textContent=signed(goalGap);
+  el('qgap').className=goalGap>=0?'qpositive':'qnegative';
+  el('qbepsub').textContent='12か月目：'+(current.profit>=0?'黒字':'赤字')+' '+signed(current.profit);
+  el('qbepsub').className='qbepsub '+(current.profit>=0?'qpositive':'qnegative');
+  const note=el('qbepnote');
+  if(!hasStep){
+    note.textContent='固定費が一定の場合、売上線と総費用線が交わる月商'+money(b0)+'が黒字・赤字の境目です。';
+  }else if(b0<=500&&b1>500){
+    note.textContent='月商'+money(b0)+'で一度黒字化しても、月商500万円超で固定費が30万円増えると再び赤字になる場合があります。その後の損益分岐点は'+money(b1)+'です。';
+  }else if(b0>500){
+    note.textContent='基本固定費だけなら月商'+money(b0)+'が目安ですが、500万円超で固定費が増える仮定では実際の損益分岐点は'+money(b1)+'です。';
+  }else{
+    note.textContent='月商'+money(b0)+'が損益分岐点です。500万円超で追加固定費が発生しますが、この条件では増額後も黒字を維持できます（追加固定費での参考値：'+money(b1)+'）。';
+  }
+  chart({goal,weighted,margin,baseFixed,b0,b1,hasStep});
   const months=Array.from({length:12},(_,i)=>model(i+1));
   const annual=months.reduce((sum,v)=>sum+v.profit,0);
+  const profitable=months.filter(v=>v.profit>=0);
   el('qforecastrows').innerHTML=months.filter(x=>[1,3,6,12].includes(x.m)).map(x=>
     '<tr><th>'+x.m+'か月目</th><td>'+money(x.sales)+'</td><td>'+money(x.varCost)+'</td><td>'+money(x.fixed)+'</td><td class="'+(x.profit>=0?'qpositive':'qnegative')+'">'+signed(x.profit)+'</td></tr>'
   ).join('');
   el('qannualprofit').textContent=signed(annual);
   el('qannualprofit').className=annual>=0?'qpositive':'qnegative';
+  el('qblackmonths').textContent='初年度の月次黒字 '+profitable.length+'/12か月'+(profitable.length?'（初回：'+profitable[0].m+'か月目）':'');
  }
  [region,cost].forEach(x=>x.addEventListener('change',render));
  [target,fixedInput].forEach(x=>x.addEventListener('input',render));
