@@ -1184,109 +1184,7 @@ main#app .family36 .family36-policy .condition36{
  main#app .family36 .finance36 th,main#app .family36 .finance36 td{padding:9px 6px;font-size:.8rem}
 }
 </style>
-<style id="kotoneya-tree-centered-four-cards-v4">
-/* TEST ONLY: original tree centered, four permanent level labels, explanation cards below. */
-main#app .intro-tree-first>h2,main#app .intro-tree-first>.tree-lead,
-main#app .final-tree>h2,main#app .final-tree>.small-guide{text-align:center}
-main#app .intro-tree-first>.tree-lead,main#app .final-tree>.small-guide{
- max-width:740px;margin:0 auto 20px;line-height:1.82
-}
-main#app .concept-tree.tree-vertical,
-main#app .intro-tree-first .concept-tree.tree-vertical,
-main#app .final-tree .concept-tree.tree-vertical{
- display:flex!important;flex-direction:column;align-items:center;gap:20px;
- width:100%;max-width:100%;margin:0 auto;
-}
-main#app .tree-vertical .tree-figure{width:min(100%,570px);margin:0 auto;min-width:0}
-main#app .tree-vertical .concept-tree-graphic,
-main#app .intro-tree-first .tree-vertical .concept-tree-graphic{
- width:100%;max-width:none;margin:0 auto;aspect-ratio:373/350;
- position:relative;overflow:hidden;border-radius:16px;
- background:#fcfdf9;border:1px solid #d9e6db;box-shadow:0 6px 28px #284d3710
-}
-main#app .tree-vertical .concept-tree-art,
-main#app .tree-vertical .concept-tree-art img{display:block;width:100%;height:100%}
-main#app .tree-vertical .concept-tree-art img{object-fit:fill}
-main#app .tree-vertical .concept-tree-graphic[data-current-part="overview"] .tree-focus-overlay{display:none}
-main#app .tree-vertical .part-word-layer,main#app .tree-vertical .tree-vocab,
-main#app .tree-vertical .tree-focus-label{display:none!important}
-main#app .tree-vertical .tree-core-label{
- position:absolute;left:50%;z-index:7;pointer-events:none;
- transform:translate(-50%,-50%);display:inline-flex;
- align-items:center;justify-content:center;
- white-space:nowrap;font-size:clamp(.83rem,1.6vw,1rem);
- line-height:1.35;font-weight:900;border-radius:8px;padding:6px 13px;
- border:1.5px solid;box-shadow:0 2px 9px #2f49372b;
-}
-main#app .tree-vertical .tree-core-label.flower{top:11%;background:#fff4cf;border-color:#d6a843;color:#815d16}
-main#app .tree-vertical .tree-core-label.branch{top:49%;background:#e8f6e8;border-color:#7daf8a;color:#285c3c}
-main#app .tree-vertical .tree-core-label.trunk{top:68%;background:#e7f3fa;border-color:#80b5d1;color:#265d79}
-main#app .tree-vertical .tree-core-label.root{top:91%;background:#f9eadc;border-color:#c5a17d;color:#765132}
-main#app .tree-vertical .concept-tree-content{
- display:flex;flex-direction:column;gap:13px;width:100%;max-width:990px;min-width:0
-}
-main#app .tree-vertical .concept-tree-tabs.tree-part-cards{
- display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
- margin:0;width:100%;
-}
-main#app .tree-vertical .tree-part-card{
- display:flex;flex-direction:column;align-items:stretch;text-align:left;
- justify-content:flex-start;gap:9px;padding:16px 13px;min-width:0;
- min-height:156px;margin:0;border-radius:12px;
- border:1px solid #cfdfd3;background:#fff;white-space:normal;
- line-height:1.48;box-shadow:none;color:#2d4a37;
-}
-main#app .tree-vertical .tree-part-card.selected{box-shadow:0 0 0 2px #4e8b6b35}
-main#app .tree-vertical .tree-part-card.root{border-top:4px solid #bb976c;background:#fdf7f0}
-main#app .tree-vertical .tree-part-card.trunk{border-top:4px solid #689fc2;background:#f2f8fc}
-main#app .tree-vertical .tree-part-card.branch{border-top:4px solid #77ab85;background:#f1f9f2}
-main#app .tree-vertical .tree-part-card.flower{border-top:4px solid #d4aa49;background:#fffaeb}
-main#app .tree-vertical .tree-part-heading{font-size:.98rem;font-weight:900;color:#244c37;line-height:1.5}
-main#app .tree-vertical .tree-part-lead{
- font-size:.83rem;line-height:1.66;font-weight:650;color:#536857;min-height:2.8em;
-}
-main#app .tree-vertical .tree-part-words{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
-main#app .tree-vertical .tree-part-words span{
- display:inline-block;background:#ffffffd9;border:1px solid #dde4de;
- border-radius:6px;padding:4px 6px;font-size:.68rem;font-weight:700;line-height:1.35;color:#53685b
-}
-main#app .tree-vertical .concept-tree-explain.tree-explain-detail{
- width:100%;padding:16px 20px;background:#f7faf7;border:1px solid #c8d9ce;
- border-radius:12px;line-height:1.8;min-height:0;margin:0
-}
-main#app .tree-vertical .tree-explain-detail[hidden]{display:none!important}
-main#app .tree-vertical .tree-explain-detail>div>strong{
- display:block;font-size:1rem;color:#27583f;margin:0 0 8px
-}
-main#app .tree-vertical .tree-explain-detail p{margin:5px 0;line-height:1.8}
-main#app .tree-vertical .v3-tree-pair{
- display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px
-}
-main#app .tree-vertical .v3-tree-pair>div{
- min-width:0;padding:12px 14px;background:#fff;border:1px solid #d7e5da;border-radius:10px
-}
-@media(max-width:700px){
- main#app .tree-vertical .tree-figure{width:min(100%,510px)}
- main#app .tree-vertical .concept-tree-tabs.tree-part-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- main#app .tree-vertical .tree-part-card{padding:12px 10px;min-height:138px;gap:6px}
- main#app .tree-vertical .tree-part-heading{font-size:.89rem}
- main#app .tree-vertical .tree-part-lead{font-size:.76rem;min-height:0}
- main#app .tree-vertical .tree-part-words span{font-size:.64rem;padding:3px 5px}
- main#app .tree-vertical .tree-explain-detail{padding:12px 13px}
-}
-@media(max-width:470px){
- main#app .tree-vertical .tree-core-label{padding:4px 8px;font-size:clamp(.72rem,2.6vw,.85rem)}
- main#app .tree-vertical .tree-figure{width:100%}
- main#app .tree-vertical .tree-part-card{min-height:140px}
- main#app .tree-vertical .v3-tree-pair{grid-template-columns:1fr;gap:8px}
-}
-</style><style id="preview-tree-legacy-overrides-v5">
-main#app .tree-vertical .concept-tree-graphic::before{display:none!important;content:none!important}
-main#app .tree-vertical .tree-hit::after{display:none!important;content:none!important}
-main#app .tree-vertical .method-words,main#app .tree-vertical .method-word,main#app .tree-vertical .method-label{display:none!important}
-main#app .tree-vertical .concept-tree-graphic{max-width:none!important}
-@media(min-width:781px){main#app .tree-vertical .tree-figure{width:min(100%,620px)}}
-</style></head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
+</head><body><header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="/" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/#comics">4コマ一覧</a><a href="/#stamps">LINEスタンプ</a><a href="/#method">ことねや式とは</a><a href="/#about">ことねや紹介</a><a href="/#news">NEWS</a><a href="/#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <div class="device-view-bar" aria-label="表示確認モード">
   <span class="device-view-label">表示確認</span>
   <div class="device-view-actions" role="group" aria-label="表示する画面">
@@ -1709,9 +1607,7 @@ function returnSales(){app.hidden=true;document.getElementById('sales-return42')
 render();
 loadOriginalTree();
 </script>
-<script id="preview-tree-capture-v5">
-window.__PREVIEW_TREE_V5 = treeDiagram;
-</script>
+
 <style id="method-tree-four-layer-fallback">
 /* Built-in four-layer presentation; remains visible even if extension JS fails. */
 .concept-tree-graphic{position:relative!important;isolation:isolate}
@@ -1730,17 +1626,19 @@ window.__PREVIEW_TREE_V5 = treeDiagram;
 .concept-tree-tabs button{min-height:46px!important;font-size:clamp(11px,1.8vw,14px)!important;padding:5px 3px!important;overflow-wrap:anywhere}
 @media(max-width:650px){.concept-tree-graphic{max-width:min(100%,400px)!important}.concept-tree-graphic .tree-hit::after{font-size:10px;padding:2px 4px}}
 </style><script src="/method/experience-20261122.js?v=20261123g"></script>
-<script id="preview-tree-restore-v5">
+<script id="preview-tree-words-inside-v6">
 (function(){
-  const treeV5=window.__PREVIEW_TREE_V5;
-  if(typeof treeV5==="function") treeDiagram=treeV5;
-  document.documentElement.setAttribute("data-preview-tree-layout","v5-vertical");
-  if(new URLSearchParams(location.search).get("previewTree")==="1"){
-    enterExperience();
-    requestAnimationFrame(function(){
-      const target=document.querySelector(".intro-tree-first");
-      if(target) target.scrollIntoView({block:"start"});
-    });
-  }
+ const st=document.createElement("style");
+ st.id="preview-tree-words-inside-v6-css";
+ st.textContent="\n/* Only presentation of the original element clouds; no words have been removed. */\n#app .intro-tree-first .concept-tree.method-tree,\n#app .final-tree .concept-tree.method-tree{\n display:flex!important;\n flex-direction:column!important;align-items:center!important;\n gap:16px!important;grid-template-columns:none!important;\n max-width:100%;width:100%;margin:0 auto!important;\n}\n#app .method-tree .concept-tree-graphic{\n width:min(100%,680px)!important;max-width:680px!important;\n margin:0 auto!important;aspect-ratio:373 / 350!important;\n}\n#app .method-tree .concept-tree-content{\n width:min(100%,880px)!important;max-width:880px!important;\n min-width:0!important;margin:0 auto!important;\n}\n#app .method-tree .method-word{\n font-size:clamp(9px,1.3vw,13px)!important;\n padding:4px 6px!important;\n line-height:1.25!important;\n max-width:29%!important;\n overflow:visible!important;\n text-overflow:clip!important;\n white-space:nowrap!important;\n box-shadow:0 1px 5px rgba(20,50,35,.1)!important;\n}\n#app .method-tree .method-label{\n font-size:clamp(11px,1.45vw,15px)!important;\n padding:5px 10px!important;\n}\n#app .method-tree .method-words{\n overflow:visible!important; /* boundary overlap is intentional when legible */\n}\n#app .method-tree .method-words.flower .method-word:nth-child(1),\n#app .method-tree .method-words.flower .method-word:nth-child(2),\n#app .method-tree .method-words.flower .method-word:nth-child(3){top:13%!important}\n#app .method-tree .method-words.flower .method-word:nth-child(4),\n#app .method-tree .method-words.flower .method-word:nth-child(5),\n#app .method-tree .method-words.flower .method-word:nth-child(6){top:20%!important}\n#app .method-tree .method-words.flower .method-word:nth-child(7),\n#app .method-tree .method-words.flower .method-word:nth-child(8),\n#app .method-tree .method-words.flower .method-word:nth-child(9){top:27%!important}\n#app .method-tree .method-words.flower .method-word:nth-child(10),\n#app .method-tree .method-words.flower .method-word:nth-child(11),\n#app .method-tree .method-words.flower .method-word:nth-child(12){top:34%!important}\n#app .method-tree .method-words.flower .method-word:nth-child(13){top:40%!important}\n#app .method-tree .method-words.branch .method-word:nth-child(1),\n#app .method-tree .method-words.branch .method-word:nth-child(3){top:53%!important}\n#app .method-tree .method-words.branch .method-word:nth-child(2),\n#app .method-tree .method-words.branch .method-word:nth-child(4){top:60%!important}\n#app .method-tree .method-words.trunk .method-word:nth-child(1),\n#app .method-tree .method-words.trunk .method-word:nth-child(2){top:72%!important}\n#app .method-tree .method-words.trunk .method-word:nth-child(3),\n#app .method-tree .method-words.trunk .method-word:nth-child(4){top:78%!important}\n#app .method-tree .method-words.root .method-word:nth-child(-n+4){top:89%!important}\n#app .method-tree .method-words.root .method-word:nth-child(n+5){top:95%!important}\n#app .method-tree .method-words.root .method-word:nth-child(1),\n#app .method-tree .method-words.root .method-word:nth-child(5){left:14%!important}\n#app .method-tree .method-words.root .method-word:nth-child(2),\n#app .method-tree .method-words.root .method-word:nth-child(6){left:38%!important}\n#app .method-tree .method-words.root .method-word:nth-child(3),\n#app .method-tree .method-words.root .method-word:nth-child(7){left:62%!important}\n#app .method-tree .method-words.root .method-word:nth-child(4),\n#app .method-tree .method-words.root .method-word:nth-child(8){left:86%!important}\n#app .method-tree .concept-tree-tabs{\n display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;\n gap:9px!important;\n}\n#app .method-tree .concept-tree-explain{margin-top:9px!important}\n@media(max-width:650px){\n #app .intro-tree-first .concept-tree.method-tree,\n #app .final-tree .concept-tree.method-tree{gap:11px!important}\n #app .method-tree .concept-tree-graphic{\n   max-width:min(100%,440px)!important;\n   width:min(100%,440px)!important\n }\n #app .method-tree .method-word{\n   font-size:clamp(7px,2.12vw,9px)!important;\n   padding:2px 3px!important;\n   max-width:25%!important;\n }\n #app .method-tree .method-label{\n   font-size:clamp(9px,2.8vw,11px)!important;\n   padding:3px 6px!important;\n }\n #app .method-tree .concept-tree-tabs{gap:5px!important}\n}\n";
+ document.head.appendChild(st);
+ document.documentElement.setAttribute("data-preview-tree-layout","words-inside-v6");
+ if(new URLSearchParams(location.search).get("previewTree")==="1"){
+   enterExperience();
+   requestAnimationFrame(function(){
+     const el=document.querySelector(".intro-tree-first");
+     if(el)el.scrollIntoView({block:"start"});
+   });
+ }
 })();
 </script></body></html>
