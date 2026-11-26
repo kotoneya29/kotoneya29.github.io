@@ -63,7 +63,7 @@
   sales.querySelectorAll('#sales-cases details.cases-detail').forEach(d=>{
     if(!d.dataset.km10Ready){
       d.dataset.km10Ready='1';
-      d.open=false;
+      d.open=new URLSearchParams(location.search).has('openCases');
     }
   });
  }
