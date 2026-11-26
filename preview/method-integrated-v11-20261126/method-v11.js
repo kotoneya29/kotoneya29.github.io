@@ -126,6 +126,20 @@ root.addEventListener("click",e=>{
  const cnt=e.target.closest("[data-km11-contact]");
  if(cnt){const note=q(".km11-preview-contact");if(note)note.scrollIntoView({block:"nearest",behavior:"smooth"});return}
 });
+
+const experienceApp=document.getElementById("app");
+if(experienceApp){
+ experienceApp.addEventListener("click",function(event){
+   const anchor=event.target.closest('a[href="/contact/"]');
+   if(!anchor)return;
+   event.preventDefault();
+   const note=make("div","km11-preview-contact","【テスト版】お問い合わせの送信は無効です。正式な問い合わせ先への接続は本番反映の承認後に設定します。");
+   const old=experienceApp.querySelector(".km11-preview-contact");
+   if(old)old.remove();
+   experienceApp.appendChild(note);
+   note.scrollIntoView({block:"nearest",behavior:"smooth"});
+ });
+}
 window.kotoneyaV11Audit=function(){
  const width=document.documentElement.clientWidth;
  return {width,proof:!!q("#method-proof"),cases:root.querySelectorAll(".km11-proof-card").length,
