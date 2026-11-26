@@ -1,0 +1,131 @@
+
+/* ことねや式 V12 — 画面内で選ぶ、読む量を減らす。テスト専用。 */
+body.km12-active #sales{max-width:1240px!important;width:100%!important;padding:6px clamp(8px,1.7vw,21px) 10px!important;margin:0 auto!important;min-height:0!important}
+body.km12-active #sales > :not(.km12-shell){display:none!important}
+body.km12-active #sales .km12-shell{box-sizing:border-box;display:flex;flex-direction:column;height:calc(100dvh - 106px);min-height:340px;width:100%;background:#fff;border:1px solid #d5e4d9;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px #1e433109}
+body.km12-active #sales .km12-shell *{box-sizing:border-box}
+#sales .km12-shell button{font:inherit;cursor:pointer}
+#sales .km12-shell button:focus-visible,#sales .km12-shell a:focus-visible{outline:3px solid #70a587;outline-offset:2px}
+#sales .km12-nav{display:flex;gap:4px;padding:8px 10px;border-bottom:1px solid #d7e4da;background:#f5f9f6;overflow-x:auto;flex:0 0 auto;scrollbar-width:thin}
+#sales .km12-navbtn{flex:1 0 auto;display:flex;align-items:center;justify-content:center;gap:6px;min-width:102px;min-height:36px;padding:6px 8px;border:1px solid transparent;border-radius:8px;background:transparent;color:#53715e;font-size:.79rem;font-weight:780;white-space:nowrap}
+#sales .km12-navbtn.active{background:#285e43;border-color:#285e43;color:white}
+#sales .km12-navbtn .km12-n{font-size:.67rem;opacity:.85}
+#sales .km12-top{display:flex;flex:0 0 auto;align-items:flex-start;justify-content:space-between;gap:10px;padding:12px 17px 10px;border-bottom:1px solid #e7efe9}
+#sales .km12-kicker{font-size:.69rem;letter-spacing:.07em;font-weight:900;color:#47765b;line-height:1.3}
+#sales .km12-top h1{margin:4px 0 1px!important;font-size:clamp(1.1rem,2vw,1.48rem)!important;color:#214a34!important;line-height:1.35!important}
+#sales .km12-top p{margin:2px 0 0!important;color:#637769;font-size:.79rem;line-height:1.4}
+#sales .km12-count{font-size:.73rem;color:#526e5c;font-variant-numeric:tabular-nums;font-weight:850;white-space:nowrap}
+#sales .km12-content{flex:1 1 0;min-height:0;overflow:auto;padding:14px 17px 18px;scrollbar-width:thin;overscroll-behavior:contain}
+#sales .km12-content h2{font-size:1.13rem!important;color:#245a3c!important;line-height:1.45;margin:0 0 8px!important}
+#sales .km12-content h3{font-size:.91rem!important;color:#2d6245!important;line-height:1.45;margin:2px 0 7px!important}
+#sales .km12-content p{font-size:.86rem;line-height:1.7;margin:4px 0 9px}
+#sales .km12-label{font-size:.69rem;font-weight:850;letter-spacing:.04em;color:#63806b;text-transform:none}
+#sales .km12-foot{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:9px;flex:0 0 auto;padding:9px 14px;border-top:1px solid #d8e7dc;background:#f7faf8;box-shadow:0 -3px 8px #27533808;min-height:58px}
+#sales .km12-foot button{min-height:39px;min-width:115px;padding:8px 13px;border:1px solid #aac8b1;border-radius:8px;background:#fff;color:#285e43;font-size:.86rem;font-weight:850}
+#sales .km12-foot button[disabled]{opacity:.3;cursor:not-allowed}
+#sales .km12-foot .next{justify-self:end;background:#286045;border-color:#286045;color:#fff}
+#sales .km12-foot .prev{justify-self:start}
+#sales .km12-foot .km12-counter{font-size:.73rem;line-height:1.4;color:#5d7866;font-weight:750;text-align:center}
+#sales .km12-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:14px;align-items:start}
+#sales .km12-layout.wide-left{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+#sales .km12-grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+#sales .km12-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+#sales .km12-card{background:#fff;border:1px solid #d6e5da;border-radius:10px;padding:13px;min-width:0}
+#sales .km12-tint{background:#f4f9f5;border:1px solid #cee2d3}
+#sales .km12-card .km12-small{font-size:.75rem;color:#637867;line-height:1.56}
+#sales .km12-em{font-size:1rem!important;font-weight:850;color:#225b40!important}
+#sales .km12-tree{display:flex;align-items:center;justify-content:center;min-width:0;height:min(330px,48dvh);background:#f6f9f6;border:1px solid #d7e5da;border-radius:12px;overflow:hidden}
+#sales .km12-tree img{display:block;object-fit:contain;width:100%;height:100%}
+#sales .km12-switches{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 11px}
+#sales .km12-switch{flex:1 1 0;min-width:0;min-height:37px;border:1px solid #bad2c1;border-radius:8px;padding:7px 8px;text-align:center;background:#fff;color:#356449;font-size:.78rem;font-weight:800}
+#sales .km12-switch.selected{color:#fff;background:#2b674a;border-color:#2b674a}
+#sales .km12-highlight{background:#eef6ef;border-left:4px solid #6da17c;border-radius:7px;padding:11px 12px;font-size:.84rem;line-height:1.65}
+#sales .km12-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:10px 0}
+#sales .km12-number{padding:9px 8px;border:1px solid #d5e5d9;border-radius:9px;text-align:center;background:#f7faf7;min-width:0}
+#sales .km12-number small{display:block;color:#57705e;font-size:.72rem}
+#sales .km12-number strong{display:block;font-size:clamp(.94rem,2vw,1.38rem);font-weight:900;color:#265f44;font-variant-numeric:tabular-nums;white-space:nowrap}
+#sales .km12-number strong.km12-negative{color:#bd6260}
+#sales .km12-number .km12-diff{font-size:.73rem;color:#647769}
+#sales .km12-question{margin:0 0 7px;display:flex;align-items:flex-start;gap:9px;font-size:.85rem;line-height:1.55}
+#sales .km12-question .km12-ordinal{background:#e6f2e9;color:#2f6046;padding:1px 6px;border-radius:4px;font-weight:900;font-size:.72rem;flex:0 0 auto}
+#sales .km12-question .km12-value{min-width:0}
+#sales .km12-case-btn{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;flex:1;min-width:0;min-height:69px;padding:9px 12px;text-align:left;border:1px solid #bfd7c5;border-radius:9px;background:#fff;color:#315c41}
+#sales .km12-case-btn.selected{background:#e8f4eb;border-color:#2c724d;box-shadow:inset 3px 0 #2c724d}
+#sales .km12-case-btn b{font-size:.86rem;line-height:1.3}
+#sales .km12-case-btn small{font-size:.73rem;color:#64816e;line-height:1.5}
+#sales .km12-cases{display:flex;gap:8px;margin:0 0 12px}
+#sales .km12-before-after{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#sales .km12-ba{padding:10px 11px;border:1px solid #d6e3d9;border-radius:9px;background:#f9fbf8;min-width:0}
+#sales .km12-ba.after{background:#eaf6ed;border-color:#9fc9a9}
+#sales .km12-ba .km12-label{display:block;margin-bottom:4px}
+#sales .km12-ba strong{font-size:.86rem;line-height:1.5}
+#sales .km12-ba p{font-size:.75rem!important;color:#637968;line-height:1.54!important;margin:4px 0!important}
+#sales .km12-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+#sales .km12-kpi{border:1px solid #d7e5da;border-radius:9px;padding:9px;background:#fff;min-width:0}
+#sales .km12-kpi small{font-size:.7rem;display:block;color:#5e7865;line-height:1.35}
+#sales .km12-kpi strong{font-weight:900;color:#285e43;font-size:clamp(.84rem,1.7vw,1.05rem);white-space:normal;font-variant-numeric:tabular-nums}
+#sales .km12-kpi .separator{color:#98b5a0;margin:0 4px}
+#sales .km12-detail-trigger{display:inline-flex;justify-content:center;align-items:center;padding:9px 14px;border:1px solid #8ebaa0;border-radius:8px;background:white;color:#2a6043;font-weight:850;font-size:.82rem;margin-top:8px;min-height:41px}
+#sales .km12-note{font-size:.74rem!important;color:#63796b!important;line-height:1.6!important}
+#sales .km12-mapping{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0}
+#sales .km12-map-item{display:flex;flex-direction:column;min-height:88px;gap:4px;border:1px solid #d5e6d7;border-radius:9px;padding:9px 10px;background:#fff}
+#sales .km12-map-item strong{color:#2a6747;font-size:.77rem}
+#sales .km12-map-item span{color:#566d5d;font-size:.77rem;line-height:1.52}
+#sales .km12-end{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;padding:22px 14px;max-width:740px;margin:auto}
+#sales .km12-end .km12-big{font-size:clamp(1.5rem,3vw,2rem);font-weight:900;line-height:1.38;color:#275b3f}
+#sales .km12-actions{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
+#sales .km12-actions button{border:1px solid #a8c9b2;padding:11px 16px;border-radius:8px;font-weight:800;background:#fff;color:#285d42;min-height:43px}
+#sales .km12-actions button.primary{background:#285e43;color:#fff;border-color:#285e43}
+#sales .km12-modal{position:fixed;z-index:10000;inset:0;padding:5vh 4vw;background:rgba(16,36,25,.6);display:flex;align-items:center;justify-content:center}
+#sales .km12-modal[hidden]{display:none!important}
+#sales .km12-dialog{width:min(1100px,100%);height:min(850px,90dvh);background:#fff;border-radius:13px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 15px 75px #0004}
+#sales .km12-dialog-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex:0 0 auto;padding:12px 15px;border-bottom:1px solid #d6e4da}
+#sales .km12-dialog-head h2{font-size:1.08rem!important;margin:0!important}
+#sales .km12-dialog-head button{border:1px solid #b9cfc0;border-radius:7px;padding:7px 12px;background:#fff;color:#2b6145;font-weight:850}
+#sales .km12-dialog-body{overflow:auto;flex:1;padding:15px;scrollbar-width:thin}
+#sales .km12-dialog-body details{display:block!important;border:0!important}
+#sales .km12-dialog-body details summary{display:none}
+#sales .km12-choices-short{font-size:.84rem;line-height:1.55;color:#426d4f;font-weight:700;margin:6px 0}
+#sales .km12-spot{color:#286345;font-weight:800}
+/* 元の家計→会社の体験も、操作欄を下端に寄せる。内容は削らない。 */
+body.km12-active #app{max-width:1080px!important}
+body.km12-active #app .actions{position:sticky!important;bottom:0!important;z-index:90!important;background:linear-gradient(#f8fbf8ee,#f8fbf8 20%)!important;border-top:1px solid #d0e2d5!important;padding:9px 8px 7px!important;box-shadow:0 -5px 16px #28563b12!important}
+@media(max-width:800px){
+ #sales .km12-layout{grid-template-columns:1fr}
+ #sales .km12-layout.wide-left{grid-template-columns:1fr}
+ #sales .km12-tree{height:min(195px,27dvh)}
+ #sales .km12-mapping{grid-template-columns:1fr 1fr}
+ #sales .km12-content{padding:10px 12px 14px}
+ #sales .km12-navbtn{min-width:110px;flex:0 0 auto}
+}
+@media(max-width:500px){
+ body.km12-active #sales{padding:3px 5px!important}
+ body.km12-active #sales .km12-shell{height:calc(100dvh - 92px);border-radius:9px}
+ #sales .km12-top{padding:8px 11px}
+ #sales .km12-top h1{font-size:1.1rem!important}
+ #sales .km12-top p{font-size:.71rem}
+ #sales .km12-nav{padding:5px;gap:3px}
+ #sales .km12-navbtn{min-width:98px;min-height:33px;padding:4px 6px;font-size:.75rem}
+ #sales .km12-foot{padding:7px;min-height:52px;gap:5px}
+ #sales .km12-foot button{min-width:102px;padding:7px;font-size:.79rem;min-height:37px}
+ #sales .km12-content{padding:9px 10px 13px}
+ #sales .km12-content h2{font-size:1rem!important}
+ #sales .km12-card{padding:10px}
+ #sales .km12-tree{height:min(165px,25dvh)}
+ #sales .km12-numbers{gap:4px;margin:7px 0}
+ #sales .km12-number{padding:6px 4px}
+ #sales .km12-number strong{font-size:.92rem}
+ #sales .km12-grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #sales .km12-mapping{grid-template-columns:1fr}
+ #sales .km12-map-item{min-height:0;padding:8px}
+ #sales .km12-ba{padding:8px}
+ #sales .km12-ba p{font-size:.7rem!important}
+ #sales .km12-dialog{height:92dvh}
+ #sales .km12-modal{padding:3vh 3vw}
+}
+@media(max-height:600px){
+ body.km12-active #sales .km12-shell{height:calc(100dvh - 86px)}
+ #sales .km12-nav{padding:4px}
+ #sales .km12-top{padding:6px 12px}
+ #sales .km12-tree{height:150px}
+}
