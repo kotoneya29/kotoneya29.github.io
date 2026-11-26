@@ -1,0 +1,202 @@
+
+/* ことねや式 V10 — すべてテスト専用。既存の文言・数字・判断ロジックは維持 */
+:root { --km10-ink:#253a2d; --km10-deep:#245d41; --km10-line:#cfdfd3; --km10-soft:#f5faf6; }
+/* 全体：段落とカードの段差を減らし、一つの節から次の節へ視線を流す */
+#sales, #app { overflow-wrap:anywhere; }
+#sales .sales-sec { padding:24px 0 26px!important; }
+#sales .sales-sec-head { margin-bottom:13px!important; }
+#sales .sales-sec-head h2 { margin:3px 0 6px!important; }
+#sales .sales-sec-head p { margin:4px auto!important;line-height:1.7!important; }
+#sales .sales-hero { gap:24px!important;padding-top:16px!important;padding-bottom:21px!important;align-items:center!important; }
+#sales .sales-hero>div { min-width:0; }
+#sales .sales-lead { margin:4px 0 9px!important; }
+#sales .sales-tagline { margin:8px 0!important; }
+#sales .sales-methodline { margin:0 0 15px!important;padding:11px 13px!important; }
+#sales .sales-methodline small { display:block;margin-top:4px; }
+#sales .sales-tree { width:100%; }
+#sales .case-review-link { display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:9px;margin-bottom:12px!important;padding:8px 12px!important; }
+#sales .km10-flow-nav { display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center; }
+#sales .km10-flow-nav a { display:inline-flex;align-items:center;padding:5px 9px;border:1px solid var(--km10-line);border-radius:6px;background:white;color:var(--km10-deep);font-size:.79rem;font-weight:750;line-height:1.5;text-decoration:none; }
+#sales .km10-flow-nav a:hover,#sales .km10-flow-nav a:focus-visible { background:#e9f3eb;outline-offset:3px; }
+#sales .sales-example { gap:14px!important;align-items:center!important;margin:8px 0 13px!important; }
+#sales .sales-example>div { min-width:0; }
+#sales .sales-example .sales-table { margin-top:6px; }
+#sales .sales-ask { padding:14px 16px!important; }
+#sales .sales-ask h2 { margin:0 0 6px!important;line-height:1.55!important; }
+#sales .sales-household>h3 { margin:13px 0 7px!important; }
+#sales .sales-table { font-size:.88rem!important;table-layout:fixed;width:100%; }
+#sales .sales-table th,#sales .sales-table td { padding:8px 9px!important;line-height:1.5!important; }
+#sales .four-table { margin:6px 0!important; }
+#sales .four-table th,#sales .four-table td { font-size:.86rem!important;padding:10px!important;line-height:1.6!important; }
+#sales .sales-flow { margin:9px 0 6px!important; }
+#sales .sales-flow span { padding:7px 12px!important; }
+#sales .sales-household>.sales-sec-head:last-child { margin-top:13px!important; }
+#sales .sales-experience-bridge { padding-bottom:12px!important; }
+#sales .sales-work-guide { margin:6px auto!important; }
+#sales .sales-two-cases { padding:21px 10px 24px!important;margin:0!important;scroll-margin-top:110px; }
+#sales .cases-title { margin:8px 0 7px!important; }
+#sales .cases-intro { margin:7px auto 13px!important;line-height:1.7!important; }
+#sales .cases-overview { display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:13px!important;align-items:stretch; }
+#sales .cases-overview article { min-width:0;padding:15px 16px!important; }
+#sales .cases-overview h3 { line-height:1.5!important;margin:6px 0 7px!important; }
+#sales .cases-overview p { line-height:1.7!important;margin:8px 0 11px!important; }
+#sales .cases-hero-value { line-height:1.4!important; }
+#sales .cases-jump { margin-top:auto;display:inline-flex!important; }
+#sales .cases-detail { margin:11px 0!important; }
+#sales .cases-detail>summary { padding:12px 14px!important;line-height:1.5!important;font-size:.95rem!important;cursor:pointer; }
+#sales .cases-detail-body { padding:12px 14px 15px!important; }
+#sales .cases-detail-lead { margin:0 0 11px!important;line-height:1.75!important; }
+#sales .cases-ba { display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important; }
+#sales .cases-era { min-width:0;padding:12px!important; }
+#sales .cases-era h4 { margin:7px 0!important;line-height:1.55!important; }
+#sales .cases-era p { line-height:1.7!important; }
+#sales .qmetricgrid { display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:9px!important; }
+#sales .qmetric { min-width:0;padding:10px!important; }
+#sales .qmetric>span { line-height:1.5; }
+#sales .qmetric>div { flex-wrap:wrap; }
+#sales .case2-keyfacts { display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important; }
+#sales .case2-keyfacts>div { min-width:0;padding:10px!important; }
+#sales .case2-modelsteps { display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px!important;padding:11px!important;line-height:1.5; }
+#sales .case2-modelsteps>span,#sales .case2-modelsteps>strong { min-width:0; }
+#sales .case2-chartgrid { display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;align-items:start; }
+#sales .case2-chartbox { min-width:0;margin:0; }
+#sales .case2-chartbox svg { display:block;width:100%;height:auto; }
+#sales .case2-chartbox .case2-chartwarning { font-size:.76rem!important;line-height:1.6!important; }
+#sales .cases-note { font-size:.8rem!important;line-height:1.7!important; }
+#sales .cases-takeaway { margin:12px 0 0!important;line-height:1.7!important; }
+#sales .sales-support-row { display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important; }
+#sales .sales-support-row>div { min-width:0;padding:13px!important; }
+#sales .sales-closing { padding:23px 0!important; }
+#sales .sales-paths { display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px!important;margin:14px auto!important; }
+#sales .sales-paths>div { min-width:0;padding:15px!important; }
+#sales .sales-paths h3 { margin:2px 0!important; }
+#sales .sales-paths p { margin:4px 0 9px!important;line-height:1.7!important; }
+/* スマホでは同じ表を4つの問いごとのカードへ。全情報を維持し、横スクロールをなくす */
+#sales .km10-four-mobile { display:none; }
+#sales .km10-four-card { border:1px solid var(--km10-line);border-radius:10px;padding:10px 11px;background:white;margin-bottom:9px; }
+#sales .km10-four-card h4 { margin:0 0 8px;color:var(--km10-deep);font-size:.9rem;line-height:1.45; }
+#sales .km10-four-card dl { margin:0;display:grid;grid-template-columns:minmax(0,5.6em) minmax(0,1fr);gap:5px 8px;align-items:baseline; }
+#sales .km10-four-card dt { font-weight:800;font-size:.76rem;color:#4b6f57; }
+#sales .km10-four-card dd { min-width:0;margin:0;font-size:.83rem;line-height:1.5; }
+/* 01 理念：木と詳細情報を左右で対照。グラフィック要素のV7座標は変更しない */
+#app .intro-tree-first { padding:14px!important; }
+#app .intro-tree-first h2 { margin:0 0 4px!important; }
+#app .intro-tree-first .tree-lead { margin-bottom:10px!important;line-height:1.65!important; }
+#app .intro-tree-first .concept-tree.method-tree,
+#app .final-tree .concept-tree.method-tree {
+  display:grid!important;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr)!important;
+  gap:16px!important;align-items:center!important;max-width:100%!important;width:100%!important;
+}
+#app .intro-tree-first .method-tree .concept-tree-graphic,
+#app .final-tree .method-tree .concept-tree-graphic {
+  width:100%!important;max-width:530px!important;margin:0!important;
+  aspect-ratio:373 / 350!important;
+}
+#app .intro-tree-first .method-tree .concept-tree-content,
+#app .final-tree .method-tree .concept-tree-content {
+  width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;
+}
+#app .method-tree .concept-tree-tabs { display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important; }
+#app .method-tree .concept-tree-tabs button { min-height:46px!important;font-size:clamp(.76rem,1.25vw,.87rem)!important;padding:7px!important; }
+#app .concept-tree-explain { padding:12px!important;min-height:0!important; }
+#app .intro-challenge { padding:15px!important; }
+#app .intro-challenge p { line-height:1.65!important; }
+#app .challenge-list { gap:8px!important; }
+#app .challenge-list>div { padding:9px 11px!important; }
+#app .intro-reading { margin:19px 0 15px!important; }
+#app .intro-reading-item { margin-bottom:8px!important; }
+#app .intro-reading-item summary { min-height:0!important;padding:12px!important; }
+#app .intro-reading-item .reading-body { padding:12px 15px 14px!important; }
+#app .reading-goal { padding:12px 0 8px!important; }
+/* 02 家計：V9の左選択/右前提・結果を採用。本文が短いときも空白カードを作らない */
+#app .one-household .family36 { margin-bottom:11px!important; }
+#app .one-household .topic-tabs { margin:8px 0 11px!important; }
+#app .one-household .goalbox { margin:9px 0!important; }
+#app .one-household .km-choice-results-layout { gap:14px!important;margin:11px 0!important; }
+#app .one-household .km-choice-rail { top:106px!important; }
+/* 03 解説：左にBefore/After、右に「どうだった・なぜ・次」 */
+#app .km10-debrief-layout { display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:13px;align-items:start;margin:11px 0!important; }
+#app .km10-debrief-facts,#app .km10-debrief-meaning { min-width:0;display:grid;gap:9px;align-content:start; }
+#app .compact-debrief .km10-debrief-layout .debrief-section { grid-column:auto!important;margin:0!important;padding:13px!important; }
+#app .compact-debrief .km10-debrief-layout .debrief-section h2 { font-size:.99rem!important;line-height:1.5!important;margin:0 0 6px!important; }
+#app .compact-debrief .km10-debrief-layout .debrief-section p { font-size:.87rem!important;line-height:1.7!important; }
+#app .compact-debrief .km10-debrief-facts .resulttable.result36 th,
+#app .compact-debrief .km10-debrief-facts .resulttable.result36 td { padding:8px!important;line-height:1.5!important;font-size:.81rem!important; }
+#app .compact-debrief .story-bridge { margin-top:11px!important;padding:12px!important; }
+/* 04 会社：目的→実例（左）／立場・数値・結論（右） */
+#app .km10-company-layout { display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);gap:13px;align-items:start;margin:9px 0; }
+#app .km10-company-scene,#app .km10-company-judgement { min-width:0;display:grid;gap:9px;align-content:start; }
+#app .company-lean .km10-company-layout .company-point,
+#app .company-lean .km10-company-layout .method-business-flow,
+#app .company-lean .km10-company-layout .method-business-compare,
+#app .company-lean .km10-company-layout .method-takeaway {
+  margin:0!important;min-width:0;padding:12px 13px!important;grid-column:auto!important;
+}
+#app .company-lean .km10-company-layout .company-point small { margin-bottom:3px!important; }
+#app .company-lean .km10-company-layout .company-point p { line-height:1.7!important; }
+#app .company-lean .km10-company-layout .method-business-flow p { margin:5px 0!important;line-height:1.65!important; }
+#app .company-lean .km10-company-layout .method-business-compare .resulttable { width:100%;table-layout:auto; }
+#app .company-lean .km10-company-layout .method-business-compare td,
+#app .company-lean .km10-company-layout .method-business-compare th { padding:8px!important;font-size:.82rem!important; }
+#app .company-lean .story-company-bridge { margin:12px 0 0!important;padding:13px!important; }
+/* 05 総括：事例・因果・次の判断を同じ視界へ */
+#app .final-tree { padding:13px!important; }
+#app .final-tree>h2 { margin:0 0 6px!important; }
+#app .final-impact { margin-top:19px!important;padding-top:18px!important; }
+#app .impact-foundation { padding:12px 13px!important; }
+#app .impact-changes { display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;align-items:start; }
+#app .impact-changes>div { min-width:0;padding:11px 13px!important; }
+#app .impact-changes h3 { font-size:.98rem!important;line-height:1.5!important;margin:6px 0!important; }
+#app .impact-changes p { font-size:.84rem!important;line-height:1.65!important;text-align:left!important; }
+#app .impact-cycle { padding:12px!important;margin:10px 0!important; }
+#app .v3-contact-steps { max-width:680px!important;gap:6px!important; }
+#app .v3-contact-steps>div { padding:8px 10px!important; }
+/* 一貫した行間と余白の調整 */
+#app .resulttable.result36 th,#app .resulttable.result36 td { line-height:1.48!important; }
+#app .method-tree .method-label { z-index:13!important; }
+/* タブレット・スマホ：比較軸の順番を守って縦へ */
+@media (max-width:880px) {
+ #sales .case2-keyfacts { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
+ #sales .qmetricgrid { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
+ #app .intro-tree-first .concept-tree.method-tree,
+ #app .final-tree .concept-tree.method-tree {
+   grid-template-columns:1fr!important;gap:11px!important;
+ }
+ #app .intro-tree-first .method-tree .concept-tree-graphic,
+ #app .final-tree .method-tree .concept-tree-graphic {
+   max-width:470px!important;margin:0 auto!important;
+ }
+ #app .method-tree .concept-tree-tabs { grid-template-columns:repeat(4,minmax(0,1fr))!important; }
+ #app .impact-changes { grid-template-columns:1fr!important; }
+}
+@media (max-width:730px) {
+ #sales .sales-hero { grid-template-columns:1fr!important;gap:13px!important; }
+ #sales .case-review-link { padding:8px!important; }
+ #sales .km10-flow-nav { width:100%; }
+ #sales .km10-flow-nav a { flex:1 1 auto;justify-content:center; }
+ #sales .sales-household { overflow:visible!important; }
+ #sales .sales-household .four-table { display:none!important; }
+ #sales .km10-four-mobile { display:block!important; }
+ #sales .sales-example { grid-template-columns:1fr!important; }
+ #sales .cases-overview { grid-template-columns:1fr!important; }
+ #sales .cases-ba { grid-template-columns:1fr!important; }
+ #sales .case2-chartgrid { grid-template-columns:1fr!important; }
+ #sales .sales-support-row { grid-template-columns:1fr!important;gap:7px!important; }
+ #sales .sales-paths { grid-template-columns:1fr!important; }
+ #sales .sales-two-cases { padding:14px 0!important; }
+ #sales .cases-detail-body { padding:10px!important; }
+ #app .km10-debrief-layout,#app .km10-company-layout { grid-template-columns:1fr!important;gap:9px!important; }
+ #app .km10-debrief-facts,#app .km10-debrief-meaning,#app .km10-company-scene,#app .km10-company-judgement { gap:8px!important; }
+ #app .method-tree .concept-tree-tabs { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
+ #app .intro-tree-first .method-tree .concept-tree-graphic,
+ #app .final-tree .method-tree .concept-tree-graphic { max-width:min(100%,420px)!important; }
+ #app .compact-debrief .km10-debrief-facts .resulttable.result36 th,
+ #app .compact-debrief .km10-debrief-facts .resulttable.result36 td { font-size:.79rem!important;padding:7px 6px!important; }
+}
+@media (max-width:400px) {
+ #sales .four-table{ display:none!important; }
+ #sales .km10-flow-nav a { font-size:.73rem; }
+ #sales .case2-modelsteps { gap:4px!important; }
+ #sales .case2-modelsteps b { font-size:.75rem; }
+ #app .method-tree .concept-tree-tabs button { font-size:.76rem!important;padding:5px!important; }
+}
