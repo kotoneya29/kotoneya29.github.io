@@ -3548,7 +3548,7 @@ function draw(){
  '<span class="km12-counter">'+esc(stageNames[state.step])+'<br>画面内で切替</span>'+
  '<button type="button" class="next" data-km12-next'+(state.step===stageNames.length-1?' disabled':'')+'>次へ ›</button>';
  content.scrollTop=0;
- const activeNav=q(".km12-navbtn.active",nav);if(activeNav)activeNav.scrollIntoView({block:"nearest",inline:"nearest"});
+ const activeNav=q(".km12-navbtn.active",nav);if(activeNav){const a=activeNav.getBoundingClientRect(),b=nav.getBoundingClientRect();nav.scrollLeft+=a.left-b.left-(b.width-a.width)/2;}
 }
 function go(i){
  const next=Math.max(0,Math.min(stageNames.length-1,i));if(next===state.step)return;
@@ -3600,6 +3600,14 @@ document.addEventListener("keydown",e=>{
  if(e.key==="Escape"&&!overlay.hidden)closeModal();
 });
 draw();
+function fitShell(){
+ if(root.hidden)return;
+ const top=shell.getBoundingClientRect().top;
+ const height=Math.max(320,Math.floor(window.innerHeight-top-7));
+ shell.style.height=height+"px";
+}
+fitShell();
+window.addEventListener("resize",fitShell);
 window.kotoneyaV12Audit=()=>({
  active:document.body.classList.contains("km12-active"),step:state.step,
  navCount:q(".km12-nav",shell)?.children.length||0,
