@@ -1,0 +1,105 @@
+
+/* ことねや式 V11｜理念から実務検証へ一本化 / TEST BRANCH ONLY */
+#sales {scroll-behavior:smooth}
+#sales .case-review-link{background:#f5faf5!important;border:1px solid #d1e3d6!important;border-radius:10px;padding:10px 13px!important;align-items:center!important}
+#sales .case-review-link strong{font-size:.86rem;color:#225d41}
+#sales .km10-flow-nav{flex-wrap:wrap}
+#sales .km10-flow-nav a{font-size:.77rem!important;background:#fff!important}
+#sales .km10-flow-nav a[href="#method-proof"]{border-color:#88af97!important;background:#eaf5ed!important;color:#245c42!important}
+#sales .km11-test-label{
+ position:relative;margin:0 auto 9px;width:max-content;max-width:100%;
+ padding:4px 10px;border:1px solid #bbd6c4;border-radius:20px;background:#edf7f0;
+ color:#2a6245;font-size:.7rem;font-weight:750;letter-spacing:.03em;text-align:center;
+}
+#sales .sales-experience-bridge{padding-bottom:8px!important;border-bottom:0!important}
+#sales .sales-experience-bridge .sales-work-guide{margin-bottom:0!important}
+/* 根・幹・枝・花の実務適用—ひとつのストーリー */
+#sales .km11-proof{scroll-margin-top:95px;margin:4px 0 12px;padding:21px 17px 22px;background:#f7faf7;border:1px solid #d1e3d5;border-radius:15px;}
+#sales .km11-proof .km11-eyebrow{font-size:.74rem;font-weight:800;color:#4c7e60;letter-spacing:.06em}
+#sales .km11-proof h2{margin:6px 0 7px!important;color:#214c37;font-size:clamp(1.25rem,2.45vw,1.75rem)!important;line-height:1.5!important}
+#sales .km11-proof>p{margin:0 0 14px;max-width:780px;line-height:1.75;font-size:.9rem;color:#465f4e}
+#sales .km11-layers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:12px 0}
+#sales .km11-layer{min-width:0;padding:11px 10px;border-radius:10px;border:1px solid #bfd2c4;background:#fff}
+#sales .km11-layer .letter{display:block;font-weight:900;font-size:.92rem;line-height:1.4}
+#sales .km11-layer small{display:block;font-size:.73rem;color:#53685a;line-height:1.55;margin:4px 0 0}
+#sales .km11-layer:nth-child(1){border-top:4px solid #a88a6c;background:#fdf9f4}
+#sales .km11-layer:nth-child(2){border-top:4px solid #6e9cb8;background:#f6fafc}
+#sales .km11-layer:nth-child(3){border-top:4px solid #68a678;background:#f7fbf7}
+#sales .km11-layer:nth-child(4){border-top:4px solid #c5a156;background:#fffcf5}
+#sales .km11-proof-join{display:flex;gap:9px;align-items:center;justify-content:center;margin:10px auto 2px;color:#37674a;font-weight:800;text-align:center;font-size:.83rem}
+#sales .km11-proof-join:before,#sales .km11-proof-join:after{content:"";height:1px;flex:1;max-width:220px;background:#cbded0}
+#sales .km11-proof-note{font-size:.8rem!important;color:#5a725e!important;line-height:1.65!important}
+#sales .km11-proof-cta{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+#sales .km11-proof-cta a{color:#276348;text-underline-offset:3px;font-size:.84rem;font-weight:850}
+/* 検証①②は概念対応カードを起点にする。以前の概要カードは新カード成功時のみ非表示 */
+#sales #sales-cases{border-top:0!important;margin:0!important;padding-top:13px!important}
+#sales #sales-cases .cases-title{margin:2px 0 7px!important}
+#sales #sales-cases .cases-intro{max-width:820px!important;margin:4px auto 12px!important;line-height:1.7!important}
+#sales #sales-cases .cases-overview.km11-replaced{display:none!important}
+#sales .km11-proof-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;margin:11px 0 15px}
+#sales .km11-proof-card{min-width:0;display:flex;flex-direction:column;gap:0;padding:14px;border:1px solid #cbded0;border-radius:14px;background:#fff}
+#sales .km11-proof-card:nth-child(2){background:#fbfcf9}
+#sales .km11-proof-card h3{font-size:1.08rem!important;margin:7px 0 8px!important;line-height:1.45!important;color:#22523a!important}
+#sales .km11-proof-card .km11-card-tag{display:inline-flex;width:max-content;font-size:.75rem;color:#276849;font-weight:850;border-radius:5px;background:#e4f0e7;padding:4px 9px}
+#sales .km11-proof-card p{font-size:.85rem;line-height:1.72;margin:5px 0 9px}
+#sales .km11-mapping{display:grid;grid-template-columns:1fr;gap:0;margin:4px 0 13px;border:1px solid #e3ede5;border-radius:10px;overflow:hidden;min-width:0}
+#sales .km11-mapping>div{display:grid;grid-template-columns:83px minmax(0,1fr);gap:9px;padding:8px 10px;align-items:baseline;border-bottom:1px solid #e4ece5;line-height:1.6}
+#sales .km11-mapping>div:last-child{border-bottom:0}
+#sales .km11-mapping strong{font-size:.79rem;white-space:nowrap;color:#386449}
+#sales .km11-mapping span{min-width:0;font-size:.81rem;color:#435948}
+#sales .km11-mapping>div:nth-child(1){background:#fdf9f3}
+#sales .km11-mapping>div:nth-child(2){background:#f6fafc}
+#sales .km11-mapping>div:nth-child(3){background:#f6faf6}
+#sales .km11-mapping>div:nth-child(4){background:#fffdf7}
+#sales .km11-card-foot{font-size:.75rem;line-height:1.6;color:#607164;margin:0 0 9px}
+#sales .km11-detail-link{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:41px;gap:6px;width:100%;margin-top:auto;text-decoration:none!important;padding:9px 12px;background:#276345;color:white!important;border:1px solid #276345;border-radius:8px;font-size:.85rem;font-weight:850}
+#sales .km11-detail-link:hover{background:#1e4f36}
+#sales .km11-proof-result{font-weight:850;color:#265b40}
+#sales .cases-detail[open]{scroll-margin-top:110px}
+/* 検証→自社を考える→問い合わせへ */
+#sales .km11-simulator{scroll-margin-top:100px;margin:15px 0 22px;padding:21px 17px 22px;border:1px solid #a9c7b0;border-radius:16px;background:#f5faf5}
+#sales .km11-simulator h2{margin:5px 0 7px!important;font-size:clamp(1.3rem,2.4vw,1.8rem)!important}
+#sales .km11-simulator .intro{line-height:1.7;font-size:.87rem;color:#516b56;margin:5px 0 13px}
+#sales .km11-sim-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:13px 0}
+#sales .km11-sim-option{width:100%;min-width:0;min-height:80px;display:flex;flex-direction:column;justify-content:center;gap:4px;text-align:left;background:#fff;border:1.5px solid #c0d4c5;border-radius:10px;padding:11px 12px;cursor:pointer;color:#244c36}
+#sales .km11-sim-option strong{font-size:.88rem;line-height:1.4}
+#sales .km11-sim-option small{font-size:.73rem;color:#557261;line-height:1.55}
+#sales .km11-sim-option[aria-pressed=true]{border-color:#276a49;background:#e5f3e8;box-shadow:inset 4px 0 #276a49}
+#sales .km11-sim-option:focus-visible{outline:3px solid #679e79;outline-offset:3px}
+#sales .km11-sim-output{background:white;border:1px solid #cadfd0;border-radius:11px;padding:14px 15px}
+#sales .km11-sim-output h3{font-size:1.02rem;margin:0 0 7px!important;color:#265d42}
+#sales .km11-sim-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+#sales .km11-sim-item{padding:11px;border:1px solid #dbe7dd;border-radius:8px;background:#fbfdfb;min-width:0}
+#sales .km11-sim-item b{display:block;color:#286048;font-size:.82rem;margin-bottom:3px}
+#sales .km11-sim-item span{display:block;font-size:.84rem;line-height:1.65;color:#455f4d}
+#sales .km11-sim-note{font-size:.78rem!important;color:#617364!important;line-height:1.65!important;margin:10px 0 0!important}
+#sales .km11-sim-ctas{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+#sales .km11-sim-ctas button,#sales .km11-sim-ctas a{padding:10px 14px!important;min-height:44px;text-decoration:none!important;font-size:.84rem!important}
+#sales .km11-sim-ctas a{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid #2a6549;color:#285e42;background:white;font-weight:800}
+#sales .km11-sim-ctas button{border-radius:8px}
+#sales .km11-sim-ctas a:hover{background:#e3f0e6}
+#sales .km11-contact-note{max-width:760px;margin:8px auto 15px;color:#5b6f60;font-size:.83rem}
+#sales .sales-contact-link .sales-paths{margin-top:13px!important}
+#sales .sales-contact-link .contactpath a[href="#sales-contact"]{pointer-events:none;cursor:default;opacity:.7}
+#sales .km11-preview-contact{display:block;text-align:center;padding:10px;background:#fff;border:1px solid #d9e4da;border-radius:9px;color:#4f6555;font-size:.8rem;margin-top:12px}
+@media (max-width:800px){
+ #sales .km11-proof-cards{grid-template-columns:1fr}
+ #sales .km11-layers{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:630px){
+ #sales .km11-proof{padding:15px 12px}
+ #sales .km11-layer{padding:10px 9px}
+ #sales .km11-proof-card{padding:12px}
+ #sales .km11-mapping>div{grid-template-columns:74px minmax(0,1fr);gap:5px;padding:8px}
+ #sales .km11-simulator{padding:15px 12px}
+ #sales .km11-sim-options{grid-template-columns:1fr;gap:7px}
+ #sales .km11-sim-option{min-height:57px;padding:9px 11px}
+ #sales .km11-sim-grid{grid-template-columns:1fr;gap:7px}
+ #sales .km11-sim-ctas{flex-direction:column}
+ #sales .km11-sim-ctas button,#sales .km11-sim-ctas a{width:100%!important}
+ #sales .km11-proof-cta a{display:block}
+}
+@media print{
+ #sales .km11-sim-option{display:none}
+ #sales .km11-sim-option[aria-pressed=true]{display:flex}
+}
