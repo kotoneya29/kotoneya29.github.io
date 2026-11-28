@@ -573,20 +573,21 @@ body{background:#f5f8f4!important}
 #app .inline-results{padding:12px 14px!important}
 #app .v47-demo{padding:10px 14px;margin:0 0 12px;background:#eaf4eb;border:1px solid #bed5c3;border-radius:8px;color:#225c3d;font-size:13px}
 #app .final-tree .concept-tree-graphic{position:relative!important;overflow:hidden!important;aspect-ratio:420/460!important;isolation:isolate;background:#fffefa!important}
-#app .final-tree .v47-original{position:absolute!important;height:133%!important;width:auto!important;max-width:none!important;left:50%!important;top:-20.2%!important;transform:translateX(-24.9%)!important;pointer-events:none}
-#app .final-tree .v47-mask{position:absolute;top:0;right:0;height:100%;width:11%;background:#fffefa;z-index:1;pointer-events:none}
+#app .final-tree .v47-tree-art{position:absolute;left:0;right:0;top:50%;aspect-ratio:1111/1024;transform:translateY(-50%)}
+#app .final-tree .v47-original{display:block!important;position:static!important;width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;transform:none!important;pointer-events:none}
+
 #app .final-tree .v47-shade{position:absolute;left:0;right:0;opacity:0;pointer-events:none;background:rgba(255,255,255,.62);z-index:2}
-#app .final-tree .v47-shade.flower{top:7%;height:36%}
-#app .final-tree .v47-shade.branch{top:43%;height:15%}
-#app .final-tree .v47-shade.trunk{top:58%;height:14%}
-#app .final-tree .v47-shade.root{top:72%;height:26%}
+#app .final-tree .v47-shade.flower{top:0;height:40%}
+#app .final-tree .v47-shade.branch{top:40%;height:13%}
+#app .final-tree .v47-shade.trunk{top:53%;height:15%}
+#app .final-tree .v47-shade.root{top:68%;height:32%}
 #app .final-tree .concept-tree-graphic[data-spot]:not([data-spot=""]) .v47-shade{opacity:1}
 #app .final-tree .concept-tree-graphic[data-spot="flower"] .v47-shade.flower,#app .final-tree .concept-tree-graphic[data-spot="branch"] .v47-shade.branch,#app .final-tree .concept-tree-graphic[data-spot="trunk"] .v47-shade.trunk,#app .final-tree .concept-tree-graphic[data-spot="root"] .v47-shade.root{opacity:0}
-#app .final-tree .v47-hot{position:absolute;left:0;width:90%;background:transparent;border:0;cursor:pointer;z-index:3}
-#app .final-tree .v47-hot.flower{top:7%;height:36%}
-#app .final-tree .v47-hot.branch{top:43%;height:15%}
-#app .final-tree .v47-hot.trunk{top:58%;height:14%}
-#app .final-tree .v47-hot.root{top:72%;height:26%}
+#app .final-tree .v47-hot{position:absolute;left:0;width:100%;background:transparent;border:0;cursor:pointer;z-index:3}
+#app .final-tree .v47-hot.flower{top:0;height:40%}
+#app .final-tree .v47-hot.branch{top:40%;height:13%}
+#app .final-tree .v47-hot.trunk{top:53%;height:15%}
+#app .final-tree .v47-hot.root{top:68%;height:32%}
 #app .final-tree .concept-tree{grid-template-columns:45% minmax(0,55%)!important;align-items:start!important}
 #app .final-tree .concept-tree-explain{min-height:0!important}
 #v47bottom{display:none}
@@ -1703,8 +1704,8 @@ if(household){const d=household.querySelector(':scope > details.subtle-detail');
 const debrief=app.querySelector('.compact-debrief');if(debrief){const results=debrief.querySelector(':scope > .debrief-section:not(.reflection-section):not(.another-view-section)');if(results){results.classList.add('v47-result');pair(results);const h=results.querySelector(':scope > h2');if(h)h.style.display='none'}
 if(!debrief.querySelector('.v47-reflect')){const a=debrief.querySelector(':scope > .reflection-section'),b=debrief.querySelector(':scope > .another-view-section'),c=b?.nextElementSibling;if(a&&b&&c?.classList.contains('debrief-section')){const grid=document.createElement('div');grid.className='v47-reflect';a.before(grid);grid.append(a,b,c)}}}
 const company=app.querySelector('.company-explanation');if(company&&!company.querySelector('.v47-company')){const goal=company.querySelector(':scope > .goalbox'),first=company.querySelector(':scope > .company-mainpoint'),rest=[...company.querySelectorAll(':scope > .company-point:not(.company-mainpoint)')];if(goal&&first&&rest.length===2){const grid=document.createElement('div');grid.className='v47-company';goal.before(grid);grid.append(goal,first,...rest)}}
-const fin=app.querySelector('.final-tree');if(fin){const g=fin.querySelector('.concept-tree-graphic');if(g&&!g.dataset.v47){g.dataset.v47='1';g.dataset.spot='';const img=document.createElement('img');img.className='v47-original';img.src='/assets/kotoneya-approved-tree-v53.png';img.alt='01理念と同じ採用済み原画の木';g.replaceChildren(img);
-['flower','branch','trunk','root'].forEach(part=>{const shade=document.createElement('div');shade.className='v47-shade '+part;const hot=document.createElement('button');hot.className='v47-hot '+part;hot.type='button';hot.dataset.treePart=part;hot.setAttribute('aria-label',part+'を選択');g.append(shade,hot)});const mask=document.createElement('div');mask.className='v47-mask';g.append(mask);
+const fin=app.querySelector('.final-tree');if(fin){const g=fin.querySelector('.concept-tree-graphic');if(g&&!g.dataset.v47){g.dataset.v47='1';g.dataset.spot='';const img=document.createElement('img');img.className='v47-original';img.src='/assets/kotoneya-sales-tree-approved.png';img.alt='01理念と同じ採用済み原画の木';const art=document.createElement('div');art.className='v47-tree-art';art.append(img);g.replaceChildren(art);
+['flower','branch','trunk','root'].forEach(part=>{const shade=document.createElement('div');shade.className='v47-shade '+part;const hot=document.createElement('button');hot.className='v47-hot '+part;hot.type='button';hot.dataset.treePart=part;hot.setAttribute('aria-label',part+'を選択');art.append(shade,hot)});
 const ex=fin.querySelector('.concept-tree-explain');if(ex){const intro=document.createElement('div');intro.dataset.treeContent='overview';intro.textContent='根・幹・枝・花を選んで、家計での判断と会社での判断を見比べてみましょう。';ex.prepend(intro);ex.querySelectorAll('[data-tree-content]').forEach(e=>e.hidden=e!==intro)}
 fin.querySelectorAll('[data-tree-part]').forEach(el=>el.setAttribute('aria-pressed','false'));
 fin.addEventListener('click',e=>{const el=e.target.closest('[data-tree-part]');if(!el||!fin.contains(el))return;e.preventDefault();e.stopImmediatePropagation();const next=g.dataset.spot===el.dataset.treePart?'':el.dataset.treePart;g.dataset.spot=next;fin.querySelectorAll('[data-tree-part]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.treePart===next));b.classList.toggle('selected',b.dataset.treePart===next)});ex?.querySelectorAll('[data-tree-content]').forEach(b=>b.hidden=b.dataset.treeContent!==(next||'overview'))},true)}}}
