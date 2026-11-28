@@ -1,0 +1,92 @@
+
+/* ことねや 5S・開閉BOX共通マーク 第63版 | 閉じる ＋ / 開くと － */
+/* 対象は開閉するBOXだけ。選択カード・ページ移動ボタンは対象外。 */
+
+/* 01 事例のカード内リンク（開閉ボタンと同期） */
+#v30home .cases-jump::before{content:none!important;display:none!important}
+#v30home .cases-jump::after{
+  content:"＋"!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:none!important;
+  width:27px!important;
+  height:27px!important;
+  margin-inline-start:auto!important;
+  border:1px solid #b8d3c0!important;
+  border-radius:6px!important;
+  background:#f5faf6!important;
+  color:#175d3c!important;
+  font-family:Arial,sans-serif!important;
+  font-weight:700!important;
+  font-size:19px!important;
+  line-height:1!important;
+  transform:none!important;
+}
+#v30home .cases-jump[aria-expanded="true"]::after{content:"−"!important}
+
+/* 01: 事例詳細 / 02: 比較表 / 05: 予定と結果、3つの変化 */
+#v30home details.cases-detail > summary,
+#app details.v60-compare-details > summary,
+#app details.final-review-details > summary,
+#app details.v50-change > summary {
+  display:flex!important;
+  align-items:center!important;
+  list-style:none!important;
+  gap:9px!important;
+  cursor:pointer!important;
+}
+#v30home details.cases-detail > summary::-webkit-details-marker,
+#app details.v60-compare-details > summary::-webkit-details-marker,
+#app details.final-review-details > summary::-webkit-details-marker,
+#app details.v50-change > summary::-webkit-details-marker{display:none!important}
+#v30home details.cases-detail > summary::marker,
+#app details.v60-compare-details > summary::marker,
+#app details.final-review-details > summary::marker,
+#app details.v50-change > summary::marker{content:""!important}
+#app details.v50-change > summary .v50-chevron{display:none!important}
+#v30home details.cases-detail > summary::after,
+#app details.v60-compare-details > summary::after,
+#app details.final-review-details > summary::after,
+#app details.v50-change > summary::after{
+  content:"＋"!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:none!important;
+  width:27px!important;
+  height:27px!important;
+  min-width:27px!important;
+  margin-inline-start:auto!important;
+  border:1px solid #b8d3c0!important;
+  border-radius:6px!important;
+  background:#f5faf6!important;
+  color:#175d3c!important;
+  font-family:Arial,sans-serif!important;
+  font-weight:700!important;
+  font-size:19px!important;
+  line-height:1!important;
+  position:static!important;
+  transform:none!important;
+  rotate:none!important;
+}
+#v30home details.cases-detail[open] > summary::after,
+#app details.v60-compare-details[open] > summary::after,
+#app details.final-review-details[open] > summary::after,
+#app details.v50-change[open] > summary::after{
+  content:"−"!important;
+}
+#v30home details.cases-detail > summary:focus-visible,
+#app details.v60-compare-details > summary:focus-visible,
+#app details.final-review-details > summary:focus-visible,
+#app details.v50-change > summary:focus-visible,
+#v30home .cases-jump:focus-visible{outline:2px solid #db9d42!important;outline-offset:3px!important}
+@media(max-width:650px){
+ #v30home .cases-jump::after,
+ #v30home details.cases-detail > summary::after,
+ #app details.v60-compare-details > summary::after,
+ #app details.final-review-details > summary::after,
+ #app details.v50-change > summary::after{
+   width:25px!important;height:25px!important;min-width:25px!important;font-size:18px!important;
+ }
+}

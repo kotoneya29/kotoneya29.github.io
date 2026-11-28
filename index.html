@@ -671,9 +671,67 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
  #about .brand-meaning-flow li{min-height:76px}
 }
 </style>
-</head>
+<link rel="stylesheet" href="/assets/kotoneya-rc3-top-cards.css">
+<style id="kotoneya-rc12-device-specific">
+/* RC12 only. Do not modify the official brand assets, wording or live website. */
+#method .section-accent{margin-bottom:12px!important}
+#method .method-layout-final{margin-top:14px!important}
+@media(min-width:801px){
+ #method .method-top-row{display:grid!important;grid-template-columns:minmax(260px,.9fr) minmax(0,1.1fr)!important;align-items:start;gap:20px!important}
+ #method .method-top-image{display:block!important;min-width:0}
+ #method .method-mobile-tree-visual{width:min(100%,330px)!important}
+ #method .method-mobile-controls{display:block!important;width:100%;max-width:none!important;margin:12px 0 0!important}
+ #method .method-mobile-buttons{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+ #method .method-mobile-buttons button{min-height:44px;border:1px solid #b3d0b8;border-radius:9px;background:#fff;color:#245b3e;font-weight:850;cursor:pointer}
+ #method .method-mobile-buttons button[aria-pressed="true"]{background:#205c40;color:#fff}
+ #method .method-mobile-explanation:not([hidden]){display:block!important;padding:13px 16px;margin-top:12px;background:#f1f8f2;border:1px solid #d3e5d8;border-radius:10px}
+ #method .method-mobile-explanation h3{margin:0 0 5px;font-size:1rem;color:#205a40}
+ #method .method-mobile-explanation p{margin:0;line-height:1.7}
+ #method .method-tree-points.method-points-grid{display:none!important}
+ #method .method-top-copy{padding:clamp(16px,2.2vw,26px)!important}
+ #method .method-top-copy p{margin:0 0 11px!important;line-height:1.65}
+}
+@media(max-width:800px){
+ #method .method-overview-layout.method-layout-final{margin-top:10px!important}
+ #method .method-top-row{grid-template-columns:1fr!important;gap:9px!important}
+ #method .method-top-image{display:flex!important;flex-direction:column!important;align-items:center!important;gap:6px!important}
+ #method .method-mobile-tree-visual{width:min(100%,230px)!important}
+ #method .method-mobile-tree-visual .method-tree-picture{max-width:none!important;max-height:none!important}
+ #method .method-mobile-controls{display:block!important;width:100%;max-width:440px!important;margin:0 auto!important}
+ #method .method-mobile-buttons{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}
+ #method .method-mobile-buttons button{min-height:40px!important;padding:6px 2px!important;font-size:.9rem!important}
+ #method .method-mobile-explanation:not([hidden]){display:block!important;margin-top:7px!important;padding:8px 11px!important;line-height:1.55!important}
+ #method .method-mobile-explanation h3{font-size:.86rem!important;margin:0 0 3px!important}
+ #method .method-mobile-explanation p{font-size:.79rem!important;line-height:1.6!important}
+ #method .method-tree-points.method-points-grid{display:none!important}
+ #method .method-top-copy{padding:14px!important;margin-top:4px!important}
+ #method .method-top-copy p{margin-bottom:7px!important;font-size:.85rem!important;line-height:1.6!important}
+}
+</style>
+<style id="rc16-authoritative-top">
+/* One controller for tree words; old dynamic coordinate adjustments and duplicate cards removed. */
+#method{padding-top:18px!important;padding-bottom:20px!important}
+#method .section-accent{margin-bottom:8px!important}
+#method .method-layout-final{margin-top:7px!important}
+#method .method-tree-points,#method .rc15-matching-words,#method .method-mobile-wordcloud{display:none!important}
+#method .method-mobile-tree-visual{position:relative!important;overflow:hidden!important;isolation:isolate}
+#method .method-mobile-tree-visual:after{content:"";display:none;position:absolute;inset:0;z-index:1;pointer-events:none}
+#method .method-mobile-tree-visual[data-active="root"]:after{display:block;background:linear-gradient(to bottom,rgba(9,33,21,.24) 0% 79%,transparent 79% 100%)}
+#method .method-mobile-tree-visual[data-active="trunk"]:after{display:block;background:linear-gradient(to bottom,rgba(9,33,21,.24) 0% 62%,transparent 62% 79%,rgba(9,33,21,.24) 79% 100%)}
+#method .method-mobile-tree-visual[data-active="branch"]:after{display:block;background:linear-gradient(to bottom,rgba(9,33,21,.24) 0% 42%,transparent 42% 63%,rgba(9,33,21,.24) 63% 100%)}
+#method .method-mobile-tree-visual[data-active="flower"]:after{display:block;background:linear-gradient(to bottom,transparent 0% 43%,rgba(9,33,21,.24) 43% 100%)}
+#method .rc16-words{position:absolute;inset:0;z-index:2;pointer-events:none;width:100%;height:100%}
+#method .rc16-words[hidden]{display:none!important}
+#method .method-mobile-explanation:not([hidden]){padding:11px 13px!important;margin-top:8px!important;line-height:1.6!important}
+@media(max-width:800px){
+ #method{padding-top:14px!important;padding-bottom:14px!important}
+ #method .method-layout-final{margin-top:5px!important}
+ #method .section-accent{margin-bottom:6px!important}
+ #method .method-mobile-explanation:not([hidden]){padding:8px 10px!important;margin-top:5px!important}
+}
+</style></head>
 <body>
-<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/comics/">4コマ</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#about">ことねやの思い</a><a href="#news">NEWS</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
+<header class="k-site-header"><div class="k-header-inner"><a class="k-header-brand" href="#top" aria-label="ことねやのトップへ戻る"><span class="k-header-brand-label">こと・ね・や</span><span>TOPへ</span></a><nav class="k-header-nav" aria-label="メインメニュー"><a href="/comics/">4コマ</a><a href="#stamps">LINEスタンプ</a><a href="#method">ことねや式とは</a><a href="#news">NEWS</a><a href="#about">ことねやの思い</a><a href="#contact-teaser">お問い合わせ</a><a class="k-header-shop" href="https://store.line.me/stickershop/author/6718846/ja" target="_blank" rel="noopener noreferrer"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"><span>LINEショップ ↗</span></a></nav></div></header>
 <main id="top">
 <section aria-label="ことねやと週刊4コマの紹介" class="hero hero-comics-integrated" id="comics">
   <div class="wrap">
@@ -756,12 +814,6 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
 <div aria-live="polite" class="news-list" id="news-latest"><p>お知らせを読み込み中です。</p></div>
 </div>
 </section>
-<section class="section section-tint" id="contact-teaser">
-<div class="wrap notice-row section-shell"><div class="section-accent" aria-hidden="true" style="width:100%"></div>
-<div><div class="section-label">CONTACT</div><h2 class="section-title">ことねやへのお問い合わせ</h2><p class="section-lead" style="margin-bottom:0">ご意見やご質問、経営支援についてのご相談など。</p></div>
-<a class="button button-dark" href="/contact/index.html">お問い合わせフォームへ →</a>
-</div>
-</section>
 <section class="about brand-about" id="about" aria-labelledby="about-title">
   <div class="wrap section-shell">
     <div class="section-accent" aria-hidden="true"></div>
@@ -791,60 +843,19 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
     
   </div>
 </section>
+<section class="section section-tint" id="contact-teaser">
+<div class="wrap notice-row section-shell"><div class="section-accent" aria-hidden="true" style="width:100%"></div>
+<div><div class="section-label">CONTACT</div><h2 class="section-title">ことねやへのお問い合わせ</h2><p class="section-lead" style="margin-bottom:0">ご意見やご質問、経営支援についてのご相談など。</p></div>
+<a class="button button-dark" href="/contact/index.html">お問い合わせフォームへ →</a>
+</div>
+</section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><span>© 2026 ことねや</span><span class="footer-note">できるかな⁉︎をカタチに！</span><a class="footer-brand-link" href="https://store.line.me/stickershop/author/6718846/ja" rel="noopener noreferrer" target="_blank"><img src="/assets/brand-line.svg" alt="" aria-hidden="true"/>LINEショップ ↗</a><a href="/comics/">4コマ一覧</a><a href="/news/index.html">NEWS</a><a href="/contact/index.html">お問い合わせ</a><a href="/privacy/">アクセス解析について</a></div></footer>
 
 <script src="/assets/news-data.js?v=20261125-08"></script>
 <script src="/assets/news-render.js"></script>
 
-<script>
-/* TOP smartphone only: clicking a tree-part button reveals the same part's elements and explanation. */
-(function(){
- const section=document.getElementById('method');
- if(!section)return;
- const buttons=Array.from(section.querySelectorAll('[data-method-part]'));
- const cloud=section.querySelector('#method-mobile-wordcloud');
- const panel=section.querySelector('#method-mobile-explanation');
- if(!buttons.length||!cloud||!panel)return;
- const parts={
-  root:{title:'根｜経営の土台',detail:'目的を共有し、必要な情報やルール、判断基準、役割と責任、検証と改善の仕組みを整えます。',
-   words:['目的の共有','ルール化','見える化','判断基準','責任の明確化','原価把握','予算と実績','検証と改善'],
-   places:[[16,83],[50,83],[83,83],[16,90],[50,90],[83,90],[33,97],[68,97]]},
-  trunk:{title:'幹｜管理会計',detail:'共通の数字とルールを使い、それぞれの判断を組織の意思決定につなげます。',
-   words:['共通の数字','共通のルール','比較・判断','意思決定'],
-   places:[[16,62],[84,62],[16,71],[84,71]]},
-  branch:{title:'枝｜立場と役割',detail:'経営者・総務経理・社員が、それぞれの立場から判断し、役割を果たします。',
-   words:['経営者','総務経理','社員','判断と実行'],
-   places:[[18,47],[82,47],[18,55],[82,55]]},
-  flower:{title:'花｜経営の成果',detail:'利益が残る、人が育つ、信頼が生まれる、事業が続く。目指す成果と実際の結果を確かめ、次の改善につなげます。',
-   words:['利益が残る','人が育つ','信頼が生まれる','事業が続く','お金が回る','無駄が減る','判断がそろう','安心して働ける','納得が生まれる','仕事が回る','人が集まる','挑戦できる','地域に根づく'],
-   places:[[17,16],[50,16],[83,16],[17,23],[50,23],[83,23],[17,30],[50,30],[83,30],[17,37],[50,37],[83,37],[50,44]]}
- };
- let active=null;
- function update(part){
-  active=part===active?null:part;
-  buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.methodPart===active)));
-  cloud.replaceChildren();
-  if(!active){cloud.hidden=true;panel.hidden=true;panel.replaceChildren();return;}
-  const obj=parts[active];
-  obj.words.forEach((word,i)=>{
-   const el=document.createElement('span');
-   el.className='method-mobile-word '+active;
-   el.textContent=word;
-   el.style.left=obj.places[i][0]+'%';
-   el.style.top=obj.places[i][1]+'%';
-   cloud.appendChild(el);
-  });
-  const title=document.createElement('h3');
-  title.textContent=obj.title;
-  const detail=document.createElement('p');
-  detail.textContent=obj.detail;
-  panel.replaceChildren(title,detail);
-  cloud.hidden=false;panel.hidden=false;
- }
- buttons.forEach(button=>button.addEventListener('click',()=>update(button.dataset.methodPart)));
-})();
-</script>
+
 <script id="original-wordmark-only">
 /*
  * Create a genuine transparent PNG wordmark from original logo pixels.
@@ -914,5 +925,73 @@ a.button:focus-visible,.wordmark:focus-visible{outline:3px solid #218c50;outline
   source.src='/assets/kotoneya-official-logo.png?v=1';
 })();
 </script>
-</body>
+
+<script id="kotoneya-rc12-arrangement">
+(function(){
+ const section=document.getElementById("method");
+ const layout=section?.querySelector(".method-layout-final");
+ const row=layout?.querySelector(".method-top-row");
+ const image=row?.querySelector(".method-top-image");
+ const copy=row?.querySelector(".method-top-copy");
+ const controls=section?.querySelector("#method-mobile-controls");
+ const panel=section?.querySelector("#method-mobile-explanation");
+ const buttons=section?.querySelector(".method-mobile-buttons");
+ const points=layout?.querySelector(".method-tree-points");
+ if(!layout||!row||!image||!copy||!controls||!panel||!buttons)return;
+ const media=window.matchMedia("(max-width:800px)");
+ function arrange(){
+  if(media.matches){
+    image.append(controls);
+    controls.append(buttons,panel);
+    layout.dataset.deviceLayout="smartphone";
+  }else{
+    layout.append(controls);
+    controls.append(buttons);
+    copy.append(panel);
+    layout.dataset.deviceLayout="desktop";
+  }
+ }
+ arrange();
+ media.addEventListener("change",arrange);
+ // Current official inline script attaches the button handlers. Reuse them, rather than duplicating content.
+ const first=buttons.querySelector('[data-method-part="root"]');
+ /* RC15: leave initial state unselected */
+})();
+</script>
+<script id="rc16-single-tree-controller">
+(function(){
+const area=document.getElementById("method"),tree=area?.querySelector(".method-mobile-tree-visual"),panel=area?.querySelector("#method-mobile-explanation"),buttons=[...(area?.querySelectorAll(".method-mobile-buttons [data-method-part]")||[])];
+if(!area||!tree||!panel||buttons.length!==4)return;
+area.querySelector(".method-tree-points")?.remove();
+area.querySelector("#method-mobile-wordcloud")?.remove();
+const data={
+root:{title:"根｜経営の土台",detail:"目的を共有し、必要な情報やルール、判断基準、役割と責任、検証と改善の仕組みを整えます。",words:["目的の共有","ルール化","見える化","判断基準","責任の明確化","原価把握","予算と実績","検証と改善"],pos:[[17,83],[50,83],[83,83],[17,90],[50,90],[83,90],[34,97],[68,97]]},
+trunk:{title:"幹｜管理会計",detail:"共通の数字とルールを使い、それぞれの判断を組織の意思決定につなげます。",words:["共通の数字","共通のルール","比較・判断","意思決定"],pos:[[16,62],[84,62],[16,71],[84,71]]},
+branch:{title:"枝｜立場と役割",detail:"経営者・総務経理・社員が、それぞれの立場から判断し、役割を果たします。",words:["経営者","総務経理","社員","判断と実行"],pos:[[18,47],[82,47],[18,55],[82,55]]},
+flower:{title:"花｜経営の成果",detail:"利益が残る、人が育つ、信頼が生まれる、事業が続く。目指す成果と実際の結果を確かめ、次の改善につなげます。",words:["利益が残る","人が育つ","信頼が生まれる","事業が続く","お金が回る","無駄が減る","判断がそろう","安心して働ける","納得が生まれる","仕事が回る","人が集まる","挑戦できる","地域に根づく"],pos:[[17,16],[50,16],[83,16],[17,23],[50,23],[83,23],[17,30],[50,30],[83,30],[17,37],[50,37],[83,37],[50,44]]}
+};
+const NS="http://www.w3.org/2000/svg",svg=document.createElementNS(NS,"svg");
+svg.classList.add("rc16-words");svg.setAttribute("viewBox","0 0 1000 940");svg.setAttribute("preserveAspectRatio","none");svg.setAttribute("aria-hidden","true");svg.hidden=true;tree.append(svg);
+let selected=null;
+function update(){
+buttons.forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.methodPart===selected)));
+tree.dataset.active=selected||"";svg.replaceChildren();svg.hidden=!selected;
+if(selected){
+const item=data[selected],font=30;
+item.words.forEach((word,i)=>{
+const [px,py]=item.pos[i],x=px*10,y=py*9.4,w=word.length*font+22;
+const g=document.createElementNS(NS,"g"),box=document.createElementNS(NS,"rect"),t=document.createElementNS(NS,"text");
+for(const [k,v]of Object.entries({x:x-w/2,y:y-20,width:w,height:40,rx:7,fill:"#fffbf1",stroke:"#608568","stroke-width":2}))box.setAttribute(k,String(v));
+for(const [k,v]of Object.entries({x,y:y+1,"text-anchor":"middle","dominant-baseline":"central","font-size":font,"font-weight":"800",fill:"#24452e","font-family":"system-ui, sans-serif"}))t.setAttribute(k,String(v));
+t.textContent=word;g.append(box,t);svg.append(g);
+});
+}
+panel.replaceChildren();
+if(!selected){panel.hidden=true;return}
+const h=document.createElement("h3"),p=document.createElement("p");h.textContent=data[selected].title;p.textContent=data[selected].detail;panel.append(h,p);panel.hidden=false;
+}
+buttons.forEach(b=>b.addEventListener("click",()=>{selected=selected===b.dataset.methodPart?null:b.dataset.methodPart;update()}));
+update();
+})();
+</script></body>
 </html>

@@ -1,0 +1,70 @@
+
+/* V66: 05の木の図と解説は変更せず、振り返りBOXを総括の直後へ移動 */
+#app .final-tree .v66-final-recap{
+  background:#f6faf6!important;
+  border:1px solid #c4dacb!important;
+  border-radius:10px!important;
+  margin:16px 0 11px!important;
+  padding:12px 14px!important;
+  box-shadow:none!important;
+  max-width:100%!important;
+}
+#app .v66-final-recap summary{
+  display:flex!important;
+  align-items:center!important;
+  min-height:43px!important;
+  gap:12px!important;
+  padding:0!important;
+  list-style:none!important;
+}
+#app .v66-final-recap summary .v66-summary-copy{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  min-width:0;
+  line-height:1.35;
+}
+#app .v66-final-recap summary .v66-summary-copy strong{
+  display:block;
+  color:#205c40;
+  font-size:14px;
+  font-weight:800;
+}
+#app .v66-final-recap summary .v66-summary-copy small{
+  color:#577563;
+  font-size:12px;
+  font-weight:500;
+}
+#app .v66-final-recap .tablewrap{margin-top:11px!important}
+#app .v66-final-recap .v66-trip-steps{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin:11px 0 8px;
+}
+#app .v66-final-recap .v66-trip-step{
+  background:white;
+  padding:10px;
+  border:1px solid #d0e0d3;
+  border-radius:7px;
+  min-width:0;
+}
+#app .v66-final-recap .v66-trip-step small{
+  display:block;
+  color:#275d40;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:5px;
+}
+#app .v66-final-recap .v66-trip-step span{
+  font-size:12px;
+  color:#536b5b;
+  line-height:1.55;
+}
+#app .final-tree .v50-footer{margin-top:13px!important}
+@media(max-width:650px){
+ #app .final-tree .v66-final-recap{padding:11px 10px!important}
+ #app .v66-final-recap summary .v66-summary-copy strong{font-size:13px}
+ #app .v66-final-recap .v66-trip-steps{grid-template-columns:1fr;gap:5px}
+ #app .v66-final-recap .v66-trip-step{padding:7px}
+}
