@@ -68,3 +68,28 @@ const observer=new MutationObserver(()=>{
 observer.observe(app,{childList:true,subtree:false});
 update();
 })();
+
+/* 05 総括のみ：既存スマホ幅で木の操作欄を画像直下へ。PCは元のDOM順を維持。 */
+(function(){
+"use strict";
+const app=document.getElementById('app');if(!app)return;
+const media=window.matchMedia('(max-width:760px)');
+function ktMobileFinalTreeOrder(app,media){
+ const tree=app.querySelector(".final-section.final-lean .final-tree.v50-ready .concept-tree[data-tree-block]");
+ if(!tree)return;
+ const grid=tree.querySelector(":scope > .v50-grid");
+ const image=grid?.querySelector(":scope > .v50-image");
+ const method=grid?.querySelector(":scope > .v50-method");
+ const controls=tree.querySelector(".v50-bottom");
+ if(!grid||!image||!method||!controls)return;
+ if(media.matches){
+  if(controls.parentElement!==grid||image.nextElementSibling!==controls)grid.insertBefore(controls,method);
+ }else if(controls.parentElement===grid){
+  grid.after(controls);
+ }
+}
+const update=()=>ktMobileFinalTreeOrder(app,media);
+new MutationObserver(update).observe(app,{childList:true,subtree:true});
+media.addEventListener('change',update);
+update();
+})();
